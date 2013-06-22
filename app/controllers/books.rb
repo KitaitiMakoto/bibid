@@ -30,7 +30,11 @@ Bibid::App.controllers :books do
   end
 
   get :show do
-
+    if @book = params[:book]
+      render 'books/show'
+    else
+      redirect url(:books, :upload)
+    end
   end
 
 end
