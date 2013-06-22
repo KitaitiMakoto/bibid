@@ -4,8 +4,13 @@ module Bibid
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Padrino::Sprockets
 
     enable :sessions
+
+    sprockets url: 'components',
+              root:  Padrino.root('app'),
+              paths: %w[assets/components]
 
     ##
     # Caching support
