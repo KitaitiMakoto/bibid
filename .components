@@ -1,0 +1,9 @@
+---
+:orm: none
+:test: none
+:mock: none
+:script: jquery
+:renderer: erb
+:stylesheet: less
+:namespace: Bibid
+:migration_format: number
