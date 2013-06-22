@@ -11,3 +11,4 @@ app/assets/components/*
 .bundle
 public/components/**/*
 public/uploads/**/*
+config/apps.rb
