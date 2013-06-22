@@ -33,5 +33,8 @@ Padrino.configure_apps do
   set :protect_from_csrf, true
 end
 
+raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
+EpubUploader.salt = 'Determine random letters and write here'
+
 # Mounts the core application for this project
 Padrino.mount('Bibid::App', :app_file => Padrino.root('app/app.rb')).to('/')
