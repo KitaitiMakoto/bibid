@@ -1,7 +1,14 @@
 <ul>
-  <li><a href="/">Top</a></li>
-  <li><a href="/components/bibi/bib/bookshelf/<%= h @book %>.epub">Download</a></li>
+  <li><%= link_to 'Upload', url(:books, :upload) %>(You cannot search the URI of this page after leaving)</li>
+  <li><%= link_to 'Download', :href => "/components/bibi/bib/bookshelf/#{h @book}.epub" %></li>
   <li>Embed into your blog!
   <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :style => "width: 100%;", :onclick => 'this.select();' %></li>
 </ul>
-<iframe src="/components/bibi/bib/i/?book=<%=h @book %>.epub" width="100%" height="100%"></iframe>
+<iframe src="/components/bibi/bib/i/?book=<%=h @book %>.epub" width="90%" height="90%"></iframe>
+<script type="text/javascript">
+  window.addEventListener("beforeunload", function(event) {
+    var message = "You don't see the URI of this book after leaving the page, are you OK?";
+    (event || window.event).returnValue = message;
+    return message;
+  });
+</script>
