@@ -31,3 +31,6 @@ gem 'padrino', '0.11.2'
 # %w(core gen helpers cache mailer admin).each do |g|
 #   gem 'padrino-' + g, '0.11.2'
 # end
+
+gem 'padrino-sprockets', :require => 'padrino/sprockets'
+gem 'carrierwave'

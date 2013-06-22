@@ -6,3 +6,6 @@ vendor/gems/*
 !vendor/gems/cache/
 .sass-cache/*
 db/*.db
+deps/*
+app/assets/components/*
+.bundle

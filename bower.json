@@ -1,0 +1,6 @@
+{
+  "name": "bibid",
+  "dependencies": {
+    "bibi": "git://github.com/satorumurmur/bibi"
+  }
+}
