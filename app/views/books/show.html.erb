@@ -1,0 +1,7 @@
+<ul>
+  <li><a href="/">Top</a></li>
+  <li><a href="/components/bibi/bib/bookshelf/<%= h @book %>.epub">Download</a></li>
+  <li>Embed into your blog!
+  <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :style => "width: 100%;", :onclick => 'this.select();' %></li>
+</ul>
+<iframe src="/components/bibi/bib/i/?book=<%=h @book %>.epub" width="100%" height="100%"></iframe>
