@@ -9,8 +9,11 @@ Development
    `$ bower install`
 2. Install gems  
    `$ bundle install --path=deps`
-3. Set secret token  
+3. Copy sample configure file  
    `$ cp config/apps.sample.rb config/apps.rb`  
+4. Set `:session_secret`  
+   `$ $EDITOR config/apps.rb`
+5. Set `EpubUploader.salt`  
    `$ $EDITOR config/apps.rb`
 4. Start server  
    `$ bundle exec rackup config.ru`
