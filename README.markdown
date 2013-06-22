@@ -13,6 +13,6 @@ Development
    `$ cp config/apps.sample.rb config/apps.rb`  
    `$ $EDITOR config/apps.rb`
 4. Start server  
-   `$ bundle exec padrino start`
+   `$ bundle exec rackup config.ru`
 
 [bibi]: http://sarasa.la/bib/i/
