@@ -6,4 +6,12 @@
 
 require File.expand_path("../config/boot.rb", __FILE__)
 
-run Padrino.application
+if ENV['RACK_ENV'] == 'production'
+  run Padrino.application
+else
+  use Rack::Static, :urls => ['/components'], :root => 'public', :index => 'index.html'
+  run Rack::Cascade.new([
+    Rack::File.new('public'),
+    Padrino.application
+  ])
+end
