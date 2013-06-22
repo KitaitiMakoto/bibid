@@ -9,3 +9,5 @@ db/*.db
 deps/*
 app/assets/components/*
 .bundle
+public/components/**/*
+public/uploads/**/*

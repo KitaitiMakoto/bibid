@@ -20,11 +20,13 @@ Bibid::App.controllers :books do
   # end
   
   get :upload do
-
+    render 'books/upload'
   end
 
   post :upload do
-
+    uploader = EpubUploader.new
+    uploader.store! params[:book]
+    redirect url(:books, :upload)
   end
 
   get :show do

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Defines our constants
 PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
@@ -29,6 +30,7 @@ Bundler.require(:default, PADRINO_ENV)
 #   include Padrino::Helpers::NumberHelpers
 #   include Padrino::Helpers::TranslationHelpers
 # end
+Padrino.require_dependencies(Padrino.root('app/uploaders/**/*.rb'))
 
 ##
 # Add your before (RE)load hooks here
@@ -41,5 +43,7 @@ end
 #
 Padrino.after_load do
 end
+
+CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
 
 Padrino.load!

@@ -63,5 +63,8 @@ module Bibid
     #     render 'errors/505'
     #   end
     #
+    get '/' do
+      redirect url(:books, :upload)
+    end
   end
 end
