@@ -64,7 +64,7 @@ module Bibid
     #   end
     #
     get '/' do
-      redirect url(:books, :upload)
+      render 'books/index'
     end
   end
 end

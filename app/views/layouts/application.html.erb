@@ -8,7 +8,39 @@ body {
 input.embedding-iframe-tag {
   width: 100%;
 }
+article {
+  height: 100%;
+}
 </style>
 <h1><%= @title %></h1>
 
 <%= yield %>
+
+<script src="/javascripts/jquery.js" type="text/javascript"></script>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+<script type="text/javascript">
+$("#upload-form").submit(function(event) {
+    var $form = $(event.target);
+    var fd = new FormData($form[0]);
+
+    $.ajax({
+        url: $form.attr("action"),
+        type: $form.attr("method"),
+        data: fd,
+        dataType: "json",
+        processData: false,
+        contentType: false,
+        beforeSend: function() {$("#book iframe:first").slideUp();}
+    }).done(function(data, status, xhr) {
+        var res = JSON.parse(xhr.responseText);
+        $("#book iframe:first").attr("src", res.embedded).slideDown();
+        $("#book #another-window-link").attr("href", res.embedded);
+        $("#book #download-link").attr("href", res.src);
+        $("#embedding-iframe-tag").val(res.embedded);
+    }).fail(function() {
+        alert("Failed!");
+    });
+
+    event.preventDefault();
+});
+</script>

@@ -1,0 +1,4 @@
+<% form_tag url(:books, :upload), :method => :post, :enctype => 'multipart/form-data', :id => 'upload-form' do %>
+  <%= file_field_tag :book, :required => true %>
+  <%= submit_tag %>
+<% end %>

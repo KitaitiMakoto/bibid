@@ -23,10 +23,15 @@ Bibid::App.controllers :books do
     render 'books/upload'
   end
 
-  post :upload do
+  post :upload, :provides => [:html, :json] do
     uploader = EpubUploader.new
     uploader.store! params[:book]
-    redirect url(:books, :show, book: uploader.file.basename)
+    case content_type
+    when :html
+      redirect url(:books, :show, book: uploader.file.basename)
+    when :json
+      {:src => "/components/bibi/bib/bookshelf/#{uploader.file.basename}.epub", :embedded => "/components/bibi/bib/i/?book=#{uploader.file.basename}.epub"}.to_json
+    end
   end
 
   get :show do

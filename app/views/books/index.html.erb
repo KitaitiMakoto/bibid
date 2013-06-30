@@ -1,0 +1,12 @@
+<%= partial 'books/upload_form' %>
+
+<article id="book">
+  <ul id="links">
+    <li><a id="another-window-link" target="_blank">Another window</a></li>
+    <li><a id="download-link">Download</a>
+    <li>Embed into your blog!
+      <input type="text" readonly onclick="this.select();" class="embedding-iframe-tag" id="embedding-iframe-tag">
+  </ul>
+  <iframe width="90%" height="90%">
+  </iframe>
+</article>

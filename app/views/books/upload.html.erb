@@ -1,4 +1,1 @@
-<% form_tag url(:books, :upload), :method => :post, :enctype => 'multipart/form-data' do %>
-  <%= file_field_tag :book %>
-  <%= submit_tag %>
-<% end %>
+<%= partial 'books/upload_form' %>
