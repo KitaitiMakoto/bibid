@@ -23,22 +23,32 @@ $("#upload-form").submit(function(event) {
     var $form = $(event.target);
     var fd = new FormData($form[0]);
 
-    $.ajax({
-        url: $form.attr("action"),
-        type: $form.attr("method"),
-        data: fd,
-        dataType: "json",
-        processData: false,
-        contentType: false,
-        beforeSend: function() {$("#book iframe:first").slideUp();}
-    }).done(function(data, status, xhr) {
-        var res = JSON.parse(xhr.responseText);
-        $("#book iframe:first").attr("src", res.embedded).slideDown();
-        $("#book #another-window-link").attr("href", res.embedded);
-        $("#book #download-link").attr("href", res.src);
-        $("#embedding-iframe-tag").val(res.embedded);
-    }).fail(function() {
-        alert("Failed!");
+    var $fileInput = $form.find('input[type="file"]').eq(0);
+    if (! $fileInput.val()) {
+        alert("Select file!");
+        event.preventDefault();
+        $fileInput.focus();
+        return;
+    }
+
+    $("#book iframe:first").slideUp(function() {
+        $.ajax({
+            url: $form.attr("action"),
+            type: $form.attr("method"),
+            data: fd,
+            dataType: "json",
+            processData: false,
+            contentType: false
+        }).done(function(data, status, xhr) {
+            $("#upload-form")[0].reset();
+            var res = JSON.parse(xhr.responseText);
+            $("#book iframe:first").attr("src", res.embedded).slideDown();
+            $("#book #another-window-link").attr("href", res.embedded);
+            $("#book #download-link").attr("href", res.src);
+            $("#embedding-iframe-tag").val(res.embedded);
+        }).fail(function() {
+            alert("Failed!");
+        });
     });
 
     event.preventDefault();
