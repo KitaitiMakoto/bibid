@@ -1,11 +1,47 @@
 <%= partial 'books/upload_form' %>
 
 <article id="book">
-  <ul id="links">
-    <li><a id="another-window-link" target="_blank">Another window</a></li>
-    <li><a id="download-link">Download</a>
-    <li>Embed into your blog!
-      <input type="text" readonly onclick="this.select();" class="embedding-iframe-tag" id="embedding-iframe-tag">
-  </ul>
+  <p>Embed into your blog!
+    <input type="text" readonly onclick="this.select();" class="embedding-iframe-tag" id="embedding-iframe-tag"></p>
   <iframe width="90%" height="90%"></iframe>
+  <p><a id="download-link">Download</a></p>
 </article>
+<script type="text/javascript">
+window.onload = function() {
+
+$("#upload-form").submit(function(event) {
+    var $form = $(event.target);
+    var fd = new FormData($form[0]);
+
+    var $fileInput = $form.find('input[type="file"]').eq(0);
+    if (! $fileInput.val()) {
+        alert("Select file!");
+        event.preventDefault();
+        $fileInput.focus();
+        return;
+    }
+
+    $("#book iframe:first").slideUp(function() {
+        $.ajax({
+            url: $form.attr("action"),
+            type: $form.attr("method"),
+            data: fd,
+            dataType: "json",
+            processData: false,
+            contentType: false
+        }).done(function(data, status, xhr) {
+            $("#upload-form")[0].reset();
+            var res = JSON.parse(xhr.responseText);
+            $("#book iframe:first").attr("src", res.uri).slideDown();
+            $("#book #download-link").attr("href", res.src);
+            $("#embedding-iframe-tag").val(res.uri);
+        }).fail(function() {
+            alert("Failed!");
+        });
+    });
+
+    event.preventDefault();
+});
+
+};
+</script>

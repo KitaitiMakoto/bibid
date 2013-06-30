@@ -30,7 +30,8 @@ Bibid::App.controllers :books do
     when :html
       redirect url(:books, :show, book: uploader.file.basename)
     when :json
-      {:src => "/components/bibi/bib/bookshelf/#{uploader.file.basename}.epub", :embedded => "/components/bibi/bib/i/?book=#{uploader.file.basename}.epub"}.to_json
+      {:uri => embedding_url(uploader.file.basename),
+       :src => "/components/bibi/bib/bookshelf/#{uploader.file.basename}.epub"}.to_json
     end
   end
 
