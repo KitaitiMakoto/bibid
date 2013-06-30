@@ -2,7 +2,7 @@
   <li><%= link_to 'Upload', url(:books, :upload) %>(You cannot search the URI of this page after leaving)</li>
   <li><%= link_to 'Download', :href => "/components/bibi/bib/bookshelf/#{h @book}.epub" %></li>
   <li>Embed into your blog!
-  <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :style => "width: 100%;", :onclick => 'this.select();' %></li>
+  <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :class => 'embedding-iframe-tag', :onclick => 'this.select();' %></li>
 </ul>
 <iframe src="/components/bibi/bib/i/?book=<%=h @book %>.epub" width="90%" height="90%"></iframe>
 <script type="text/javascript">
