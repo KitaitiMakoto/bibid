@@ -34,3 +34,5 @@ gem 'padrino', '0.11.2'
 
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'carrierwave'
+
+gem 'mina'
