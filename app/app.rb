@@ -8,9 +8,11 @@ module Bibid
 
     enable :sessions
 
-    sprockets url: 'components',
-              root:  Padrino.root('app'),
-              paths: %w[assets/components]
+    %w[stylesheets javascripts components].each do |type|
+      sprockets url: type,
+                root:  Padrino.root('app'),
+                paths: [type]
+    end
 
     ##
     # Caching support
