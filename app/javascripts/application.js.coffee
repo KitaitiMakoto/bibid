@@ -14,6 +14,7 @@ $("#upload-form").submit (event) ->
       url: $form.attr('action'),
       type: $form.attr('method'),
       data: fd,
+      dataType: 'json'
       processData: false,
       contentType: false,
     }).done (data, status, xhr) ->
