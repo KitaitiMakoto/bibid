@@ -1,4 +1,4 @@
-BiB/id
+BiB/i'd
 ======
 
 Server for [BiB/i][bibi]
