@@ -32,9 +32,17 @@ gem 'padrino', '0.11.2'
 #   gem 'padrino-' + g, '0.11.2'
 # end
 
+gem 'activerecord'
+
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'coffee-script'
 gem 'padrino-assets'
 gem 'carrierwave'
+gem 'fog'
+gem 'carrierwave-google_drive'
+gem 'carrierwave-aws'
+gem 'dropbox-sdk'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 gem 'mina'
