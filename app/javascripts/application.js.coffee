@@ -1,4 +1,6 @@
 $("#upload-form").submit (event) ->
+  return unless window.FormData
+
   $form = $(event.target)
   fd = new FormData($form[0])
 
