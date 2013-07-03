@@ -1,7 +1,7 @@
 BiB/i'd
 ======
 
-Server for [BiB/i][bibi]
+[BiB/i][bibi] daemon. Actually, not a daemon.
 
 Development
 -----------
