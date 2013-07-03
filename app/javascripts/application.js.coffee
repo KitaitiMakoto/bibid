@@ -26,4 +26,4 @@ $("#upload-form").submit (event) ->
     .fail ->
       alert("Failed!")
 
-    event.preventDefault()
+  event.preventDefault()
