@@ -24,7 +24,6 @@ $("#upload-form").submit (event) ->
       $('#book #download-link').attr('href', res.src)
       $('#embedding-iframe-tag').val(res.uri)
     .fail ->
-      alert("Failed!");
+      alert("Failed!")
 
-    event.preventDefault();
-
+    event.preventDefault()
