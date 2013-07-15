@@ -49,3 +49,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
 gem 'mina'
+
+group :test do
+  gem 'test-unit', :require => 'test/unit'
+  gem 'shoulda'
+end

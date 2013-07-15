@@ -1,6 +1,6 @@
 ---
 :orm: activerecord
-:test: none
+:test: shoulda
 :mock: none
 :script: jquery
 :renderer: erb
