@@ -33,6 +33,7 @@ gem 'padrino', '0.11.2'
 # end
 
 gem 'activerecord'
+gem 'pg'
 
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'coffee-script'
