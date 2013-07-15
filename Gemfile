@@ -32,7 +32,7 @@ gem 'padrino', '0.11.2'
 #   gem 'padrino-' + g, '0.11.2'
 # end
 
-gem 'activerecord', :require => 'active_record'
+gem 'activerecord', '~> 3', :require => 'active_record'
 gem 'pg'
 
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
