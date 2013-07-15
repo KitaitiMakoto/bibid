@@ -24,7 +24,7 @@ $("#upload-form").submit (event) ->
       res = JSON.parse(xhr.responseText)
       $('#book iframe:first').attr('src', res.uri).slideDown()
       $('#book #download-link').attr('href', res.src)
-      $('#embedding-iframe-tag').val(res.uri)
+      $('#embedding-iframe-tag').val('<iframe src="' + res.uri + '"></iframe>')
     .fail ->
       alert("Failed!")
 
