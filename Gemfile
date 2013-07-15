@@ -58,4 +58,5 @@ group :test do
   gem 'test-unit', :require => 'test/unit'
   gem 'shoulda'
   gem 'rack-test', :require => 'rack/test'
+  gem 'poltergeist'
 end
