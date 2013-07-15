@@ -50,6 +50,10 @@ gem 'omniauth-facebook'
 
 gem 'mina'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
 group :test do
   gem 'test-unit', :require => 'test/unit'
   gem 'shoulda'
