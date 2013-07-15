@@ -15,19 +15,19 @@
 #
 ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'twintails_development.db')
+  :database => Padrino.root('db', 'bibid_development.db')
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'twintails_production.db')
+  :database => Padrino.root('db', 'bibid_production.db')
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'twintails_test.db')
+  :database => Padrino.root('db', 'bibid_test.db')
 
 }
 
