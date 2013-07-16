@@ -35,6 +35,8 @@ end
 
 TWITTER_CONSUMER_KEY = raise 'Twitter consumer key here'
 TWITTER_CONSUMER_SECRET = raise 'Twitter consumer secret here'
+FACEBOOK_APP_ID = raise 'Facebook App ID here'
+FACEBOOK_APP_SECRET = raise 'Facebook App secret here'
 
 raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
 Foreigner.load
