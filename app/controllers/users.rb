@@ -20,23 +20,39 @@ Bibid::App.controllers :users do
   # end
   
   get :index do
-
+    
   end
 
-  get :show do
+  get :new do
+logger.debug session.inspect
+    unless session[:auth]
+      redirect '/sessions/login'
+    end
+    @user = User.new
+    @user.authentications.build session[:auth]
+    session[:auth] = nil
 
+    render 'users/new'
   end
 
-  post :create do
-
+  get :show, :map => '/users/:name' do
+    
   end
 
-  put :update do
+  post :create, :map => '/users' do
+    @user = User.new(params[:user].slice('name', 'display_name'))
+    @user.authentications.build(params[:authentication])
+    @user.save!
 
+    redirect url(:users, :show, :name => @user.name)
   end
 
-  delete :destroy do
+  put :update, :map => '/users/:name' do
+    
+  end
 
+  delete :destroy, :map => '/users/:name' do
+    
   end
 
 end

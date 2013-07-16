@@ -1,3 +1,5 @@
+require 'openid/store/filesystem'
+
 module Bibid
   class App < Padrino::Application
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
@@ -6,7 +8,14 @@ module Bibid
     register Padrino::Mailer
     register Padrino::Helpers
     register Padrino::Sprockets
-
+    OmniAuth.config.on_failure do |env|
+      OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+    end
+    use OmniAuth::Builder do
+      # provider :open_id, :store => OpenID::Store::Filesystem.new('/tmp')
+      provider :twitter, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
+      # provider :facebook
+    end
 
     %w[stylesheets javascripts components].each do |type|
       sprockets url: type,
@@ -67,6 +76,30 @@ module Bibid
     #
     get '/' do
       render 'books/index'
+    end
+
+    get '/auth/:provider/callback' do
+      # logger.debug params.inspect # => {"oauth_token"=>"OwgxCSCy0SIMWjyxLbZ0xQLyMAOnhjMmWcouKXUlvaE", "oauth_verifier"=>"Nf9vJViJPDtGQXhABKyQ1PNX7Bvu7pdhRzzlfLEx0", :provider=>"twitter"}
+
+      auth = request.env['omniauth.auth']
+      unless auth.provider == params[:provider]
+        raise
+      end
+      authentication = Authentication.find_by_provider_and_uid(auth.provider, auth.uid)
+      if authentication
+        current_user = authentication.user
+        redirect url(:users, :show, :name => current_user.name)
+      elsif current_user
+        current_user.authentications.create provider: auth.provider, uid: auth.uid
+        redirect url(:users, :show, :name => current_user.name)
+      else
+        session[:auth] = {:provider => auth.provider, :uid => auth.uid}
+        redirect url(:users, :new)
+      end
+    end
+
+    get '/auth/failure' do
+      "Authentication with #{h params['strategy']} failed: #{h params['message']}"
     end
   end
 end

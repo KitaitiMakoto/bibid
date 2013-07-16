@@ -1,0 +1,16 @@
+<% form_for @user, url(:users, :create) do |f| %>
+  <p><%= f.error_messages %></p>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :display_name %>
+    <%= f.text_field :display_name, :required => true %>
+  </p>
+  <% fields_for @user.authentications.first do |authentication| %>
+    <%= authentication.hidden_field :provider, :value => @user.authentications.first.provider %>
+    <%= authentication.hidden_field :uid, :value => @user.authentications.first.uid %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
