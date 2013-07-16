@@ -7,7 +7,6 @@ module Bibid
     register Padrino::Helpers
     register Padrino::Sprockets
 
-    enable :sessions
 
     %w[stylesheets javascripts components].each do |type|
       sprockets url: type,
