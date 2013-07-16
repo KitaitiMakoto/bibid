@@ -87,7 +87,8 @@ module Bibid
       end
       authentication = Authentication.find_by_provider_and_uid(auth.provider, auth.uid)
       if authentication
-        current_user = authentication.user
+        session.clear
+        session[:user_id] = authentication.user.id
         redirect url(:users, :show, :name => current_user.name)
       elsif current_user
         current_user.authentications.create provider: auth.provider, uid: auth.uid
