@@ -33,20 +33,6 @@ Padrino.configure_apps do
   set :protect_from_csrf, true
 end
 
-class WardenOmniAuth::Strategy
-  def authenticate!
-    session = env[WardenOmniAuth::SESSION_KEY]
-    session[WardenOmniAuth::SCOPE_KEY] = scope
-
-    if user = (env['omniauth.auth'] || env['rack.auth'] || request['auth'])
-      success! self.class.on_callback[user]
-    else
-      path_prefix = OmniAuth::Configuration.instance.path_prefix
-      redirect! File.join(path_prefix, self.class.omni_name)
-    end
-  end
-end
-
 TWITTER_CONSUMER_KEY = raise 'Twitter consumer key here'
 TWITTER_CONSUMER_SECRET = raise 'Twitter consumer secret here'
 

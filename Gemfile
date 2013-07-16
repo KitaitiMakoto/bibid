@@ -43,12 +43,10 @@ gem 'fog'
 gem 'carrierwave-google_drive'
 gem 'carrierwave-aws'
 gem 'dropbox-sdk'
-gem 'padrino-warden'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'warden_omniauth'
 
 gem 'mina'
 
