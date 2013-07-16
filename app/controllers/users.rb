@@ -24,7 +24,6 @@ Bibid::App.controllers :users do
   end
 
   get :new do
-logger.debug session.inspect
     unless session[:auth]
       redirect '/sessions/login'
     end
