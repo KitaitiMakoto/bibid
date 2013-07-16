@@ -37,6 +37,7 @@ TWITTER_CONSUMER_KEY = raise 'Twitter consumer key here'
 TWITTER_CONSUMER_SECRET = raise 'Twitter consumer secret here'
 
 raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
+Foreigner.load
 EpubUploader.salt = 'Determine random letters and write here'
 
 # Mounts the core application for this project
