@@ -34,6 +34,7 @@ gem 'padrino', '0.11.2'
 
 gem 'activerecord', '~> 3', :require => 'active_record'
 gem 'pg'
+gem 'foreigner'
 
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'coffee-script'
