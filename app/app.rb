@@ -11,7 +11,7 @@ module Bibid
     end
     use OmniAuth::Builder do
       provider :twitter, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
-      provider :facebook, FACEBOOK_APP_ID, FACEBOOK_APP_SECRET
+      provider :facebook, FACEBOOK_APP_ID, FACEBOOK_APP_SECRET, :scope => 'user_about_me'
     end
 
     %w[stylesheets javascripts components].each do |type|
