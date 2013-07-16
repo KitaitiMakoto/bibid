@@ -35,7 +35,12 @@ Bibid::App.controllers :users do
   end
 
   get :show, :map => '/users/:name' do
-    
+    @user = User.find_by_name(params[:name])
+    if @user
+      render 'users/show'
+    else
+      halt 404
+    end
   end
 
   post :create, :map => '/users' do

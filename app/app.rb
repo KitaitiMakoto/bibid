@@ -63,14 +63,14 @@ module Bibid
     ##
     # You can manage errors like:
     #
-    #   error 404 do
-    #     render 'errors/404'
-    #   end
-    #
-    #   error 505 do
-    #     render 'errors/505'
-    #   end
-    #
+    error 404 do
+      render 'errors/404'
+    end
+
+    # error 505 do
+    #   render 'errors/505'
+    # end
+
     get '/' do
       render 'books/index'
     end
