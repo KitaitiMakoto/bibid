@@ -76,8 +76,6 @@ module Bibid
     end
 
     get '/auth/:provider/callback' do
-      # logger.debug params.inspect # => {"oauth_token"=>"OwgxCSCy0SIMWjyxLbZ0xQLyMAOnhjMmWcouKXUlvaE", "oauth_verifier"=>"Nf9vJViJPDtGQXhABKyQ1PNX7Bvu7pdhRzzlfLEx0", :provider=>"twitter"}
-
       auth = request.env['omniauth.auth']
       unless auth.provider == params[:provider]
         raise
