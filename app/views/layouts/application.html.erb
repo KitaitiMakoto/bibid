@@ -11,6 +11,18 @@ input.embedding-iframe-tag {
 </style>
 <h1><%= @title %></h1>
 
+<div>
+  <% if current_user %>
+    <%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %>
+    <% form_tag url(:sessions, :destroy) do %>
+      <%= hidden_form_method_field 'delete' %>
+      <%= submit_tag 'sign out' %>
+    <% end %>
+  <% else %>
+    <%= link_to 'sign in', url(:sessions, :new) %>
+  <% end %>
+</div>
+
 <%= yield %>
 
 <script src="/javascripts/jquery.js" type="text/javascript"></script>

@@ -19,5 +19,12 @@ Bibid::App.controllers :sessions do
   #   'Hello world!'
   # end
   
+  get :new do
+    render 'sessions/new'
+  end
 
+  delete :destroy, :map => '/session' do
+    session.clear
+    redirect '/'
+  end
 end
