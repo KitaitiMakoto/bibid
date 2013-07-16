@@ -45,7 +45,6 @@ gem 'carrierwave-google_drive'
 gem 'carrierwave-aws'
 gem 'dropbox-sdk'
 gem 'omniauth'
-gem 'omniauth-openid'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
