@@ -1,5 +1,3 @@
-require 'openid/store/filesystem'
-
 module Bibid
   class App < Padrino::Application
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
@@ -12,7 +10,6 @@ module Bibid
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure
     end
     use OmniAuth::Builder do
-      # provider :open_id, :store => OpenID::Store::Filesystem.new('/tmp')
       provider :twitter, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
       # provider :facebook
     end
