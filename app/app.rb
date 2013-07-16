@@ -89,7 +89,12 @@ module Bibid
         current_user.authentications.create provider: auth.provider, uid: auth.uid
         redirect url(:users, :show, :name => current_user.name)
       else
-        session[:auth] = {:provider => auth.provider, :uid => auth.uid}
+        session[:auth] = {
+          :provider     => auth.provider,
+          :uid          => auth.uid,
+          :name         => Authentication.name_from(auth),
+          :display_name => Authentication.display_name_from(auth)
+        }
         redirect url(:users, :new)
       end
     end
