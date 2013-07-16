@@ -13,9 +13,11 @@ Development
    `$ cp config/apps.sample.rb config/apps.rb`  
 4. Set `:session_secret`  
    `$ $EDITOR config/apps.rb`
-5. Set `EpubUploader.salt`  
+5. Set Twitter consumer key and secret  
    `$ $EDITOR config/apps.rb`
-4. Start server  
+6. Set `EpubUploader.salt`  
+   `$ $EDITOR config/apps.rb`
+7. Start server  
    `$ bundle exec rackup config.ru`
 
 [bibi]: http://sarasa.la/bib/i/
