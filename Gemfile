@@ -48,6 +48,7 @@ gem 'omniauth'
 gem 'omniauth-openid'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'warden_omniauth'
 
 gem 'mina'
 
