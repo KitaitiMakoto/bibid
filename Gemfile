@@ -45,6 +45,7 @@ gem 'carrierwave-aws'
 gem 'dropbox-sdk'
 gem 'padrino-warden'
 gem 'omniauth'
+gem 'omniauth-openid'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
