@@ -23,15 +23,13 @@ Bibid::App.controllers :books do
     render 'books/new'
   end
 
-  post :create, :map => '/books', :provides => [:html, :json], :require_sign_in => true do
-    uploader = EpubUploader.new
-    uploader.store! params[:book]
-    case content_type
-    when :html
+  post :create, :map => '/books', :require_sign_in => true do
+    book = Book.new
+    book.file = params[:book]
+    if book.save
       redirect url(:books, :show, book: uploader.file.basename)
-    when :json
-      {:uri => embedding_url(uploader.file.basename),
-       :src => "/components/bibi/bib/bookshelf/#{uploader.file.basename}.epub"}.to_json
+    else
+      redirect url(:books, :new)
     end
   end
 
