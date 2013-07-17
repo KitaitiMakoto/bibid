@@ -5,10 +5,3 @@
   <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :class => 'embedding-iframe-tag', :onclick => 'this.select();' %></li>
 </ul>
 <iframe src="/components/bibi/bib/i/?book=<%= File.basename(@book.epub.current_path) %>" width="90%" height="90%"></iframe>
-<script type="text/javascript">
-  window.addEventListener("beforeunload", function(event) {
-    var message = "You don't see the URI of this book after leaving the page, are you OK?";
-    (event || window.event).returnValue = message;
-    return message;
-  });
-</script>
