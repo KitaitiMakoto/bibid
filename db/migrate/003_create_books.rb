@@ -8,6 +8,7 @@ class CreateBooks < ActiveRecord::Migration
     end
 
     add_foreign_key :books, :users, :dependent => :delete
+    add_index :books, :epub, :unique => true
   end
 
   def self.down
