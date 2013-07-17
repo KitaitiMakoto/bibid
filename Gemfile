@@ -39,7 +39,7 @@ gem 'foreigner'
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'coffee-script'
 gem 'padrino-assets'
-gem 'carrierwave'
+gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
 gem 'fog'
 gem 'carrierwave-google_drive'
 gem 'carrierwave-aws'
