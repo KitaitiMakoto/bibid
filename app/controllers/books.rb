@@ -19,8 +19,8 @@ Bibid::App.controllers :books do
   #   'Hello world!'
   # end
   
-  get :upload do
-    render 'books/upload'
+  get :new do
+    render 'books/new'
   end
 
   post :upload, :provides => [:html, :json] do
