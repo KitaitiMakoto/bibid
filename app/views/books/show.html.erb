@@ -1,5 +1,5 @@
 <ul>
-  <li><%= link_to 'Upload', url(:books, :upload) %>(You cannot search the URI of this page after leaving)</li>
+  <li><%= link_to 'Upload', url(:books, :new) %>(You cannot search the URI of this page after leaving)</li>
   <li><%= link_to 'Download', :href => "/components/bibi/bib/bookshelf/#{h @book}.epub" %></li>
   <li>Embed into your blog!
   <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :class => 'embedding-iframe-tag', :onclick => 'this.select();' %></li>

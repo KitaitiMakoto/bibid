@@ -23,7 +23,7 @@ Bibid::App.controllers :books do
     render 'books/new'
   end
 
-  post :upload, :provides => [:html, :json] do
+  post :create, :map => '/books', :provides => [:html, :json] do
     uploader = EpubUploader.new
     uploader.store! params[:book]
     case content_type
