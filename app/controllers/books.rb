@@ -25,16 +25,16 @@ Bibid::App.controllers :books do
 
   post :create, :map => '/books', :require_sign_in => true do
     book = Book.new
-    book.file = params[:book]
+    book.epub = params[:book]
     if book.save
-      redirect url(:books, :show, book: uploader.file.basename)
+      redirect url(:books, :show, :id => book.id)
     else
       redirect url(:books, :new)
     end
   end
 
-  get :show do
-    if @book = params[:book]
+  get :show, :map => '/books/:id' do
+    if @book = Book.find(params[:id])
       render 'books/show'
     else
       redirect url(:books, :upload)
