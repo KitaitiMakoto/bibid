@@ -1,2 +1,4 @@
-<%= link_to 'User list', url(:users, :index) %>
+<nav>
+  <%= link_to 'User list', url(:users, :index) %>
+</nav>
 <h2><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
