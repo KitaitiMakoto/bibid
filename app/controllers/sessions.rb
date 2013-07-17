@@ -30,7 +30,6 @@ Bibid::App.controllers :sessions do
     end
     authentication = Authentication.find_by_provider_and_uid(auth.provider, auth.uid)
     if authentication
-      session.clear
       session[:user_id] = authentication.user.id
       redirect url(:users, :show, :name => current_user.name)
     elsif current_user
