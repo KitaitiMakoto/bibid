@@ -5,6 +5,8 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.timestamps
     end
+
+    add_foreign_key :books, :users, :dependent => :delete
   end
 
   def self.down
