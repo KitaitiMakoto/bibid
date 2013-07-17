@@ -19,11 +19,11 @@ Bibid::App.controllers :books do
   #   'Hello world!'
   # end
   
-  get :new do
+  get :new, :require_sign_in => true do
     render 'books/new'
   end
 
-  post :create, :map => '/books', :provides => [:html, :json] do
+  post :create, :map => '/books', :provides => [:html, :json], :require_sign_in => true do
     uploader = EpubUploader.new
     uploader.store! params[:book]
     case content_type
@@ -42,5 +42,4 @@ Bibid::App.controllers :books do
       redirect url(:books, :upload)
     end
   end
-
 end

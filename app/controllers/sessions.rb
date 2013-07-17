@@ -47,7 +47,7 @@ Bibid::App.controllers :sessions do
     end
   end
 
-  delete :destroy, :map => '/session' do
+  delete :destroy, :map => '/session', :require_sign_in => true do
     session.clear
     redirect '/'
   end

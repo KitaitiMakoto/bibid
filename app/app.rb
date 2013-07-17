@@ -20,6 +20,14 @@ module Bibid
                 paths: [type]
     end
 
+    class << self
+      def require_sign_in(*args)
+        condition {
+          halt 403, 'Require signing in' unless current_user
+        }
+      end
+    end
+
     ##
     # Caching support
     #
