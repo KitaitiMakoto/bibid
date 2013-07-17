@@ -20,7 +20,9 @@ Bibid::App.controllers :users do
   # end
   
   get :index do
-    
+    @users = User.order(:created_at)
+
+    render 'users/index'
   end
 
   get :new do
