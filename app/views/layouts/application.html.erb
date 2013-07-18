@@ -17,6 +17,7 @@ iframe {
 
 <div>
   <% if current_user %>
+    <%= link_to 'Upload', url(:books, :new) %>
     <%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %>
     <% form_tag url(:sessions, :destroy) do %>
       <%= hidden_form_method_field 'delete' %>
