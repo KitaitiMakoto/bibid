@@ -12,7 +12,7 @@ class EpubUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    'components/bibi/bib/bookshelf'
+    File.join('components/bibi/bib/bookshelf', model.user.name)
   end
 
   def salt
