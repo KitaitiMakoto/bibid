@@ -48,6 +48,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+gem 'epub-parser', :require => 'epub/parser'
+
 gem 'mina'
 
 group :development, :test do
