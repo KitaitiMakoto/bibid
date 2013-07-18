@@ -1,4 +1,4 @@
-<h2><%= link_to @book.try(:title) || 'Unknow title', url(:books, :show, :id => @book.id) %></h2>
+<h2><%= link_to @book.title.presence || 'Unknown title', url(:books, :show, :id => @book.id) %></h2>
 
 <%= embedding_tag(@book) %>
 <ul>
