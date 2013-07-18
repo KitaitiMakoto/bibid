@@ -31,7 +31,6 @@ Bundler.require(:default, PADRINO_ENV)
 #   include Padrino::Helpers::TranslationHelpers
 # end
 require 'digest/sha1'
-Padrino.require_dependencies(Padrino.root('app/uploaders/**/*.rb'))
 
 ##
 # Add your before (RE)load hooks here
