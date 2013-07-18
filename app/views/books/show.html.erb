@@ -1,3 +1,5 @@
+<h2><%= link_to @book.try(:title) || 'Unknow title', url(:books, :show, :id => @book.id) %></h2>
+
 <iframe src="/components/bibi/bib/i/?book=<%= File.basename(@book.epub.current_path) %>" width="90%" height="90%"></iframe>
 <ul>
   <li>Embed into your blog!<br>
