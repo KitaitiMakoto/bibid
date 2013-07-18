@@ -20,9 +20,9 @@ Bibid::App.controllers :books do
   # end
 
   get :index, :map => '/books' do
-    books = Book.all
+    @books = Book.all
 
-    render 'books/index', :locals => {:books => books}
+    render 'books/index'
   end
   
   get :new, :require_sign_in => true do

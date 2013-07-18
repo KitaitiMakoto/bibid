@@ -1,0 +1,5 @@
+<ul>
+<% books.each do |book| %>
+  <li><%= link_to book.try(:title) || 'Unknown title', url(:books, :show, :id => book.id) %></li>
+<% end %>
+</ul>
