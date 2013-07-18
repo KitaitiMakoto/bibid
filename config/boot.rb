@@ -42,6 +42,7 @@ end
 # Add your after (RE)load hooks here
 #
 Padrino.after_load do
+  Foreigner.load
 end
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
