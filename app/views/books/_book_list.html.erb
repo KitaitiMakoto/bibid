@@ -1,5 +1,5 @@
 <ul>
 <% books.each do |book| %>
-  <li><%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %></li>
+  <li><%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %> - <%= link_to book.user.display_name, url(:users, :show, :name => book.user.name) %></li>
 <% end %>
 </ul>
