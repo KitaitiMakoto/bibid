@@ -15,6 +15,10 @@ class EpubUploader < CarrierWave::Uploader::Base
     File.join('components/bibi/bib/bookshelf', model.user.name)
   end
 
+  def extension_white_list
+    ['epub']
+  end
+
   def salt
     self.class.salt
   end
