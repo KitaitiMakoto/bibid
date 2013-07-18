@@ -80,6 +80,8 @@ module Bibid
     # end
 
     get '/' do
+      @books = Book.all
+
       render 'books/index'
     end
 
