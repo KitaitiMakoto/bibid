@@ -22,9 +22,9 @@ module Bibid
 
     class << self
       def require_sign_in(*args)
-        condition {
+        condition do
           halt 403, 'Signing in required' unless current_user
-        }
+        end
       end
     end
 
