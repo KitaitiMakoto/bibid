@@ -2,5 +2,6 @@
 <ul>
   <li>Embed into your blog!
   <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :class => 'embedding-iframe-tag', :onclick => 'this.select();' %></li>
-  <li><%= link_to 'Download', :href => h(File.basename(@book.epub.current_path)) %></li>
+  <li><%= link_to 'Download', :href => File.basename(@book.epub.current_path) %></li>
+  <li><%= link_to 'Open in another window', :href => embedding_url(@book), :target => '_blank' %></li>
 </ul>
