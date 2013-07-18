@@ -12,20 +12,27 @@ iframe {
   height: 70%;
   width: 70%;
 }
+nav li, nav li form {
+  display: inline;
+}
 </style>
 <h1><%= @title %></h1>
 
 <nav>
+  <ul>
   <% if current_user %>
-    <%= link_to 'Upload', url(:books, :new) %>
-    <%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %>
-    <% form_tag url(:sessions, :destroy) do %>
-      <%= hidden_form_method_field 'delete' %>
-      <%= submit_tag 'sign out' %>
-    <% end %>
+    <li><%= link_to 'Upload', url(:books, :new) %></li>
+    <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %></li>
+    <li>
+      <% form_tag url(:sessions, :destroy) do %>
+        <%= hidden_form_method_field 'delete' %>
+        <%= submit_tag 'sign out' %>
+      <% end %>
+    </li>
   <% else %>
-    <%= link_to 'sign in', url(:sessions, :new) %>
+    <li><%= link_to 'sign in', url(:sessions, :new) %></li>
   <% end %>
+  </ul>
 </nav>
 
 <%= yield %>
