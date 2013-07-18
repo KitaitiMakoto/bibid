@@ -41,10 +41,10 @@ Bibid::App.controllers :books do
   end
 
   get :show, :map => '/books/:id' do
-    if @book = Book.find(params[:id])
+    if @book = Book.find_by_id(params[:id])
       render 'books/show'
     else
-      redirect url(:books, :upload)
+      halt 404
     end
   end
 end
