@@ -31,6 +31,7 @@ Padrino.configure_apps do
   set :session_secret, 'Determine session secret and write here'
   set :protection, true
   set :protect_from_csrf, true
+  set :total_file_size_limit, 20.megabytes
 end
 
 TWITTER_CONSUMER_KEY = raise 'Twitter consumer key here'
