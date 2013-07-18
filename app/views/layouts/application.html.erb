@@ -15,7 +15,7 @@ iframe {
 </style>
 <h1><%= @title %></h1>
 
-<div>
+<nav>
   <% if current_user %>
     <%= link_to 'Upload', url(:books, :new) %>
     <%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %>
@@ -26,7 +26,7 @@ iframe {
   <% else %>
     <%= link_to 'sign in', url(:sessions, :new) %>
   <% end %>
-</div>
+</nav>
 
 <%= yield %>
 
