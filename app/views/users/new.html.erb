@@ -1,13 +1,11 @@
 <% form_for @user, url(:users, :create) do |f| %>
   <p><%= f.error_messages %></p>
   <p>
-    <%= f.label :name %>
-    <%= f.text_field :name, :value => @user.name,:required => true %>
+    <%= f.text_field_block :name, :value => @user.name, :required => true %>
     can<em>not</em> modify later.
   </p>
   <p>
-    <%= f.label :display_name %>
-    <%= f.text_field :display_name, :value => @user.display_name, :required => true %>
+    <%= f.text_field_block :display_name, :value => @user.display_name, :required => true %>
     can modify later.
   </p>
   <% fields_for @user.authentications.first do |authentication| %>
