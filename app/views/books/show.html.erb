@@ -1,7 +1,7 @@
+<iframe src="/components/bibi/bib/i/?book=<%= File.basename(@book.epub.current_path) %>" width="90%" height="90%"></iframe>
 <ul>
   <li><%= link_to 'Upload', url(:books, :new) %></li>
   <li><%= link_to 'Download', :href => h(File.basename(@book.epub.current_path)) %></li>
   <li>Embed into your blog!
   <%= input_tag :text, :value => embedding_tag(@book), :readonly => true, :class => 'embedding-iframe-tag', :onclick => 'this.select();' %></li>
 </ul>
-<iframe src="/components/bibi/bib/i/?book=<%= File.basename(@book.epub.current_path) %>" width="90%" height="90%"></iframe>
