@@ -27,7 +27,7 @@ Bibid::App.controllers :users do
 
   get :new do
     unless session[:auth]
-      redirect '/sessions/login'
+      redirect url(:sessions, :new)
     end
     @user = User.new(session[:auth].slice(:name, :display_name))
     @user.authentications.build session[:auth].slice(:provider, :uid)
