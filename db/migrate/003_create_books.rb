@@ -3,7 +3,7 @@ class CreateBooks < ActiveRecord::Migration
     create_table :books do |t|
       t.integer :user_id, :null => false
       t.string :title
-      t.string :epub
+      t.string :epub, :null => false
       t.timestamps
     end
 
