@@ -1,8 +1,5 @@
-<%= partial 'books/upload_form' %>
-
-<article id="book">
-  <p>Embed into your blog!
-    <input type="text" readonly onclick="this.select();" class="embedding-iframe-tag" id="embedding-iframe-tag"></p>
-  <iframe width="90%" height="90%"></iframe>
-  <p><a id="download-link">Download</a></p>
-</article>
+<ul>
+<% books.each do |book| %>
+  <li><%= link_to book.try(:title) || 'Unknown title', url(:books, :show, :id => book.id) %></li>
+<% end %>
+</ul>
