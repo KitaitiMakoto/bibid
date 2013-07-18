@@ -47,4 +47,17 @@ Bibid::App.controllers :books do
       halt 404
     end
   end
+
+  delete :destroy, :map => '/books/:id', :require_sign_in => true do
+    if @book = Book.find_by_id(params[:id])
+      if current_user == @book.user
+        @book.destroy
+        redirect url(:users, :show, :name => current_user.name)
+      else
+        halt 403
+      end
+    else
+      halt 404
+    end
+  end
 end

@@ -1,5 +1,15 @@
 <ul>
 <% books.each do |book| %>
-  <li><%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %> - <%= link_to book.user.display_name, url(:users, :show, :name => book.user.name) %></li>
+  <li>
+    <%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %>
+    - <%= link_to book.user.display_name, url(:users, :show, :name => book.user.name) %>
+    <% if current_user == book.user %>
+      <% form_for book, url(:books, :destroy, :id => book.id) do |f| %>
+        <%= hidden_form_method_field 'delete' %>
+        <p><%= f.error_messages %></p>
+        <%= f.submit 'Delete' %>
+      <% end %>
+    <% end %>
+  </li>
 <% end %>
 </ul>

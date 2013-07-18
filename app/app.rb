@@ -75,6 +75,10 @@ module Bibid
       render 'errors/404'
     end
 
+    error 403 do
+      '403 Forbidden'
+    end
+
     # error 505 do
     #   render 'errors/505'
     # end
