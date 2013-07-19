@@ -21,7 +21,7 @@ nav li, nav li form {
 <nav>
   <ul>
   <% if current_user %>
-    <li><%= render_partial('books/upload_form') %></li>
+    <li><%= partial('books/upload_form') %></li>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %></li>
     <li>
       <% form_tag url(:sessions, :destroy) do %>
