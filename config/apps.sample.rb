@@ -32,15 +32,13 @@ Padrino.configure_apps do
   set :protection, true
   set :protect_from_csrf, true
   set :total_file_size_limit, 20.megabytes
+  set :epub_uploader_salt, raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
 end
 
 TWITTER_CONSUMER_KEY = raise 'Twitter consumer key here'
 TWITTER_CONSUMER_SECRET = raise 'Twitter consumer secret here'
 FACEBOOK_APP_ID = raise 'Facebook App ID here'
 FACEBOOK_APP_SECRET = raise 'Facebook App secret here'
-
-raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
-EpubUploader.salt = 'Determine random letters and write here'
 
 # Mounts the core application for this project
 Padrino.mount('Bibid::App', :app_file => Padrino.root('app/app.rb')).to('/')

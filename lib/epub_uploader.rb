@@ -1,10 +1,6 @@
 class EpubUploader < CarrierWave::Uploader::Base
   EXTENSION = '.epub'
 
-  class << self
-    attr_accessor :salt
-  end
-
   storage :file
 
   def filename
@@ -20,6 +16,6 @@ class EpubUploader < CarrierWave::Uploader::Base
   end
 
   def salt
-    self.class.salt
+    Bibid::App.settings.epub_uploader_salt
   end
 end
