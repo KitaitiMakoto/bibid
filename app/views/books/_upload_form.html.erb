@@ -1,4 +1,4 @@
-<% form_tag url(:books, :create), :enctype => 'multipart/form-data', :id => 'upload-form' do %>
-  <label>Upload<%= file_field_tag :epub, :required => true %></label>
-  <%= submit_tag %>
+<% form_tag url(:books, :create), :enctype => 'multipart/form-data', :class => 'upload-form' do %>
+  <%= file_field_tag :epub, :required => true %>
+  <%= submit_tag 'Upload' %>
 <% end %>
