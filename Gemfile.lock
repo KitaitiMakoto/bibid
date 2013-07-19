@@ -196,6 +196,8 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
     test-unit (2.5.5)
+    test-unit-notify (1.0.1)
+      test-unit (>= 2.4.9)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -242,4 +244,5 @@ DEPENDENCIES
   shoulda
   sqlite3
   test-unit
+  test-unit-notify
   therubyracer
