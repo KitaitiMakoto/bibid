@@ -1,7 +1,7 @@
 <h2><%= link_to @book.title.presence || 'Unknown title', url(:books, :show, :id => @book.id) %></h2>
 
 <p>Embed into your blog!<br>
-  <textarea readonly class="embedding-iframe-tag" onclick="this.select();" style="width: 70%;"><%= embedding_tag(@book) %></textarea>
+  <textarea readonly class="embedding-iframe-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
 </p>
 <%= embedding_tag(@book) %>
 <ul>
