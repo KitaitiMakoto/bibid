@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
-      t.string :name
+      t.string :name, :null => false
       t.string :display_name, :null => false
       t.timestamps
     end
