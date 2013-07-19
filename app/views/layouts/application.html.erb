@@ -16,6 +16,10 @@ nav li, nav li form {
   display: inline;
 }
 </style>
+
+<p class="flash-success"><%= flash_tag :success, :class => 'success' %></p>
+<p class="flash-error"><%= flash_tag :error, :class => 'error' %></p>
+
 <h1><%= link_to @title, '/' %></h1>
 
 <nav>

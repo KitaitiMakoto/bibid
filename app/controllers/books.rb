@@ -29,7 +29,7 @@ Bibid::App.controllers :books do
     @book = Book.new(params[:book])
     @book.title = EPUB::Parser.parse(@book.epub.current_path).title rescue File.basename(@book.epub.filename, '.*')
     if current_user.books << @book
-      redirect url(:books, :show, :id => @book.id)
+      redirect url(:books, :show, :id => @book.id), :success => 'Successfully book uploaded'
     else
       render 'books/new'
     end
@@ -47,7 +47,7 @@ Bibid::App.controllers :books do
     if @book = Book.find_by_id(params[:id])
       if current_user == @book.user
         @book.destroy
-        redirect url(:users, :show, :name => current_user.name)
+        redirect url(:users, :show, :name => current_user.name), :success => 'Successfully book deleted'
       else
         halt 403
       end

@@ -31,10 +31,10 @@ Bibid::App.controllers :sessions do
     authentication = Authentication.find_by_provider_and_uid(auth.provider, auth.uid)
     if authentication
       session[:user_id] = authentication.user.id
-      redirect url(:users, :show, :name => current_user.name)
+      redirect url(:users, :show, :name => current_user.name), :success => 'Successfully signed in'
     elsif current_user
       current_user.authentications.create provider: auth.provider, uid: auth.uid
-      redirect url(:users, :show, :name => current_user.name)
+      redirect url(:users, :show, :name => current_user.name), :success => 'Successfully new authentication service added'
     else
       session[:auth] = {
         :provider     => auth.provider,
@@ -42,12 +42,12 @@ Bibid::App.controllers :sessions do
         :name         => Authentication.name_from(auth),
         :display_name => Authentication.display_name_from(auth)
       }
-      redirect url(:users, :new)
+      redirect url(:users, :new), 'Successfully account created'
     end
   end
 
   delete :destroy, :map => '/session', :require_sign_in => true do
     session.clear
-    redirect '/'
+    redirect '/', :success => 'Successfully signed out'
   end
 end
