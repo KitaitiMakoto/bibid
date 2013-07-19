@@ -27,8 +27,7 @@
 #
 Padrino.configure_apps do
   enable :sessions
-  raise "Configure session_secret such like '01b730daf02343fb470231c6a1f4db8e8c0b755e48c5b2fb2659c65065f69011'"
-  set :session_secret, 'Determine session secret and write here'
+  set :session_secret, raise "Configure session_secret such like '01b730daf02343fb470231c6a1f4db8e8c0b755e48c5b2fb2659c65065f69011'"
   set :protection, true
   set :protect_from_csrf, true
   set :total_file_size_limit, 20.megabytes
