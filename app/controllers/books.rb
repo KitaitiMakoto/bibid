@@ -26,13 +26,12 @@ Bibid::App.controllers :books do
   end
   
   post :create, :map => '/books', :require_sign_in => true do
-    book = Book.new
-    book.epub = params[:epub]
-    book.title = EPUB::Parser.parse(book.epub.current_path).title rescue File.basename(params[:epub][:filename], '.*')
-    if current_user.books << book
-      redirect url(:books, :show, :id => book.id)
+    @book = Book.new(params[:book])
+    @book.title = EPUB::Parser.parse(@book.epub.current_path).title rescue File.basename(@book.epub.filename, '.*')
+    if current_user.books << @book
+      redirect url(:books, :show, :id => @book.id)
     else
-      redirect url(:books, :new)
+      render 'books/new'
     end
   end
 
