@@ -25,10 +25,6 @@ Bibid::App.controllers :books do
     render 'books/index'
   end
   
-  get :new, :require_sign_in => true do
-    render 'books/new'
-  end
-
   post :create, :map => '/books', :require_sign_in => true do
     book = Book.new
     book.epub = params[:epub]
