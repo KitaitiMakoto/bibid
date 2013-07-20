@@ -48,6 +48,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
+gem 'rack-zip', :github => 'KitaitiMakoto/rack-zip', :require => 'rack/zip'
 gem 'epub-parser', :require => 'epub/parser'
 
 gem 'mina'
