@@ -21,6 +21,9 @@
 #   Padrino.mount('AppName', :app_file => 'path/to/file', :app_class => 'BlogApp').to('/')
 #
 
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 ##
 # Setup global project settings for your apps. These settings are inherited by every subapp. You can
 # override these settings in the subapps as needed.
