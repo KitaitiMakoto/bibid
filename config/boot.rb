@@ -45,7 +45,8 @@ Padrino.after_load do
   Foreigner.load
 end
 
-Dotenv.load ".env.#{PADRINO_ENV}"
+Dotenv.load! ".env.#{ENV['RACK_ENV']}"
+
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
 
 Padrino.load!
