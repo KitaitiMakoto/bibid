@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/rack-zip.git
-  revision: 6aca0f271e8cff475f68d18d44baa4f1e5913923
+  revision: 7d69a7d2ffe68cd7498174f710d23629ff98ba68
   specs:
     rack-zip (0.0.1)
       rack
