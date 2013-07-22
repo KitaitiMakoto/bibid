@@ -43,4 +43,8 @@ ActiveRecord::Schema.define(:version => 3) do
 
   add_index "users", ["name"], :name => "index_users_on_name"
 
+  add_foreign_key "authentications", "users", :name => "authentications_user_id_fk", :dependent => :delete
+
+  add_foreign_key "books", "users", :name => "books_user_id_fk", :dependent => :delete
+
 end

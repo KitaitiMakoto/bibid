@@ -48,6 +48,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.6)
+    dotenv (0.8.0)
     dropbox-sdk (1.6.1)
       json
     enumerabler (1.0.0)
@@ -231,6 +232,7 @@ DEPENDENCIES
   carrierwave-aws
   carrierwave-google_drive
   coffee-script
+  dotenv
   dropbox-sdk
   epub-parser
   erubis (~> 2.7.0)

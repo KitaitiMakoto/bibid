@@ -12,3 +12,5 @@ app/assets/components/*
 public/components/**/*
 public/uploads/**/*
 config/apps.rb
+.env.development
+.env.test

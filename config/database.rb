@@ -13,21 +13,38 @@
 #     :socket    => '/tmp/mysql.sock'
 #   }
 #
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
+
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'bibid_development.db')
+  :adapter  => 'postgresql',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1],
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host,
+  :port     => postgres.port
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'bibid_production.db')
+  :adapter  => 'postgres',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1],
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host,
+  :port     => postgres.port
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'bibid_test.db')
+  :adapter  => 'postgres',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1],
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host,
+  :port     => postgres.port
 
 }
 
