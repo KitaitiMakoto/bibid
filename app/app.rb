@@ -14,7 +14,7 @@ module Bibid
       provider :facebook, Bibid::App.settings.facebook_app_id, Bibid::App.facebook_app_secret, :scope => 'user_about_me'
     end
 
-    %w[stylesheets javascripts components].each do |type|
+    %w[stylesheets javascripts].each do |type|
       sprockets url: type,
                 root:  Padrino.root('app'),
                 paths: [type]
