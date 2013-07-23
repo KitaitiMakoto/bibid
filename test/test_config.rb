@@ -21,3 +21,11 @@ class Test::Unit::TestCase
     @app ||= Padrino.application
   end
 end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+  :provider => 'twitter',
+  :uid      => '123456',
+  :nickname => 'bibi',
+  :name     => 'BiB/i'
+})
