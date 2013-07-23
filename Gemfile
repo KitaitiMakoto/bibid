@@ -55,10 +55,6 @@ gem 'epub-parser', :require => 'epub/parser'
 
 gem 'mina'
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
 group :test do
   gem 'test-unit', :require => 'test/unit'
   gem 'test-unit-notify', :require => 'test/unit/notify'
