@@ -1,6 +1,7 @@
 <%- @title = "BiB/i'd" -%>
 <!DOCTYPE html>
 <title><%= @title %></title>
+<link rel="stylesheets" type="text/css" href="/components/bootstrap/css/bootstrap.min.css">
 <%= stylesheet_link_tag 'application' %>
 
 <p class="flash-success"><%= flash_tag :success, :class => 'success' %></p>
@@ -28,4 +29,5 @@
 <%= yield %>
 
 <script src="/javascripts/jquery.js" type="text/javascript"></script>
+<script src="/components/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/javascripts/application.js" type="text/javascript"></script>

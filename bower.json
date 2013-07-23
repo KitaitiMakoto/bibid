@@ -2,6 +2,6 @@
   "name": "bibid",
   "dependencies": {
     "bibi": "git://github.com/satorumurmur/bibi",
-    "bootstrap": "~ 2"
+    "bootstrap": "http://twitter.github.io/bootstrap/assets/bootstrap.zip"
   }
 }
