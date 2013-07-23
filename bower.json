@@ -1,6 +1,7 @@
 {
   "name": "bibid",
   "dependencies": {
-    "bibi": "git://github.com/satorumurmur/bibi"
+    "bibi": "git://github.com/satorumurmur/bibi",
+    "bootstrap": "~ 2"
   }
 }
