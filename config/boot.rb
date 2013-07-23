@@ -47,6 +47,18 @@ end
 
 Dotenv.load! ".env.#{ENV['RACK_ENV']}"
 
+# Restore behavior changed by padrino-sprockets
+# TODO: Stop to use padrino-sprockets
+module Padrino::Sprockets::Helpers::AssetTagHelpers
+  def asset_folder_name(kind)
+    case kind
+    when :css then 'stylesheets'
+    when :js  then 'javascripts'
+    else kind.to_s
+    end
+  end
+end
+
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
 
 Padrino.load!
