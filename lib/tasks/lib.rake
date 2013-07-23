@@ -4,6 +4,12 @@ task :lib => 'lib:default'
 namespace :lib do
   task :default => %w[gem:default bower:default]
 
+  desc 'Update RubyGems'
+  task :gem => 'gem:update'
+
+  desc 'Update bower packages'
+  task :bower => 'bower:update'
+
   namespace :gem do
     task :default => :update
 
