@@ -27,7 +27,7 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter  => 'postgres',
+  :adapter  => 'postgresql',
   :encoding => 'utf8',
   :database => postgres.path[1..-1],
   :username => postgres.user,
@@ -38,7 +38,7 @@ ActiveRecord::Base.configurations[:production] = {
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter  => 'postgres',
+  :adapter  => 'postgresql',
   :encoding => 'utf8',
   :database => postgres.path[1..-1],
   :username => postgres.user,
