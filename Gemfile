@@ -57,6 +57,8 @@ gem 'mina'
 
 group :test do
   gem 'test-unit', :require => 'test/unit'
+  gem 'test-unit-rr', :require => 'test/unit/rr'
+  gem 'test-unit-capybara', :require => 'test/unit/capybara'
   gem 'test-unit-notify', :require => 'test/unit/notify'
   gem 'shoulda'
   gem 'rack-test', :require => 'rack/test'
