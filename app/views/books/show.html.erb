@@ -1,7 +1,7 @@
 <h2><%= link_to @book.title.presence || 'Unknown title', url(:books, :show, :id => @book.id) %></h2>
 <h3 class="user-name text-right"><%= link_to @book.user.display_name, url(:users, :show, name: @book.user.name) %></h3>
 
-<p>Embed into your blog!<br>
+<p><label for="embedding-tag">Embed into your blog!</label><br>
   <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
 </p>
 <%= embedding_tag(@book) %>
