@@ -9,7 +9,7 @@
 
 <h1><%= link_to @title, '/' %></h1>
 
-<nav>
+<nav class="text-right">
   <ul>
   <% if current_user %>
     <li><%= partial('books/upload_form') %></li>
