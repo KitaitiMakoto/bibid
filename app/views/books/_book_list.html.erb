@@ -1,4 +1,4 @@
-<ul>
+<ul class="book-list">
 <% books.each do |book| %>
   <li>
     <%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %>
