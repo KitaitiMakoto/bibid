@@ -4,8 +4,8 @@
 <link rel="stylesheet" type="text/css" href="/components/bootstrap/css/bootstrap.min.css">
 <%= stylesheet_link_tag 'application' %>
 
-<p class="flash-success"><%= flash_tag :success, :class => 'success' %></p>
-<p class="flash-error"><%= flash_tag :error, :class => 'error' %></p>
+<%= flash_tag :success, :class => 'text-success' %>
+<%= flash_tag :error, :class => 'text-error' %>
 
 <h1><%= link_to @title, '/' %></h1>
 
