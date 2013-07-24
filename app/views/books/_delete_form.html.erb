@@ -1,0 +1,5 @@
+<% form_for book, url(:books, :destroy, :id => book.id) do |f| %>
+  <%= hidden_form_method_field 'delete' %>
+  <p><%= f.error_messages %></p>
+  <%= f.submit 'Delete' %>
+<% end %>
