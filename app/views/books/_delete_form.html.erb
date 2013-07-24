@@ -1,4 +1,4 @@
-<% form_for book, url(:books, :destroy, :id => book.id) do |f| %>
+<% form_for book, url(:books, :destroy, :id => book.id), :'data-confirm' => 'Are you sure you want to delete this book?' do |f| %>
   <%= hidden_form_method_field 'delete' %>
   <%= f.submit 'Delete' %>
   <% if f.error_messages.present? %><p><%= f.error_messages %></p><% end %>
