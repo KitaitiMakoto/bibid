@@ -1,4 +1,5 @@
 <h2><%= link_to @book.title.presence || 'Unknown title', url(:books, :show, :id => @book.id) %></h2>
+<h3 class="user-name text-right"><%= link_to @book.user.display_name, url(:users, :show, name: @book.user.name) %></h3>
 
 <p>Embed into your blog!<br>
   <textarea readonly class="embedding-iframe-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
