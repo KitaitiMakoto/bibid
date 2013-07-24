@@ -2,7 +2,7 @@
 <h3 class="user-name text-right"><%= link_to @book.user.display_name, url(:users, :show, name: @book.user.name) %></h3>
 
 <p>Embed into your blog!<br>
-  <textarea readonly id="embedding-iframe-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
+  <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
 </p>
 <%= embedding_tag(@book) %>
 <ul>
