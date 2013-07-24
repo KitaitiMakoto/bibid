@@ -84,7 +84,7 @@ module Bibid
     # end
 
     get '/' do
-      @books = Book.all
+      @books = Book.order('created_at DESC').limit(12)
 
       render 'books/index'
     end

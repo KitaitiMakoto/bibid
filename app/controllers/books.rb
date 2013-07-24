@@ -20,11 +20,11 @@ Bibid::App.controllers :books do
   # end
 
   get :index, :map => '/books' do
-    @books = Book.all
+    @books = Book.order('created_at DESC')
 
     render 'books/index'
   end
-  
+
   post :create, :map => '/books', :require_sign_in => true do
     @book = Book.new(params[:book])
     @book.title = EPUB::Parser.parse(@book.epub.current_path).title rescue File.basename(@book.epub.filename, '.*')
