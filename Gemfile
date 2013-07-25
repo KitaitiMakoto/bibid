@@ -54,6 +54,7 @@ gem 'rack-zip', :github => 'KitaitiMakoto/rack-zip', :require => 'rack/zip'
 gem 'epub-parser', :require => 'epub/parser'
 
 gem 'mina'
+gem 'triglav-client', :require => 'triglav/client'
 
 group :test do
   gem 'test-unit', :require => 'test/unit'

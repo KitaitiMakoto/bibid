@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/rack-zip.git
-  revision: 7d69a7d2ffe68cd7498174f710d23629ff98ba68
+  revision: 4083b874b8b4e9f33395ad6c935eaefd30689686
   specs:
     rack-zip (0.0.1)
       rack
@@ -222,6 +222,7 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    triglav-client (0.0.7)
     tzinfo (0.3.37)
     url_mount (0.2.1)
       rack
@@ -265,3 +266,4 @@ DEPENDENCIES
   test-unit-notify
   test-unit-rr
   therubyracer
+  triglav-client
