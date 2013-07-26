@@ -5,6 +5,7 @@ ja:
   sign_out_success: サインアウトしました
   authentication_add_success: 認証元を追加しました
   account_create_success: アカウントを作成しました
+  user_name_max_length: 最大 32 文字です。
   user_name_available_charactors: が使用可能です。
   user_name_cannot_modify: 後から変更できません。
   user_display_name_can_modify: 後で変更できます。

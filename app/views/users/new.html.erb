@@ -1,7 +1,8 @@
 <% form_for @user, url(:users, :create) do |f| %>
   <p><%= f.error_messages %></p>
   <p>
-    <%= f.text_field_block :name, :value => @user.name, :required => true, :pattern => '^[\w\-]+$' %>
+    <%= f.text_field_block :name, :value => @user.name %>
+    <%= t('user_name_max_length') %>
     "A-Za-z0-9_-" <%= t('user_name_available_charactors') %>
     <em><%= t('user_name_cannot_modify') %></em>
   </p>

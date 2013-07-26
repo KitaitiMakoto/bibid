@@ -48,10 +48,12 @@ Bibid::App.controllers :users do
   post :create, :map => '/users' do
     @user = User.new(params[:user].slice('name', 'display_name'))
     @user.authentications.build(params[:authentication])
-    @user.save!
-    session[:user_id] = @user.id
-
-    redirect url(:users, :show, :name => @user.name)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect url(:users, :show, :name => @user.name)
+    else
+      render 'users/new'
+    end
   end
 
   put :update, :map => '/users/:name' do
