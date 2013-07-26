@@ -16,12 +16,12 @@
     <li>
       <% form_tag url(:sessions, :destroy) do %>
         <%= hidden_form_method_field 'delete' %>
-        <%= submit_tag 'sign out' %>
+        <%= submit_tag t('sign_out') %>
       <% end %>
     </li>
     <li class="upload-form"><%= partial('books/upload_form') %></li>
   <% else %>
-    <li><%= link_to 'sign in', url(:sessions, :new) %></li>
+    <li><%= link_to t('sign_in'), url(:sessions, :new) %></li>
   <% end %>
   </ul>
 </nav>

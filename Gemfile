@@ -38,6 +38,7 @@ gem 'activerecord', '~> 3', :require => 'active_record'
 gem 'pg'
 gem 'foreigner'
 
+gem 'http_accept_language', '2.0.0.pre'
 gem 'padrino-sprockets', :require => 'padrino/sprockets'
 gem 'coffee-script'
 gem 'padrino-assets'

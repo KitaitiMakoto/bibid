@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/rack-zip.git
-  revision: 4083b874b8b4e9f33395ad6c935eaefd30689686
+  revision: 0e7eff1ddf3879e45c0bb3ce22e4e699b585c911
   specs:
     rack-zip (0.0.1)
       rack
@@ -63,8 +63,8 @@ GEM
     excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
     fog (1.14.0)
@@ -82,6 +82,7 @@ GEM
     formatador (0.2.4)
     hashie (2.0.5)
     hike (1.2.3)
+    http_accept_language (2.0.0.pre)
     http_parser.rb (0.5.3)
     http_router (0.11.0)
       rack (>= 1.0.0)
@@ -246,6 +247,7 @@ DEPENDENCIES
   erubis (~> 2.7.0)
   fog
   foreigner
+  http_accept_language (= 2.0.0.pre)
   less
   mina
   omniauth

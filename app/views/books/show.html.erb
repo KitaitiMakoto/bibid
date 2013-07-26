@@ -1,16 +1,16 @@
 <article class="row-flued">
   <div class="book-heading">
-    <h2><%= link_to @book.title.presence || 'Unknown title', url(:books, :show, :id => @book.id) %></h2>
+    <h2><%= link_to @book.title.presence || t('unknown_title'), url(:books, :show, :id => @book.id) %></h2>
     <h3 class="user-name text-right"><%= link_to @book.user.display_name, url(:users, :show, name: @book.user.name) %></h3>
   </div>
 
   <div id="book-controls">
-    <p class="embedding-tag span8"><label for="embedding-tag">Embed into your blog!</label><br>
+    <p class="embedding-tag span8"><label for="embedding-tag"><%= t('encourage_embedding') %></label><br>
       <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
     </p>
     <ul id="book-controls" class="span2">
-      <li><%= link_to 'Download', :href => "/components/bibi/bib/bookshelf/#{@book.user.name}/#{File.basename(@book.epub.current_path)}", :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow' %></li>
-      <li><%= link_to 'Open book directly', :href => embedding_url(@book) %></li>
+      <li><%= link_to t('download'), :href => "/components/bibi/bib/bookshelf/#{@book.user.name}/#{File.basename(@book.epub.current_path)}", :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow' %></li>
+      <li><%= link_to t('open_book'), :href => embedding_url(@book) %></li>
       <% if current_user == @book.user %><li><%= partial 'books/delete_form', :locals => {:book => @book} %></li><% end %>
     </ul>
   </div>

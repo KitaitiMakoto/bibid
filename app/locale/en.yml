@@ -1,0 +1,12 @@
+en:
+  sign_in: sign in
+  sign_out: sign out
+  upload: Upload
+  download: Download
+  user_list: User list
+  books_of_whom: "'s books"
+  delete: delete
+  confirm_deletion: Are you sure you want to delete this book?
+  unknown_title: Unknown title
+  encorage_embedding: Embed into your blog!
+  open_book: Open book directly

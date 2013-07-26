@@ -1,6 +1,7 @@
 module Bibid
   class App < Padrino::Application
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
+    use HttpAcceptLanguage::Middleware
     register LessInitializer
     register Padrino::Rendering
     register Padrino::Mailer
@@ -67,6 +68,10 @@ module Bibid
     #     disable :asset_stamp # no asset timestamping for dev
     #   end
     #
+
+    before do
+      I18n.locale = request.env.http_accept_language.compatible_language_from(['en', 'ja'])
+    end
 
     ##
     # You can manage errors like:
