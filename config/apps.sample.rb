@@ -33,6 +33,7 @@ Padrino.configure_apps do
   set :session_secret, raise "Configure session_secret such like '01b730daf02343fb470231c6a1f4db8e8c0b755e48c5b2fb2659c65065f69011'"
   set :protection, true
   set :protect_from_csrf, true
+  set :avalable_languages, ['en', 'ja']
   set :total_file_size_limit, 20.megabytes
   set :epub_uploader_salt, raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
   set :twitter_consumer_key, raise 'Twitter consumer key here'
