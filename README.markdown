@@ -21,3 +21,7 @@ Development
    `$ bundle exec rackup config.ru`
 
 [bibi]: http://sarasa.la/bib/i/
+
+License
+-------
+BiB/i'd is released under the GPLv3. See th file "gpl-3.0.txt" for the term.
