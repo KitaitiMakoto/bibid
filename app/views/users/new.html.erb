@@ -2,16 +2,16 @@
   <p><%= f.error_messages %></p>
   <p>
     <%= f.text_field_block :name, :value => @user.name, :required => true, :pattern => '^[\w\-]+$' %>
-    "A-Za-z0-9_-" are avaiable.
-    can<em>not</em> modify later.
+    "A-Za-z0-9_-" <%= t('user_name_available_charactors') %>
+    <em><%= t('user_name_cannot_modify') %></em>
   </p>
   <p>
     <%= f.text_field_block :display_name, :value => @user.display_name, :required => true %>
-    can modify later.
+    <%= t('user_display_name_can_modify') %>
   </p>
   <% fields_for @user.authentications.first do |authentication| %>
     <%= authentication.hidden_field :provider, :value => @user.authentications.first.provider %>
     <%= authentication.hidden_field :uid, :value => @user.authentications.first.uid %>
   <% end %>
-  <%= f.submit %>
+  <%= f.submit t('account_create') %>
 <% end %>

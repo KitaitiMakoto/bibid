@@ -1,6 +1,14 @@
 en:
   sign_in: sign in
   sign_out: sign out
+  sign_in_success: Successfully signed in
+  sign_out_success: Successfully signed out
+  authentication_add_success: Successfully new authentication service added
+  account_create_success: Successfully account created
+  user_name_available_charactors: are avaiable.
+  user_name_cannot_modify: cannot modify later.
+  user_display_name_can_modify: can modify later.
+  account_create: Create account
   upload: Upload
   download: Download
   user_list: User list
