@@ -1,0 +1,11 @@
+ja:
+  models:
+    authentication:
+      name: Authentication
+      attributes:
+        id: Id
+        user_id: User
+        provider: Provider
+        uid: Uid
+        created_at: Created at
+        updated_at: Updated at

@@ -1,0 +1,10 @@
+ja:
+  models:
+    user:
+      name: User
+      attributes:
+        id: Id
+        name: Name
+        display_name: Display name
+        created_at: Created at
+        updated_at: Updated at

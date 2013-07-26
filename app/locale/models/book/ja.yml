@@ -1,0 +1,11 @@
+ja:
+  models:
+    book:
+      name: Book
+      attributes:
+        id: Id
+        user_id: User
+        title: Title
+        epub: Epub
+        created_at: Created at
+        updated_at: Updated at
