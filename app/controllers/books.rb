@@ -20,7 +20,7 @@ Bibid::App.controllers :books do
   # end
 
   get :index, :map => '/books' do
-    @books = Book.order('created_at DESC')
+    @books = Book.order('created_at DESC').page(params[:page])
 
     render 'books/index'
   end

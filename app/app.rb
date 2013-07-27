@@ -6,6 +6,7 @@ module Bibid
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Kaminari::Helpers::SinatraHelpers
 
     OmniAuth.config.on_failure do |env|
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure

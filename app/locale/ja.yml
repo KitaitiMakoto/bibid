@@ -27,3 +27,10 @@ ja:
   errors:
     messages:
       extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."

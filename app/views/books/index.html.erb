@@ -1,2 +1,3 @@
 <%= link_to t('user_list'), url(:users, :index) %>
 <%= partial 'books/book_list', :locals => {:books => @books} %>
+<%= paginate @books %>

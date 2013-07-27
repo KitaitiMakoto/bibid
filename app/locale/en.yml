@@ -24,3 +24,10 @@ en:
   book_delete_success: Successfully book deleted
   title_recent_books: Recent books
   root_and_more: And more...
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
