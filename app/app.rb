@@ -95,7 +95,7 @@ module Bibid
     end
 
     get '/auth/failure' do
-      "Authentication with #{h params['strategy']} failed: #{h params['message']}"
+      I18n.t('authentication_error', :strategy => params['strategy'], :message => params['message'])
     end
   end
 end

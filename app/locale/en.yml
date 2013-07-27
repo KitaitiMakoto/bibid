@@ -10,6 +10,7 @@ en:
   user_name_cannot_modify: cannot modify later.
   user_display_name_can_modify: can modify later.
   account_create: Create account
+  authentication_error: "Authentication with %{strategy} failed: %{message}"
   upload: Upload
   download: Download
   user_list: User list

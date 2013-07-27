@@ -10,6 +10,7 @@ ja:
   user_name_cannot_modify: 後から変更できません。
   user_display_name_can_modify: 後で変更できます。
   account_create: アカウント作成
+  authentication_error: "%{strategy} での認証に失敗しました：%{message}"
   upload: アップロード
   download: ダウンロード
   user_list: ユーザー一覧
