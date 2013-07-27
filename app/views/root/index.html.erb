@@ -1,0 +1,4 @@
+<%= link_to t('user_list'), url(:users, :index) %>
+<h2><%= t('title_recent_books') %></h2>
+<%= partial 'books/book_list', :locals => {:books => @books} %>
+<p class="text-right"><%= link_to t('root_and_more'), url(:books, :index) %></p>

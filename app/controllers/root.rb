@@ -19,5 +19,9 @@ Bibid::App.controllers :root do
   #   'Hello world!'
   # end
   
+  get :index, :map => '/' do
+    @books = Book.order('created_at DESC').limit(12)
 
+    render 'root/index'
+  end
 end

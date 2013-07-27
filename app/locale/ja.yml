@@ -22,6 +22,8 @@ ja:
   open_book: 本を開く
   book_upload_success: 本をアップロードしました
   book_delete_success: 本を削除しました
+  title_recent_books: 最近登録された本
+  root_and_more: もっと見る
   errors:
     messages:
       extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}

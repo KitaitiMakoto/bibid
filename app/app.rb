@@ -88,12 +88,6 @@ module Bibid
     #   render 'errors/505'
     # end
 
-    get '/' do
-      @books = Book.order('created_at DESC').limit(12)
-
-      render 'books/index'
-    end
-
     get '/auth/failure' do
       I18n.t('authentication_error', :strategy => params['strategy'], :message => params['message'])
     end
