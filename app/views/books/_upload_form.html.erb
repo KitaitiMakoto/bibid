@@ -1,4 +1,4 @@
 <% form_for @book || Book.new, url(:books, :create), :enctype => 'multipart/form-data' do |f| %>
-  <%= f.file_field :epub, :required => true %>
+  <%= f.file_field_block :epub, :required => true, :caption => t('upload') %>
   <%= f.submit t('upload') %>
 <% end %>

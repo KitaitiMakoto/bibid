@@ -9,7 +9,7 @@
 
 <h1><%= link_to @title, '/' %></h1>
 
-<nav class="text-right">
+<nav class="global">
   <ul>
   <% if current_user %>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %></li>
