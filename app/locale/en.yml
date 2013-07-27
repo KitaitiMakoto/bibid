@@ -18,5 +18,7 @@ en:
   delete: delete
   confirm_deletion: Are you sure you want to delete this book?
   unknown_title: Unknown title
-  encorage_embedding: Embed into your blog!
+  encourage_embedding: Embed into your blog!
   open_book: Open book directly
+  book_upload_success: Successfully book uploaded
+  book_delete_success: Successfully book deleted

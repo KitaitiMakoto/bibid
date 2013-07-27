@@ -20,6 +20,8 @@ ja:
   unknown_title: タイトル不明
   encourage_embedding: ブログに埋め込んでみましょう！
   open_book: 本を開く
+  book_upload_success: 本をアップロードしました
+  book_delete_success: 本を削除しました
   errors:
     messages:
       extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}
