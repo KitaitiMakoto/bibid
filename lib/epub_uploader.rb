@@ -8,7 +8,11 @@ class EpubUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    File.join('components/bibi/bib/bookshelf', model.user.name)
+    File.join(super, model.user.name)
+  end
+
+  def cache_dir
+    File.join(Padrino.root, 'tmp', 'uploads')
   end
 
   def extension_white_list

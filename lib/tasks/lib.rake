@@ -27,14 +27,21 @@ namespace :lib do
   namespace :bower do
     task :default => :update
 
+    desc "Symlink BiB/i's bookshelf directory"
+    task :symlink do
+      sh 'ln -sf ../../../uploads public/components/bibi/bib/bookshelf'
+    end
+
     desc 'Install bower packages'
     task :install do
       sh 'bower install'
+      Rake::Task['lib:bower:symlink'].invoke
     end
 
     desc 'Update bower packages'
     task :update do
       sh 'bower update'
+      Rake::Task['lib:bower:symlink'].invoke
     end
   end
 end
