@@ -1,13 +1,13 @@
 <% form_for @user, url(:users, :create) do |f| %>
   <p><%= f.error_messages %></p>
+  <%= f.text_field_block :name, :value => @user.name %>
   <p>
-    <%= f.text_field_block :name, :value => @user.name %>
     <%= t('user_name_max_length', :length => 32) %>
     "A-Za-z0-9_-" <%= t('user_name_available_charactors') %>
     <em><%= t('user_name_cannot_modify') %></em>
   </p>
-  <p>
     <%= f.text_field_block :display_name, :value => @user.display_name, :required => true %>
+  <p>
     <%= t('user_display_name_can_modify') %>
   </p>
   <% fields_for @user.authentications.first do |authentication| %>
