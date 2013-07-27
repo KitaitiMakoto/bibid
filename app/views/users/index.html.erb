@@ -3,3 +3,5 @@
     <li><%= link_to user.display_name, url(:users, :show, :name => user.name) %></li>
   </ul>
 <% end %>
+
+<%= paginate @users %>
