@@ -1,15 +1,15 @@
-<% form_for @user, url(:users, :create) do |f| %>
-  <p><%= f.error_messages %></p>
-  <%= f.text_field_block :name, :value => @user.name %>
-  <p>
-    <%= t('user_name_max_length', :length => 32) %>
-    "A-Za-z0-9_-" <%= t('user_name_available_charactors') %>
-    <em><%= t('user_name_cannot_modify') %></em>
-  </p>
-    <%= f.text_field_block :display_name, :value => @user.display_name, :required => true %>
-  <p>
-    <%= t('user_display_name_can_modify') %>
-  </p>
+<% form_for @user, url(:users, :create), :class => 'users_create' do |f| %>
+  <% if f.error_messages.present? %><p><%= f.error_messages %></p><% end %>
+  <%= f.text_field_block :name, :value => @user.name, :required => true, :pattern => '[A-Za-z0-9_\-]+', :maxlength => 24 %>
+  <ul class="validation-notices">
+    <li><%= t('user_name_max_length', :length => 24) %></li>
+    <li>"A-Za-z0-9_-" <%= t('user_name_available_charactors') %></li>
+    <li><em><%= t('user_name_cannot_modify') %></em></li>
+  </ul>
+  <%= f.text_field_block :display_name, :value => @user.display_name, :required => true %>
+  <ul class="validation-notices">
+    <li><%= t('user_display_name_can_modify') %></li>
+  </ul>
   <% fields_for @user.authentications.first do |authentication| %>
     <%= authentication.hidden_field :provider, :value => @user.authentications.first.provider %>
     <%= authentication.hidden_field :uid, :value => @user.authentications.first.uid %>
