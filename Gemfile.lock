@@ -9,6 +9,16 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    actionpack (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.5)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.2.1)
     activemodel (3.2.14)
       activesupport (= 3.2.14)
       builder (~> 3.0.0)
@@ -65,9 +75,13 @@ GEM
       url_mount (~> 0.2.1)
     httpauth (0.2.0)
     i18n (0.6.4)
+    journey (1.0.4)
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     less (2.3.2)
       commonjs (~> 0.2.6)
     libv8 (3.11.8.17)
@@ -141,7 +155,9 @@ GEM
       faye-websocket (>= 0.4.4, < 0.5.0)
       http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
-    rack (1.5.2)
+    rack (1.4.5)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-less (3.0.2)
       less (~> 2.0)
       rack (~> 1.0)
@@ -162,7 +178,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sprockets (2.10.0)
+    sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -205,6 +221,7 @@ DEPENDENCIES
   erubis (~> 2.7.0)
   foreigner
   http_accept_language (= 2.0.0.pre)
+  kaminari (= 0.14.1)
   less
   mina
   omniauth
@@ -218,7 +235,7 @@ DEPENDENCIES
   rack-zip!
   rake
   shoulda
-  sprockets
+  sprockets (~> 2.2.1)
   test-unit
   test-unit-capybara
   test-unit-notify
