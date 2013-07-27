@@ -1,7 +1,7 @@
 ja:
   sign_in: サインイン
   sign_out: サインアウト
-  sign_in_with: 次のアカウントでサインイン
+  sign_in_with: 次のアカウントでサインイン/サインアップできます
   sign_in_success: サインインしました
   sign_out_success: サインアウトしました
   authentication_add_success: 認証元を追加しました

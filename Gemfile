@@ -46,6 +46,7 @@ gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 gem 'rack-zip', :github => 'KitaitiMakoto/rack-zip', :require => 'rack/zip'
 gem 'epub-parser', :require => 'epub/parser'

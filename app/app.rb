@@ -12,6 +12,7 @@ module Bibid
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure
     end
     use OmniAuth::Builder do
+      provider :google_oauth2, Bibid::App.settings.google_oauth2_client_id, Bibid::App.settings.google_oauth2_client_secret
       provider :twitter, Bibid::App.settings.twitter_consumer_key, Bibid::App.settings.twitter_consumer_secret
       provider :facebook, Bibid::App.settings.facebook_app_id, Bibid::App.facebook_app_secret, :scope => 'user_about_me'
     end

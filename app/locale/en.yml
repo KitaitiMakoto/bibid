@@ -1,7 +1,7 @@
 en:
   sign_in: sign in
   sign_out: sign out
-  sign_in_with: Sign in with
+  sign_in_with: Sign in/sign up with
   sign_in_success: Successfully signed in
   sign_out_success: Successfully signed out
   authentication_add_success: Successfully new authentication service added
