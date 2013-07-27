@@ -4,4 +4,6 @@
 <h2><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
 
 <h3><%= @user.display_name %><%= t('books_of_whom') %></h3>
-<%= partial 'books/book_list', :locals => {:books => @user.books} %>
+<%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
+
+<%= paginate @user.books.page(params[:page]) %>
