@@ -37,10 +37,12 @@ ActiveRecord::Schema.define(:version => 3) do
   create_table "users", :force => true do |t|
     t.string   "name",         :null => false
     t.string   "display_name", :null => false
+    t.string   "lower_name",   :null => false
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
 
+  add_index "users", ["lower_name"], :name => "index_users_on_lower_name"
   add_index "users", ["name"], :name => "index_users_on_name"
 
   add_foreign_key "authentications", "users", :name => "authentications_user_id_fk", :dependent => :delete
