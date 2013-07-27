@@ -6,19 +6,13 @@ module Bibid
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
-    register Padrino::Sprockets
+
     OmniAuth.config.on_failure do |env|
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure
     end
     use OmniAuth::Builder do
       provider :twitter, Bibid::App.settings.twitter_consumer_key, Bibid::App.settings.twitter_consumer_secret
       provider :facebook, Bibid::App.settings.facebook_app_id, Bibid::App.facebook_app_secret, :scope => 'user_about_me'
-    end
-
-    %w[stylesheets javascripts].each do |type|
-      sprockets url: type,
-                root:  Padrino.root('app'),
-                paths: [type]
     end
 
     class << self
