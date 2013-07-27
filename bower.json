@@ -2,6 +2,8 @@
   "name": "bibid",
   "dependencies": {
     "bibi": "git://github.com/satorumurmur/bibi",
-    "bootstrap": "http://twitter.github.io/bootstrap/assets/bootstrap.zip"
+    "bootstrap": "http://twitter.github.io/bootstrap/assets/bootstrap.zip",
+    "twitter-icon": "https://abs.twimg.com/a/1374745069/images/resources/twitter-bird-light-bgs.png",
+    "facebook-icon": "http://4fe5a2cf5ede8f9d9dfa-32b9f49f48b2c22be12b40ee79e2acc4.r80.cf1.rackcdn.com/assets/logos_and_badges_f_logo/online/png/51627e7683fd66.55594540/logos_and_badges_f_logo-online-png.zip"
   }
 }

@@ -1,4 +1,5 @@
-<ul>
-  <li><%= link_to 'Twitter', '/auth/twitter' %></li>
-  <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+<p><%= t('sign_in_with') %></p>
+<ul class="sign-in">
+  <li><%= link_to image_tag('/components/twitter-icon/index.png', :alt => 'Twitter'), '/auth/twitter' %></li>
+  <li><%= link_to image_tag('/components/facebook-icon/FB-f-Logo__blue_144.png', :alt => 'Facebook'), '/auth/facebook' %></li>
 </ul>
