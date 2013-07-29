@@ -15,6 +15,6 @@ require File.expand_path("../config/boot.rb", __FILE__)
 end
 
 run Rack::Cascade.new([
-  Rack::Zip.new('public', extensions: %w[.epub]),
-  Padrino.application
+  Padrino.application,
+  Rack::Zip.new('public', extensions: %w[.epub])
 ])
