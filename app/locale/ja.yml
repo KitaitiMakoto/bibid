@@ -23,7 +23,7 @@ ja:
   delete: 削除
   confirm_deletion: この本を削除してよろしいですか？
   unknown_title: タイトル不明
-  encourage_embedding: ブログに埋め込んでみましょう！
+  encourage_embedding: この本をブログに埋め込んでみましょう！
   open_book: 本を開く
   book_upload_success: 本をアップロードしました
   book_delete_success: 本を削除しました
