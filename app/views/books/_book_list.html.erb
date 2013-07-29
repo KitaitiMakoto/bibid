@@ -1,7 +1,7 @@
 <ul class="book-list">
 <% books.each do |book| %>
   <li>
-    <%= link_to book.title.presence || 'Unknown title', url(:books, :show, :id => book.id) %>
+    <%= link_to book.title.presence || t('books.unknown_title'), url(:books, :show, :id => book.id) %>
     - <%= link_to book.user.display_name, url(:users, :show, :name => book.user.name) %>
     <% if current_user == book.user %>
       <%= partial 'books/delete_form', :locals => {:book => book} %>

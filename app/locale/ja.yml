@@ -1,36 +1,51 @@
 ja:
-  sign_in: サインイン
-  sign_out: サインアウト
-  sign_in_with: 次のアカウントでサインイン/サインアップできます
-  sign_in_success: サインインしました
-  sign_out_success: サインアウトしました
-  authentication_add_success: 認証元を追加しました
-  account_create_success: アカウントを作成しました
-  user_name_max_length: 最大 %{length} 文字です。
-  user_name_available_charactors: が使用可能です。
-  user_name_cannot_modify: 後から変更できません。
-  user_display_name_can_modify: 後で変更できます。
-  account_create: アカウント作成
+  helpers:
+    edit: 編集
+    close: 閉じる
+    update: 更新
+    destroy: 削除
+    upload: アップロード
+  notice:
+    sessions:
+      create: サインインしました
+      destroy: サインアウトしました
+    users:
+      create: アカウントを作成しました
+    authentications:
+      create: 認証元 %{provider} を追加しました
+    books:
+      create: 本をアップロードしました
+      destroy: 本を削除しました
+  layout:
+    nav:
+      sign_in: サインイン
+      sign_out: サインアウト
+      user_list: ユーザー一覧
+  root:
+    recent_books: 最近登録された本
+    more_books: もっと見る
+  users:
+    name:
+      max_length: 最大 %{length} 文字です。
+      available_charactors: が使用可能です。
+      cannot_modify: 後から変更できません。
+    display_name:
+      can_modify: 後で変更できます。
+    books: "%{user}の本"
+    submit:
+      create: アカウント作成
+  books:
+    unknown_title: タイトル不明
+    download: ダウンロード
+    open: 本を開く
+    encourage_embedding: この本をブログに埋め込んでみましょう！
+    confirm_deletion: この本を削除してよろしいですか？
+  sessions:
+    sign_in_with: 次のアカウントでサインイン/サインアップできます
   authentication_error: "%{strategy} での認証に失敗しました：%{message}"
-  update: 更新
-  user_edit_opener: 編集
-  user_edit_closer: 閉じる
   user_update_success: 更新しました
   user_destroy_success: 削除しました
   confirm_user_deletion: このアカウントを削除してよろしいですか？
-  upload: アップロード
-  download: ダウンロード
-  user_list: ユーザー一覧
-  books_of_whom: の本
-  delete: 削除
-  confirm_deletion: この本を削除してよろしいですか？
-  unknown_title: タイトル不明
-  encourage_embedding: この本をブログに埋め込んでみましょう！
-  open_book: 本を開く
-  book_upload_success: 本をアップロードしました
-  book_delete_success: 本を削除しました
-  title_recent_books: 最近登録された本
-  root_and_more: もっと見る
   errors:
     messages:
       extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}

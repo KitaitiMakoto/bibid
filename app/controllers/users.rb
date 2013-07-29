@@ -50,7 +50,7 @@ Bibid::App.controllers :users do
     @user.authentications.build(params[:authentication])
     if @user.save
       session[:user_id] = @user.id
-      redirect url(:users, :show, :name => @user.name)
+      redirect url(:users, :show, :name => @user.name), :success => I18n.t('notice.users.create')
     else
       render 'users/new'
     end
