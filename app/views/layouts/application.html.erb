@@ -11,6 +11,9 @@
 
 <nav class="global">
   <ul>
+    <li><%= link_to t('layout.nav.user_list'), url(:users, :index) %></li>
+  </ul>
+  <ul>
   <% if current_user %>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %></li>
     <li>
