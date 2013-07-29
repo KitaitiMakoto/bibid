@@ -12,6 +12,10 @@ ja:
   user_display_name_can_modify: 後で変更できます。
   account_create: アカウント作成
   authentication_error: "%{strategy} での認証に失敗しました：%{message}"
+  update: 更新
+  user_edit_opener: 編集
+  user_edit_closer: 閉じる
+  user_update_success: 更新しました
   upload: アップロード
   download: ダウンロード
   user_list: ユーザー一覧

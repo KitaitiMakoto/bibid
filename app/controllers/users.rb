@@ -56,8 +56,14 @@ Bibid::App.controllers :users do
     end
   end
 
-  put :update, :map => '/users/:name' do
-    
+  put :update, :map => '/users/:name', :require_sign_in => true do
+    return halt 403 unless current_user.name == params[:name]
+    @user = User.find_by_name(params[:name])
+    if @user.update_attributes params[:user].slice('display_name')
+      redirect url(:users, :show, :name => params[:name]), :success => I18n.t('user_update_success')
+    else
+      render 'users/show'
+    end
   end
 
   delete :destroy, :map => '/users/:name' do

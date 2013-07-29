@@ -12,6 +12,10 @@ en:
   user_display_name_can_modify: can modify later.
   account_create: Create account
   authentication_error: "Authentication with %{strategy} failed: %{message}"
+  update: Update
+  user_edit_opener: Edit
+  user_edit_closer: Close
+  user_update_success: Successfully updated
   upload: Upload
   download: Download
   user_list: User list
