@@ -7,8 +7,16 @@ body {
   margin: 1em;
 }
 
-nav li, nav li form {
-  display: inline;
+nav {
+  ul {
+    display: inline;
+    &.resources li {
+      margin: 0 0.5em;
+    }
+  }
+  li, li form {
+    display: inline;
+  }
 }
 
 nav.global {

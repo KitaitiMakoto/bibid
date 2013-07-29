@@ -24,6 +24,7 @@ ja:
       sign_in: サインイン
       sign_out: サインアウト
       users: ユーザー一覧
+      books: 登録された本
   root:
     recent_books: 最近登録された本
     more_books: もっと見る

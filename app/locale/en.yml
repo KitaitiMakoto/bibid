@@ -24,6 +24,7 @@ en:
       sign_in: sign in
       sign_out: Sign out
       users: User list
+      books: Uploaded books
   root:
     recent_books: Recent books
     more_books: And more...
