@@ -85,7 +85,7 @@ module Bibid
     # end
 
     get '/auth/failure' do
-      I18n.t('authentication_error', :strategy => params['strategy'], :message => params['message'])
+      redirect url(:sessions, :new), :error => I18n.t('notice.sessions.error', :strategy => params['strategy'], :message => params['message'])
     end
   end
 end

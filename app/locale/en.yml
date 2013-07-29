@@ -9,6 +9,7 @@ en:
     sessions:
       create: Successfully signed in
       destroy: Successfully signed out
+      error: "Authentication with %{strategy} failed: %{message}"
     users:
       create: Successfully account created
     authentications:
@@ -42,7 +43,6 @@ en:
     confirm_deletion: Are you sure you want to delete this book?
   sessions:
     sign_in_with: Sign in/sign up with
-  authentication_error: "Authentication with %{strategy} failed: %{message}"
   user_update_success: Successfully updated
   user_destroy_success: Successfully deleted
   confirm_user_deletion: Are you sure you want to delete this account?

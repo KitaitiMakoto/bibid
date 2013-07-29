@@ -9,6 +9,7 @@ ja:
     sessions:
       create: サインインしました
       destroy: サインアウトしました
+      error: "%{strategy} での認証に失敗しました：%{message}"
     users:
       create: アカウントを作成しました
     authentications:
@@ -42,7 +43,6 @@ ja:
     confirm_deletion: この本を削除してよろしいですか？
   sessions:
     sign_in_with: 次のアカウントでサインイン/サインアップできます
-  authentication_error: "%{strategy} での認証に失敗しました：%{message}"
   user_update_success: 更新しました
   user_destroy_success: 削除しました
   confirm_user_deletion: このアカウントを削除してよろしいですか？
