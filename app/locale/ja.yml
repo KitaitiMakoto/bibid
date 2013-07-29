@@ -23,7 +23,7 @@ ja:
     nav:
       sign_in: サインイン
       sign_out: サインアウト
-      user_list: ユーザー一覧
+      users: ユーザー一覧
   root:
     recent_books: 最近登録された本
     more_books: もっと見る

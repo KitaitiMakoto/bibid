@@ -23,7 +23,7 @@ en:
     nav:
       sign_in: sign in
       sign_out: Sign out
-      user_list: User list
+      users: User list
   root:
     recent_books: Recent books
     more_books: And more...
