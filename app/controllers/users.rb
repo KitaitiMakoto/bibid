@@ -66,8 +66,14 @@ Bibid::App.controllers :users do
     end
   end
 
-  delete :destroy, :map => '/users/:name' do
-    
+  delete :destroy, :map => '/users/:name', :require_sign_in => true do
+    return halt 403 unless current_user.name == params[:name]
+    @user = User.find_by_name(params[:name])
+    if @user.destroy
+      redirect url(:root, :index), :success => I18n.t('user_destroy_success')
+    else
+      render 'users/show'
+    end
   end
 
 end

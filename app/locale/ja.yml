@@ -16,6 +16,8 @@ ja:
   user_edit_opener: 編集
   user_edit_closer: 閉じる
   user_update_success: 更新しました
+  user_destroy_success: 削除しました
+  confirm_user_deletion: このアカウントを削除してよろしいですか？
   upload: アップロード
   download: ダウンロード
   user_list: ユーザー一覧

@@ -13,6 +13,11 @@
       <%= f.submit t('update') %>
     <% end %>
   </div>
+  <% form_for @user, url(:users, :destroy, :name => @user.name), :'data-confirm' => t('confirm_user_deletion') do |f| %>
+    <%= f.error_messages %>
+    <%= hidden_form_method_field 'delete' %>
+    <%= f.submit t('delete') %>
+  <% end %>
 <% end %>
 
 <h3><%= @user.display_name %><%= t('books_of_whom') %></h3>

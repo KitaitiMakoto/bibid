@@ -16,6 +16,8 @@ en:
   user_edit_opener: Edit
   user_edit_closer: Close
   user_update_success: Successfully updated
+  user_destroy_success: Successfully deleted
+  confirm_user_deletion: Are you sure you want to delete this account?
   upload: Upload
   download: Download
   user_list: User list
