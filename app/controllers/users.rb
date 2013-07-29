@@ -60,7 +60,7 @@ Bibid::App.controllers :users do
     return halt 403 unless current_user.name == params[:name]
     @user = User.find_by_name(params[:name])
     if @user.update_attributes params[:user].slice('display_name')
-      redirect url(:users, :show, :name => params[:name]), :success => I18n.t('user_update_success')
+      redirect url(:users, :show, :name => params[:name]), :success => I18n.t('notice.users.update')
     else
       render 'users/show'
     end
@@ -70,7 +70,7 @@ Bibid::App.controllers :users do
     return halt 403 unless current_user.name == params[:name]
     @user = User.find_by_name(params[:name])
     if @user.destroy
-      redirect url(:root, :index), :success => I18n.t('user_destroy_success')
+      redirect url(:root, :index), :success => I18n.t('notice.users.destroy')
     else
       render 'users/show'
     end

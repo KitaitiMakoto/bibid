@@ -12,6 +12,8 @@ ja:
       error: "%{strategy} での認証に失敗しました：%{message}"
     users:
       create: アカウントを作成しました
+      update: 更新しました
+      destroy: 削除しました
     authentications:
       create: 認証元 %{provider} を追加しました
     books:
@@ -35,6 +37,7 @@ ja:
     books: "%{user}の本"
     submit:
       create: アカウント作成
+    confirm_deletion: このアカウントを削除してよろしいですか？
   books:
     unknown_title: タイトル不明
     download: ダウンロード
@@ -43,9 +46,6 @@ ja:
     confirm_deletion: この本を削除してよろしいですか？
   sessions:
     sign_in_with: 次のアカウントでサインイン/サインアップできます
-  user_update_success: 更新しました
-  user_destroy_success: 削除しました
-  confirm_user_deletion: このアカウントを削除してよろしいですか？
   errors:
     messages:
       extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}
