@@ -36,6 +36,8 @@ Padrino.configure_apps do
   set :avalable_languages, ['en', 'ja']
   set :total_file_size_limit, 20.megabytes
   set :epub_uploader_salt, raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
+  set :google_oauth2_client_id, raise 'Google OAuth client id here'
+  set :google_oauth2_client_secret, raise 'Google OAuth client secret here'
   set :twitter_consumer_key, raise 'Twitter consumer key here'
   set :twitter_consumer_secret, raise 'Twitter consumer secret here'
   set :facebook_app_id, raise 'Facebook App ID here'
