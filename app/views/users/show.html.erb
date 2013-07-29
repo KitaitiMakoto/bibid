@@ -1,23 +1,25 @@
 <nav>
   <%= link_to t('user_list'), url(:users, :index) %>
 </nav>
-<h2><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
+<h2 class="user-heading"><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
 <% if @user == current_user %>
   <div class="edit-area">
     <a class="opener"><%= t('user_edit_opener') %></a>
     <% form_for @user, url(:users, :update, :name => @user.name) do |f| %>
-      <a class="closer"><%= t('user_edit_closer') %></a>
       <%= f.error_messages %>
       <%= hidden_form_method_field 'put' %>
       <%= f.text_field_block 'display_name', :required => true %>
       <%= f.submit t('update') %>
+      <a class="closer"><%= t('user_edit_closer') %></a>
     <% end %>
   </div>
-  <% form_for @user, url(:users, :destroy, :name => @user.name), :'data-confirm' => t('confirm_user_deletion') do |f| %>
-    <%= f.error_messages %>
-    <%= hidden_form_method_field 'delete' %>
-    <%= f.submit t('delete') %>
-  <% end %>
+  <div class="delete-area">
+    <% form_for @user, url(:users, :destroy, :name => @user.name), :'data-confirm' => t('confirm_user_deletion') do |f| %>
+      <%= f.error_messages %>
+      <%= hidden_form_method_field 'delete' %>
+      <%= f.submit t('delete') %>
+    <% end %>
+  </div>
 <% end %>
 
 <h3><%= @user.display_name %><%= t('books_of_whom') %></h3>
