@@ -35,7 +35,7 @@ ja:
       cannot_modify: 後から変更できません。
     display_name:
       can_modify: 後で変更できます。
-    books: "%{user}の本"
+    books: の本
     submit:
       create: アカウント作成
     confirm_deletion: このアカウントを削除してよろしいですか？

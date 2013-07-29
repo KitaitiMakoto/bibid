@@ -1,8 +1,8 @@
-<h2 class="user-heading"><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
+<h2 class="user-heading user-name"><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
 <% if @user == current_user %>
   <div class="edit-area">
     <a class="opener"><%= t('helpers.edit') %></a>
-    <% form_for @user, url(:users, :update, :name => @user.name) do |f| %>
+    <% form_for @user, url(:users, :update, :name => @user.name), :'data-name' => @user.name do |f| %>
       <%= f.error_messages %>
       <%= hidden_form_method_field 'put' %>
       <%= f.text_field_block 'display_name', :required => true %>
@@ -19,7 +19,7 @@
   </div>
 <% end %>
 
-<h3><%= t('users.books', :user => @user.display_name) %></h3>
+<h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
 <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
 
 <%= paginate @user.books.page(params[:page]) %>

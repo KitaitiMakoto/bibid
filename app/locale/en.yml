@@ -35,7 +35,7 @@ en:
       cannot_modify: cannot modify later.
     display_name:
       can_modify: can modify later.
-    books: "%{user}'s books"
+    books: "'s books"
     submit:
       create: Create account
     confirm_deletion: Are you sure you want to delete this account?

@@ -16,7 +16,7 @@
   </ul>
   <ul>
   <% if current_user %>
-    <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name) %></li>
+    <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name' %></li>
     <li>
       <% form_tag url(:sessions, :destroy) do %>
         <%= hidden_form_method_field 'delete' %>

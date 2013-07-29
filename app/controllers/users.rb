@@ -56,11 +56,20 @@ Bibid::App.controllers :users do
     end
   end
 
-  put :update, :map => '/users/:name', :require_sign_in => true do
+  put :update, :map => '/users/:name', :require_sign_in => true, :provides => %i[html json] do
     return halt 403 unless current_user.name == params[:name]
     @user = User.find_by_name(params[:name])
-    if @user.update_attributes params[:user].slice('display_name')
-      redirect url(:users, :show, :name => params[:name]), :success => I18n.t('notice.users.update')
+    user_param =
+      request.media_type == 'application/json' ?
+        JSON.parse(request.body.read) :
+        params[:user]
+    if @user.update_attributes user_param.slice('display_name')
+      if request.xhr?
+        response.status = 204
+        ''
+      else
+        redirect url(:users, :show, :name => params[:name]), :success => I18n.t('notice.users.update')
+      end
     else
       render 'users/show'
     end
