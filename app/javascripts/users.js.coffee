@@ -1,10 +1,13 @@
-$('.edit-area a.opener').on 'click', (event) ->
-  $trigger = $(event.target)
-  $trigger.hide()
-  $('form', $trigger.closest('.edit-area')).show()
-$('.edit-area a.closer').on 'click', (event) ->
-  $trigger = $(event.target)
-  $trigger.closest('form').hide()
-  $('a.opener', $trigger.closest('.edit-area')).show()
-unless $('.field-errors').length == 0
-  $('.edit-area a.opener').click()
+UserView = Backbone.View.extend
+  el: '.edit-area',
+  initialize: ->
+    @$opener = @$('.opener')
+    @$form = @$('form')
+    unless @$('.field-errors').length == 0
+      @toggleEditArea()
+  events:
+    'click .opener, .closer': 'toggleEditArea'
+  toggleEditArea: (event) ->
+    @$opener.toggle()
+    @$form.toggle()
+view = new UserView
