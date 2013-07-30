@@ -36,10 +36,14 @@ Bibid::App.controllers :users do
     render 'users/new'
   end
 
-  get :show, :map => '/users/:name' do
+  get :show, :map => '/users/:name', :provides => %i[html opds] do
     @user = User.find_by_name(params[:name])
     if @user
-      render 'users/show'
+      if content_type == :opds
+        opds_from_user(@user).to_s
+      else
+        render 'users/show'
+      end
     else
       halt 404
     end

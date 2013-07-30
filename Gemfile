@@ -22,7 +22,7 @@ gem 'erubis', '~> 2.7.0'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.11.2'
+gem 'padrino', '0.11.3'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
@@ -49,7 +49,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'rack-zip', :github => 'KitaitiMakoto/rack-zip', :require => 'rack/zip'
-gem 'epub-parser', :require => 'epub/parser'
+gem 'epub-parser', :github => 'KitaitiMakoto/epub-parser', :require => 'epub/parser'
+gem 'rss-opds', :require => 'rss/opds'
 
 gem 'mina'
 gem 'triglav-client', :require => 'triglav/client'

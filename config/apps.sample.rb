@@ -42,6 +42,8 @@ Padrino.configure_apps do
   set :twitter_consumer_secret, raise 'Twitter consumer secret here'
   set :facebook_app_id, raise 'Facebook App ID here'
   set :facebook_app_secret, raise 'Facebook App secret here'
+
+  mime_type :opds, RSS::OPDS::TYPES['navigation']
 end
 
 # Mounts the core application for this project
