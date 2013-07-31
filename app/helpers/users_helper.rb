@@ -22,7 +22,7 @@ Bibid::App.helpers do
         link.type = RSS::OPDS::TYPES['acquisition']
       end
       books = user.books.order(:created_at).all
-      maker.channel.updated = books.last.created_at
+      maker.channel.updated = books.empty? ? user.updated_at : books.last.created_at
       books.each do |book|
         begin
           epub = EPUB::Parser.parse(book.epub.current_path)
