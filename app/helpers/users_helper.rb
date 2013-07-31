@@ -6,10 +6,6 @@ Bibid::App.helpers do
   end
 
   def opds_from_user(user)
-    feed_from_user(user)
-  end
-
-  def feed_from_user(user)
     RSS::Maker.make('atom') {|maker|
       maker.channel.about = absolute_url(:users, :show, :name => user.name)
       maker.channel.title = "#{user.display_name}'s books"
