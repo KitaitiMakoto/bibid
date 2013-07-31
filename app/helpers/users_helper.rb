@@ -15,6 +15,16 @@ Bibid::App.helpers do
       maker.channel.title = "#{user.display_name}'s books"
       maker.channel.author = user.display_name
       maker.channel.generator = "BiB/i'd"
+      maker.channel.links.new_link do |link|
+        link.href = absolute_url(:users, :show, :name => user.name, :format => :opds)
+        link.rel = RSS::OPDS::RELATIONS['self']
+        link.type = RSS::OPDS::TYPES['acquisition']
+      end
+      maker.channel.links.new_link do |link|
+        link.href = absolute_url(:users, :show, :name => user.name, :format => :opds)
+        link.rel = RSS::OPDS::RELATIONS['start']
+        link.type = RSS::OPDS::TYPES['acquisition']
+      end
       books = user.books.order(:created_at).all
       maker.channel.updated = books.last.created_at
       books.each do |book|
