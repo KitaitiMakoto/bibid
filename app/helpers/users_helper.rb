@@ -7,10 +7,8 @@ Bibid::App.helpers do
 
   def opds_from_user(user)
     RSS::Maker.make('atom') {|maker|
-      maker.channel.about = absolute_url(:users, :show, :name => user.name)
-      maker.channel.title = "#{user.display_name}'s books"
-      maker.channel.author = user.display_name
-      maker.channel.generator = "BiB/i'd"
+      books = user.books.order(:created_at).all
+      make_feed_base maker, user, books
       maker.channel.links.new_link do |link|
         link.href = absolute_url(:users, :show, :name => user.name, :format => :opds)
         link.rel = RSS::OPDS::RELATIONS['self']
@@ -21,21 +19,10 @@ Bibid::App.helpers do
         link.rel = RSS::OPDS::RELATIONS['start']
         link.type = RSS::OPDS::TYPES['acquisition']
       end
-      books = user.books.order(:created_at).all
-      maker.channel.updated = books.empty? ? user.updated_at : books.last.created_at
       books.each do |book|
         begin
-          epub = EPUB::Parser.parse(book.epub.current_path)
           maker.items.new_item do |entry|
-            uid = epub.unique_identifier
-            if uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
-              entry.id = "urn:isbn:#{h uid.content}"
-            else
-              entry.id = uid.content
-            end
-            entry.title = epub.title
-            entry.summary = epub.description
-            entry.updated = book.updated_at
+            make_entry_base entry, book
             entry.links.new_link do |link|
               link.rel = RSS::OPDS::RELATIONS['acquisition']
               link.href = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
@@ -49,5 +36,45 @@ Bibid::App.helpers do
         end
       end
     }
+  end
+
+  def rss_from_user(user)
+    RSS::Maker.make('2.0') {|maker|
+      books = user.books.order(:created_at).all
+      make_feed_base maker, user, books
+      maker.channel.link = absolute_url(:users, :show, :name => user.name)
+      books.each do |book|
+        maker.items.new_item do |item|
+          make_entry_base item, book
+          item.enclosure.url = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
+          item.enclosure.length = book.epub.size
+          item.enclosure.type = 'document/x-epub'
+        end
+      end
+    }
+  end
+
+  private
+
+  def make_feed_base(maker, user, books)
+    maker.channel.about = absolute_url(:users, :show, :name => user.name)
+    maker.channel.title = "#{user.display_name}'s books"
+    maker.channel.description = maker.channel.title
+    maker.channel.author = user.display_name
+    maker.channel.generator = "BiB/i'd"
+    maker.channel.updated = books.empty? ? user.updated_at : books.last.created_at
+  end
+
+  def make_entry_base(entry, book)
+    epub = EPUB::Parser.parse(book.epub.current_path)
+    uid = epub.unique_identifier
+    if uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
+      entry.id = "urn:isbn:#{h uid.content}"
+    else
+      entry.id = uid.content
+    end
+    entry.title = epub.title
+    entry.summary = epub.description
+    entry.updated = book.updated_at
   end
 end

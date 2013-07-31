@@ -36,11 +36,14 @@ Bibid::App.controllers :users do
     render 'users/new'
   end
 
-  get :show, :map => '/users/:name', :provides => %i[html opds] do
+  get :show, :map => '/users/:name', :provides => %i[html opds rss] do
     @user = User.find_by_name(params[:name])
     if @user
-      if content_type == :opds
+      case content_type
+      when :opds
         opds_from_user(@user).to_s
+      when :rss
+        rss_from_user(@user).to_s
       else
         render 'users/show'
       end
