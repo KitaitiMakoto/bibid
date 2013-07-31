@@ -20,6 +20,7 @@
 <% end %>
 
 <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
+<p>OPDS: <%= link_to (url = absolute_url(:users, :show, :name => @user.name, :format => :opds)), url %></p>
 <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
 
 <%= paginate @user.books.page(params[:page]) %>
