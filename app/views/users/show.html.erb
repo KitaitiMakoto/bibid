@@ -6,15 +6,15 @@
       <%= f.error_messages %>
       <%= hidden_form_method_field 'put' %>
       <%= f.text_field_block 'display_name', :required => true %>
-      <a class="closer btn btn-primary"><%= t('helpers.close') %></a>
-      <%= f.submit t('helpers.update'), :class => 'btn btn->primary' %>
+      <a class="closer"><%= t('helpers.close') %></a>
+      <%= f.submit t('helpers.update') %>
     <% end %>
   </div>
   <div class="delete-area">
     <% form_for @user, url(:users, :destroy, :name => @user.name), :'data-confirm' => t('users.confirm_deletion') do |f| %>
       <%= f.error_messages %>
       <%= hidden_form_method_field 'delete' %>
-      <%= f.submit t('helpers.destroy'), :class => 'btn btn-danger' %>
+      <%= f.submit t('helpers.destroy') %>
     <% end %>
   </div>
 <% end %>
