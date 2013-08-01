@@ -10,7 +10,7 @@ Bibid::App.helpers do
   def bookshelf_url(book=nil)
     parts = [absolute_bibi_url, 'bookshelf']
     if book
-      parts << book.user.name << File.basename(book.epub.current_path)
+      parts << Rack::Utils.escape(book.user.name) << Rack::Utils.escape(File.basename(book.epub.current_path))
     end
     parts.join('/')
   end
