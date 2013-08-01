@@ -20,8 +20,8 @@
 <% end %>
 
 <div class="user-books">
-  <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
   <div class="col-7">
+    <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
     <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
 
     <%= paginate @user.books.page(params[:page]) %>
