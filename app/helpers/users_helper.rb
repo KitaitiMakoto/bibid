@@ -44,11 +44,17 @@ Bibid::App.helpers do
       make_feed_base maker, user, books
       maker.channel.link = absolute_url(:users, :show, :name => user.name)
       books.each do |book|
-        maker.items.new_item do |item|
-          make_entry_base item, book
-          item.enclosure.url = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
-          item.enclosure.length = book.epub.size
-          item.enclosure.type = 'document/x-epub'
+        begin
+          maker.items.new_item do |item|
+            make_entry_base item, book
+            item.enclosure.url = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
+            item.enclosure.length = book.epub.size
+            item.enclosure.type = 'document/x-epub'
+          end
+        rescue => error
+          logger.error error
+          logger.error error.backtrace.join("\n")
+          logger.error "Skip book id=#{book.id}"
         end
       end
     }
