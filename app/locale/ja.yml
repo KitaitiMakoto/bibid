@@ -37,6 +37,7 @@ ja:
       can_modify: 後で変更できます。
     books: の本
     book_feeds: フィード
+    podcasting: Podcast用
     submit:
       create: アカウント作成
     confirm_deletion: このアカウントを削除してよろしいですか？

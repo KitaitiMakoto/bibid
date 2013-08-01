@@ -1,6 +1,8 @@
 <p><%= t('sessions.sign_in_with') %></p>
 <ul class="sign-in">
-  <li><%= link_to image_tag('https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Short_base_44dp.png', :alt => 'Google+', :width => '106px'), '/auth/google_oauth2' %></li>
-  <li><%= link_to image_tag('/components/twitter-icon/index.png', :alt => 'Twitter', :width => '180px'), '/auth/twitter' %></li>
-  <li><%= link_to image_tag('/components/facebook-icon/FB-f-Logo__blue_100.png', :alt => 'Facebook', :width => '92px'), '/auth/facebook' %></li>
+  <% settings.omniauth_providers.each do |provider, *_| %>
+    <% if provider == :google_oauth2 %><li><%= link_to image_tag('https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Short_base_44dp.png', :alt => 'Google+', :width => '106px'), '/auth/google_oauth2' %></li><% end %>
+    <% if provider == :twitter %><li><%= link_to image_tag('/components/twitter-icon/index.png', :alt => 'Twitter', :width => '180px'), '/auth/twitter' %></li><% end %>
+    <% if provider == :facebookd %><li><%= link_to image_tag('/components/facebook-icon/FB-f-Logo__blue_100.png', :alt => 'Facebook', :width => '92px'), '/auth/facebook' %></li><% end %>
+  <% end %>
 </ul>
