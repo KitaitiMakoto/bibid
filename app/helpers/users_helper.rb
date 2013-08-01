@@ -69,7 +69,7 @@ Bibid::App.helpers do
     epub = EPUB::Parser.parse(book.epub.current_path)
     uid = epub.unique_identifier
     if uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
-      entry.id = "urn:isbn:#{h uid.content}"
+      entry.id = "urn:isbn:#{escape uid.content}"
     else
       entry.id = uid.content
     end
