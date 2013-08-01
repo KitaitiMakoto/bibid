@@ -34,7 +34,7 @@ UserFeedsView = Backbone.View.extend
     'click': 'toggleLinks'
   toggleLinks: (event) ->
     return if _.contains ['A', 'TEXTAREA'], $(event.target)[0].nodeName
-    $(@el).toggleClass 'shrinked'
+    $(@el).toggleClass 'contracted'
 
 new UserView
 new UserFeedsView
