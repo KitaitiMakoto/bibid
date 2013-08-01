@@ -1,6 +1,5 @@
 //= require_tree .
 
-
 @font-face {
   font-family: "LigatureSymbols";
   src: url("/components/ligature_symbols/LigatureSymbols-2.11.eot");
@@ -11,6 +10,27 @@
   src: url("/components/ligature_symbols/LigatureSymbols-2.11.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+[data-ligature-symbol]:after {
+  font-family: "LigatureSymbols";
+  content: attr(data-ligature-symbol);
+  margin-left: 2px;
+  -webkit-text-rendering: optimizeLegibility;
+     -moz-text-rendering: optimizeLegibility;
+      -ms-text-rendering: optimizeLegibility;
+       -o-text-rendering: optimizeLegibility;
+          text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+
+.btn {
+  margin: 1px 0;
+  padding: 4px 6px;
 }
 
 html, body {
@@ -37,6 +57,20 @@ nav.global {
   position: absolute;
   top: 1em;
   right: 1em;
+  form.sign-out-form input[type="submit"] {
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+}
+
+[download]:after {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .upload-form {
@@ -44,6 +78,7 @@ nav.global {
     display: inline;
     label {
       display: inline;
+      cursor: pointer;
     }
   }
   input[type="file"], input[type="submit"] {

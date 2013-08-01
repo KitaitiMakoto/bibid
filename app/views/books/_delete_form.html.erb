@@ -1,5 +1,5 @@
 <% form_for book, url(:books, :destroy, :id => book.id), :'data-confirm' => t('books.confirm_deletion') do |f| %>
   <%= hidden_form_method_field 'delete' %>
-  <%= f.submit t('helpers.destroy') %>
+  <%= f.submit t('helpers.destroy'), :class => 'btn btn-danger' %>
   <% if f.error_messages.present? %><p><%= f.error_messages %></p><% end %>
 <% end %>

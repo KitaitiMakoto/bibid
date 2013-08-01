@@ -18,9 +18,9 @@
   <% if current_user %>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name' %></li>
     <li>
-      <% form_tag url(:sessions, :destroy) do %>
+      <% form_tag url(:sessions, :destroy), :class => 'sign-out-form', :'data-ligature-symbol' => 'logout' do %>
         <%= hidden_form_method_field 'delete' %>
-        <%= submit_tag t('layout.nav.sign_out'), :class => 'btn' %>
+        <%= submit_tag t('layout.nav.sign_out') %>
       <% end %>
     </li>
     <li class="upload-form"><%= partial('books/upload_form') %></li>
