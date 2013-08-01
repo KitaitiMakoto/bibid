@@ -20,12 +20,12 @@
     <li>
       <% form_tag url(:sessions, :destroy) do %>
         <%= hidden_form_method_field 'delete' %>
-        <%= submit_tag t('layout.nav.sign_out'), :class => 'btn' %>
+        <%= submit_tag t('layout.nav.sign_out'), :class => 'btn btn-primary' %>
       <% end %>
     </li>
     <li class="upload-form"><%= partial('books/upload_form') %></li>
   <% else %>
-    <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new) %></li>
+    <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :class => 'btn btn-primary' %></li>
   <% end %>
   </ul>
 </nav>
