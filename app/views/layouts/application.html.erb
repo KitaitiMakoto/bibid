@@ -20,7 +20,7 @@
     <li>
       <% form_tag url(:sessions, :destroy) do %>
         <%= hidden_form_method_field 'delete' %>
-        <%= submit_tag t('layout.nav.sign_out') %>
+        <%= submit_tag t('layout.nav.sign_out'), :class => 'btn' %>
       <% end %>
     </li>
     <li class="upload-form"><%= partial('books/upload_form') %></li>
