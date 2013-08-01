@@ -28,4 +28,13 @@ UserView = Backbone.View.extend
     @$opener.toggle()
     @$form.toggle()
 
-view = new UserView
+UserFeedsView = Backbone.View.extend
+  el: '.feeds',
+  events:
+    'click h4, li': 'toggleLinks'
+  toggleLinks: (event) ->
+    return if _.contains ['A', 'TEXTAREA'], $(event.target)[0].nodeName
+    $(@el).toggleClass 'shrinked'
+
+new UserView
+new UserFeedsView

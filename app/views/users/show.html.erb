@@ -21,17 +21,17 @@
 
 <div class="user-books">
   <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
-  <div class="feeds">
-    <h4>Feed links</h4>
+  <div class="feeds shrinked">
+    <h4><%= t('users.book_feeds') %></h4>
     <ul>
       <li>
         <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
-        OPDS: <%= link_to opds_url, opds_url %>
+        OPDS <%= link_to opds_url, opds_url %>
         <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
       </li>
       <li>
         <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
-        RSS 2.0(for Podcasting): <%= link_to rss_url, rss_url %>
+        RSS 2.0(for Podcasting) <%= link_to rss_url, rss_url %>
         <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
       </li>
     </ul>

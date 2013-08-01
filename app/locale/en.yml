@@ -36,6 +36,7 @@ en:
     display_name:
       can_modify: can modify later.
     books: "'s books"
+    book_feeds: Feeds
     submit:
       create: Create account
     confirm_deletion: Are you sure you want to delete this account?
