@@ -30,9 +30,6 @@ div.delete-area {
 }
 
 .user-books {
-  h4 {
-    display: inline-block;
-  }
   .book-list {
     padding-left: 2em;
   }
@@ -40,6 +37,26 @@ div.delete-area {
     float: right;
     margin-top: -3em;
     cursor: pointer;
+    h4 {
+      font-family: "LigatureSymbols";
+      -webkit-text-rendering: optimizeLegibility;
+         -moz-text-rendering: optimizeLegibility;
+          -ms-text-rendering: optimizeLegibility;
+           -o-text-rendering: optimizeLegibility;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+         -moz-font-smoothing: antialiased;
+          -ms-font-smoothing: antialiased;
+           -o-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+    h4:before, h4:after {
+      margin: 0 0.2em;
+      vertical-align: top;
+    }
+    h4:after {
+      content: "arrowright";
+    }
     ul {
       padding-left: 1em;;
       list-style: none;
@@ -52,6 +69,16 @@ div.delete-area {
     }
     &.contracted {
       width: 20%;
+      color: gray;
+      &:hover {
+        color: black;
+      }
+      h4:before {
+        content: "arrowleft";
+      }
+      h4:after {
+        content: "";
+      }
       li {
         white-space: nowrap;
         overflow: scroll;
