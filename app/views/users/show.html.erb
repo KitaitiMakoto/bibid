@@ -20,13 +20,8 @@
 <% end %>
 
 <div class="user-books">
-  <div class="col-7">
-    <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
-    <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
-
-    <%= paginate @user.books.page(params[:page]) %>
-  </div>
-  <div class="feeds col-5">
+  <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
+  <div class="feeds">
     <h4>Feed links</h4>
     <ul>
       <li>
@@ -41,4 +36,7 @@
       </li>
     </ul>
   </div>
+  <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
+
+  <%= paginate @user.books.page(params[:page]) %>
 </div>
