@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/epub-parser.git
-  revision: 645bf1f847b61219d9f83ec61991e902ee498e0f
+  revision: 5f59e7a29eda03c769116e17db0f9c7d8d42c2d2
   specs:
     epub-parser (0.1.5)
       addressable (>= 2.3.5)

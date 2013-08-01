@@ -76,5 +76,6 @@ Bibid::App.helpers do
     entry.title = epub.title
     entry.summary = epub.description
     entry.updated = book.updated_at
+    entry.dc_language = epub.metadata.language
   end
 end
