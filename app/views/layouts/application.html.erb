@@ -7,7 +7,7 @@
 <%= flash_tag :success, :class => 'text-success' %>
 <%= flash_tag :error, :class => 'text-error' %>
 
-<h1><%= link_to @title, '/' %></h1>
+<h1><%= link_to @title, url(:root, :index) %></h1>
 
 <nav class="global">
   <ul class="resources">
