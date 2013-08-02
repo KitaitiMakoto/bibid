@@ -25,14 +25,14 @@
     <h4><%= t('users.book_feeds') %></h4>
     <ul>
       <li>
-        <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
-        OPDS <%= link_to opds_url, opds_url %>
-        <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
-      </li>
-      <li>
         <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
         RSS 2.0(<%= t('users.podcasting') %>) <%= link_to rss_url, rss_url %>
         <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
+      </li>
+      <li>
+        <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
+        OPDS <%= link_to opds_url, opds_url %>
+        <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
       </li>
     </ul>
   </div>
