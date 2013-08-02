@@ -1,12 +1,12 @@
 <h2 class="user-heading user-name"><%= link_to @user.display_name, url(:users, :show, :name => @user.name) %></h2>
 <% if @user == current_user %>
   <div class="edit-area">
-    <a class="opener"><%= t('helpers.edit') %></a>
+    <a class="opener" data-ligature-symbol="edit"><%= t('helpers.edit') %></a>
     <% form_for @user, url(:users, :update, :name => @user.name), :'data-name' => @user.name do |f| %>
       <%= f.error_messages %>
       <%= hidden_form_method_field 'put' %>
       <%= f.text_field_block 'display_name', :required => true %>
-      <a class="closer"><%= t('helpers.close') %></a>
+      <a class="closer" data-ligature-symbol="close"><%= t('helpers.close') %></a>
       <%= f.submit t('helpers.update') %>
     <% end %>
   </div>
