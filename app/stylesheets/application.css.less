@@ -1,5 +1,7 @@
 //= require_tree .
 
+@brand-primary: #428bca;
+
 @font-face {
   font-family: "LigatureSymbols";
   src: url("/components/ligature_symbols/LigatureSymbols-2.11.eot");
@@ -57,10 +59,27 @@ nav.global {
   position: absolute;
   top: 1em;
   right: 1em;
-  form.sign-out-form input[type="submit"] {
-    padding: 0;
-    background: transparent;
-    border: none;
+  form.sign-out-form {
+    input[type="submit"] {
+      color: @brand-primary;
+      padding: 0;
+      background: transparent;
+      border: none;
+      &:hover {
+        color: #2a6496;
+        text-decoration: underline;
+      }
+    }
+  }
+  form.upload-form {
+    label {
+      color: @brand-primary;
+      font-weight: normal;
+      &:hover {
+        color: #2a6496;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
