@@ -16,7 +16,7 @@
   </ul>
   <ul>
   <% if current_user %>
-    <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name' %></li>
+    <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name', :'data-ligature-symbol' => 'you' %></li>
     <li>
       <% form_tag url(:sessions, :destroy), :class => 'sign-out-form', :'data-ligature-symbol' => 'logout' do %>
         <%= hidden_form_method_field 'delete' %>
