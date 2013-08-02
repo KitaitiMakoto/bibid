@@ -40,6 +40,7 @@ ja:
     podcasting: Podcast用
     submit:
       create: アカウント作成
+    destroy: 退会
     confirm_deletion: このアカウントを削除してよろしいですか？
   books:
     unknown_title: タイトル不明

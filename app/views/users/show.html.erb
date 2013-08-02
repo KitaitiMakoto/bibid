@@ -14,7 +14,7 @@
     <% form_for @user, url(:users, :destroy, :name => @user.name), :'data-confirm' => t('users.confirm_deletion') do |f| %>
       <%= f.error_messages %>
       <%= hidden_form_method_field 'delete' %>
-      <%= f.submit t('helpers.destroy'), :class => 'btn btn-danger' %>
+      <%= f.submit t('users.destroy'), :class => 'btn btn-danger' %>
     <% end %>
   </div>
 <% end %>
