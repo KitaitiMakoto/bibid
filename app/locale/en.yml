@@ -21,7 +21,7 @@ en:
       destroy: Successfully book deleted
   help:
     rss: "Encourage your readers to register this feed to their podcast applications, including iTunes, and they can recieve notification and automatically download EPUB files when you post EPUB books to BiB/i'd."
-    opds: (to be prepared)
+    opds: (description to be prepared)
   layout:
     nav:
       sign_in: sign in
