@@ -45,13 +45,11 @@ end
 #
 Padrino.after_load do
   Foreigner.load
+  ActiveRecord::Base.send :include, Padrino::Helpers::NumberHelpers
 end
 
 Dotenv.load! ".env.#{ENV['RACK_ENV']}"
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
-class ActiveRecord::Base
-  include ActionView::Helpers::NumberHelper
-end
 
 Padrino.load!
