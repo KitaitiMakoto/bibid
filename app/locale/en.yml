@@ -20,7 +20,7 @@ en:
       create: Successfully book uploaded
       destroy: Successfully book deleted
   help:
-    rss: "By register this feed to your podcat application, including iTunes, you can receive notification when %{user} post books to BiB/i'd"
+    rss: "Encourage your readers to register this feed to their podcast applications, including iTunes, and they can recieve notification and automatically download EPUB files when you post EPUB books to BiB/i'd."
     opds: (to be prepared)
   layout:
     nav:

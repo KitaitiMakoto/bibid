@@ -20,7 +20,7 @@ ja:
       create: 本をアップロードしました
       destroy: 本を削除しました
   help:
-    rss: "このフィードをiTunes等Podcast用ソフトに登録しておくと、%{user}さんが新刊をBiB/i'dに登録した時に通知が届きます。"
+    rss: "読者に、iTunes等Podcast用アプリケーションでこのフィードを登録してもらってください。BiB/i'dでEPUBを登録した時に通知・ダウンロードが行われます。"
     opds: （準備中）
   layout:
     nav:

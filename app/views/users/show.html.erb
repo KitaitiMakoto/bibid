@@ -24,7 +24,7 @@
   <div class="feeds contracted">
     <h4><%= t('users.book_feeds') %></h4>
     <ul>
-      <li title="<%= t('help.rss', user: @user.display_name) %>" class="help">
+      <li title="<%= t('help.rss') %>" class="help">
         <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
         <span class="feed-type help" data-ligature-symbol="help">RSS 2.0(<%= t('users.podcasting') %>)</span> <%= link_to rss_url, rss_url %>
         <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
