@@ -24,14 +24,14 @@
   <div class="feeds contracted">
     <h4><%= t('users.book_feeds') %></h4>
     <ul>
-      <li>
+      <li title="<%= t('help.rss', user: @user.display_name) %>" class="help">
         <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
-        RSS 2.0(<%= t('users.podcasting') %>) <%= link_to rss_url, rss_url %>
+        <span class="feed-type help" data-ligature-symbol="help">RSS 2.0(<%= t('users.podcasting') %>)</span> <%= link_to rss_url, rss_url %>
         <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
       </li>
-      <li>
+      <li title="<%= t('help.opds') %>" class="help">
         <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
-        OPDS <%= link_to opds_url, opds_url %>
+        <span class="feed-type" data-ligature-symbol="help">OPDS</span> <%= link_to opds_url, opds_url %>
         <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
       </li>
     </ul>
