@@ -1,10 +1,8 @@
 class EpubUploader < CarrierWave::Uploader::Base
-  EXTENSION = '.epub'
-
   storage :file
 
   def filename
-    Digest::SHA1.hexdigest(salt + Time.now.to_s) + EXTENSION
+    Digest::SHA1.hexdigest(salt + Time.now.to_s) + '.epub'
   end
 
   def store_dir
