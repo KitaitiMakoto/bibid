@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
     self.lower_name = self.name.downcase
     logger.debug self.lower_name.inspect
   }
+
+  def current_file_size
+    store_dir_path = File.join(Padrino.root, 'public', books.first.epub.store_dir)
+    Dir["#{store_dir_path}/*"].reduce(0) {|total, epub| total + File.size(epub)}
+  end
 end

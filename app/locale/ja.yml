@@ -39,6 +39,7 @@ ja:
     display_name:
       can_modify: 後で変更できます。
     books: の本
+    current_file_size: ファイルサイズ総計
     book_feeds: フィード
     podcasting: Podcast用
     submit:

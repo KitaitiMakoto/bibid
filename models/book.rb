@@ -6,8 +6,7 @@ class Book < ActiveRecord::Base
   validate :epub, :validate_file_size, :on => :create
 
   def validate_file_size
-    store_dir_path = File.join(Padrino.root, 'public', epub.store_dir)
-    current_file_size = Dir["#{store_dir_path}/*"].reduce(0) {|total, epub| total + File.size(epub)}
+    current_file_size = user.current_file_size
     if current_file_size + epub.size > Bibid::App.total_file_size_limit
       error_message = I18n.translate('errors.over_total_file_size',
         current: number_to_human_size(current_file_size),

@@ -2,6 +2,7 @@
 <% books.each do |book| %>
   <li>
     <%= link_to book.title.presence || t('books.unknown_title'), url(:books, :show, :id => book.id) %>
+    - <%= number_to_human_size book.epub.size %>
     - <%= link_to book.user.display_name, url(:users, :show, :name => book.user.name) %>
     <% if current_user == book.user %>
       <%= partial 'books/delete_form', :locals => {:book => book} %>
