@@ -24,7 +24,7 @@ en:
     opds: (description to be prepared)
   layout:
     nav:
-      sign_in: sign in
+      sign_in: Sign in
       sign_out: Sign out
       users: User list
       books: Uploaded books
