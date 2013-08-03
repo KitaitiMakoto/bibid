@@ -26,7 +26,7 @@
     <ul>
       <li title="<%= t('help.rss') %>" class="help">
         <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
-        <span class="feed-type help" data-ligature-symbol="help">RSS 2.0(<%= t('users.podcasting') %>)</span> <%= link_to rss_url, rss_url %>
+        <span class="feed-type" data-ligature-symbol="help">RSS 2.0(<%= t('users.podcasting') %>)</span> <%= link_to rss_url, rss_url %>
         <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
       </li>
       <li title="<%= t('help.opds') %>" class="help">

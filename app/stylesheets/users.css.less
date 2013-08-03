@@ -1,3 +1,17 @@
+.ligature-symbol {
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+     -moz-text-rendering: optimizeLegibility;
+      -ms-text-rendering: optimizeLegibility;
+       -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
 h2.user-heading {
   display: inline-block;
   a {
@@ -43,29 +57,27 @@ div.delete-area {
   }
   .feeds {
     float: right;
-    cursor: pointer;
-    h4:before {
-      font-family: "LigatureSymbols";
-      -webkit-text-rendering: optimizeLegibility;
-         -moz-text-rendering: optimizeLegibility;
-          -ms-text-rendering: optimizeLegibility;
-           -o-text-rendering: optimizeLegibility;
-              text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-         -moz-font-smoothing: antialiased;
-          -ms-font-smoothing: antialiased;
-           -o-font-smoothing: antialiased;
-              font-smoothing: antialiased;
-      margin-right: 0.2em;
-      content: "right";
+    margin-left: 2em;
+    h4 {
+      cursor: pointer;
+      &:after {
+        .ligature-symbol;
+        content: "right";
+        display: block;
+        float: left;
+        margin-left: -1.5em;
+        padding: 27% 0.5em;
+        background-color: #f3f3f3;
+      }
     }
     ul {
-      padding-left: 1em;;
+      padding-left: 0.3em;
       list-style: none;
     }
     .feed-type {
       &:after {
-        margin-left: 0.2em;
+        .ligature-symbol;
+        margin-right: 0.2em;
       }
     }
     textarea {
@@ -80,8 +92,10 @@ div.delete-area {
       &:hover {
         color: inherit;
       }
-      h4:before {
+      h4:after {
         content: "left";
+        padding-top: 22%;
+        padding-bottom: 22%;
       }
       li {
         white-space: nowrap;
