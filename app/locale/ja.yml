@@ -55,7 +55,8 @@ ja:
     sign_in_with: 次のアカウントでサインイン/サインアップできます
   errors:
     messages:
-      extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。次の拡張子が許可されています：%{allowed_types}
+      extension_white_list_error: 拡張子%{extension}のファイルはアップロードできません。ファイルをいくつか削除してください。次の拡張子が許可されています：%{allowed_types}
+    over_total_file_size: 'ファイルサイズ合計が制限を超えます。現在：%{current}, アップロードするファイル：%{epub}, 制限：%{limit}'
   views:
     pagination:
       first: "&laquo;"

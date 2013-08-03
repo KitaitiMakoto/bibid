@@ -31,6 +31,8 @@ Bundler.require(:default, PADRINO_ENV)
 #   include Padrino::Helpers::TranslationHelpers
 # end
 require 'digest/sha1'
+require 'action_view/helpers'
+require 'action_view/helpers/number_helper'
 
 ##
 # Add your before (RE)load hooks here
@@ -48,5 +50,8 @@ end
 Dotenv.load! ".env.#{ENV['RACK_ENV']}"
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
+class ActiveRecord::Base
+  include ActionView::Helpers::NumberHelper
+end
 
 Padrino.load!

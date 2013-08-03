@@ -53,6 +53,8 @@ en:
     confirm_deletion: Are you sure you want to delete this book?
   sessions:
     sign_in_with: Sign in/sign up with
+  errors:
+    over_total_file_size: 'total file size will be over limitation. Please delete some files. Current: %{current}, uploaded: %{epub}, limit: %{limit}'
   views:
     pagination:
       first: "&laquo;"
