@@ -12,8 +12,8 @@
 
 <nav class="global">
   <ul class="resources">
-    <li><%= link_to t('layout.nav.users'), url(:users, :index) %></li>
-    <li><%= link_to t('layout.nav.books'), url(:books, :index) %></li>
+    <li><%= link_to t('layout.nav.users'), url(:users, :index), :'data-ligature-symbol' => 'users' %></li>
+    <li><%= link_to t('layout.nav.books'), url(:books, :index), :'data-ligature-symbol' => 'book' %></li>
   </ul>
   <ul>
   <% if current_user %>
