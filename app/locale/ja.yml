@@ -21,7 +21,7 @@ ja:
       destroy: 本を削除しました
   help:
     rss: "読者に、iTunes等Podcast用アプリケーションでこのフィードを登録してもらってください。BiB/i'dでEPUBを登録した時に通知・ダウンロードが行われます。"
-    opds: （説明準備中）
+    opds: "読者に、OPDS用アプリケーションでこのフィードを登録してもらってください。BiB/i'dでEPUBを登録した時に通知が行われます。"
   layout:
     nav:
       sign_in: サインイン
