@@ -13,7 +13,7 @@ ja:
     users:
       create: アカウントを作成しました
       update: 更新しました
-      destroy: 削除しました
+      destroy: 退会しました
     authentications:
       create: 認証元 %{provider} を追加しました
     books:

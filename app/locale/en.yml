@@ -13,7 +13,7 @@ en:
     users:
       create: Successfully account created
       update: Successfully updated
-      destroy: Successfully deleted
+      destroy: Successfully resigned
     authentications:
       create: Successfully new authentication service "%{provider}" added
     books:
