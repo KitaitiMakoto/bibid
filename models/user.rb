@@ -13,7 +13,9 @@ class User < ActiveRecord::Base
   }
 
   def current_file_size
-    store_dir_path = File.join(Padrino.root, 'public', books.first.epub.store_dir)
+    sample_book = books.first
+    return 0 unless sample_book
+    store_dir_path = File.join(Padrino.root, 'public', sample_book.epub.store_dir)
     Dir["#{store_dir_path}/*"].reduce(0) {|total, epub| total + File.size(epub)}
   end
 end
