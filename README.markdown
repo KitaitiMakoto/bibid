@@ -3,6 +3,11 @@ BiB/i'd
 
 [BiB/i][bibi] daemon. Actually, not a daemon.
 
+Demo
+----
+
+BiB/i'd is running at [bibid.kitaitimakoto.net](http://bibid.kitaitimakoto.net).
+
 Development
 -----------
 1. Install assets  
