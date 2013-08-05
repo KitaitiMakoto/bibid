@@ -26,7 +26,7 @@
     </li>
     <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
   <% else %>
-    <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :'data-ligature-symbol' => 'logout' %></li>
+    <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :'data-ligature-symbol' => 'login' %></li>
   <% end %>
   </ul>
 </nav>
