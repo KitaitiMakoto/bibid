@@ -37,11 +37,24 @@ Bibid::App.controllers :sandbox do
   end
 
   post :create, :map => '/sandbox' do
-    book = Book.new(params[:book])
-    book.user = User.new(name: '')
-    book.epub.store!
     keep_sandbox_file_count
-    redirect url(:sandbox, :show, filename: book.epub.filename), :success => I18n.translate('notice.books.create')
+    @book = Book.new(params[:book])
+    @book.user = User.new(name: '')
+
+    if @book.epub.size > settings.sandbox_file_size_limit
+      @book.errors.add :epub, I18n.translate(
+        'sandbox.over_file_size',
+        epub:  number_to_human_size(@book.epub.size),
+        limit: number_to_human_size(settings.sandbox_file_size_limit)
+      )
+    else
+      @book.epub.store!
+    end
+    if @book.errors.empty? and @book.valid?
+      redirect url(:sandbox, :show, filename: @book.epub.filename), :success => I18n.translate('notice.books.create')
+    else
+      render 'sandbox/new'
+    end
   end
 
   delete :destroy, :map => '/sandbox/:filename' do
