@@ -62,6 +62,8 @@ Bibid::App.controllers :sandbox do
     file_path = File.join(Padrino.root, 'public', 'uploads', File.basename(params[:filename]))
     if File.exist? file_path
       File.delete file_path
+    else
+      halt 404
     end
     redirect url(:sandbox, :new), :success => I18n.t('notice.books.destroy')
   end
