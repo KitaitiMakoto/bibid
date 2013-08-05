@@ -4,7 +4,7 @@
     <h3 class="user-name text-right"><%= link_to 'Sandbox', url(:sandbox, :new) %></h3>
   </div>
 
-  <p><strong>CAUTION: This book will be removed at some time.</strong></p>
+  <p><strong><%= t('sandbox.caution') %></strong></p>
 
   <div id="book-controls">
     <p class="embedding-tag col-10"><label for="embedding-tag"><%= t('books.encourage_embedding') %></label><br>

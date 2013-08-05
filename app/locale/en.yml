@@ -28,9 +28,10 @@ en:
       sign_out: Sign out
       users: User list
       books: Uploaded books
-  root:
-    recent_books: Recent books
-    more_books: And more...
+  sandbox:
+    title: Try it!
+    description: This is a sandbox to see feature of this site. You can upload an EPUB file and see embedded EPUB book, an iframe tag to embed it to your blog, and so on.
+    caution: "CAUTION: Uploaded book will be removed at some time."
   users:
     name:
       max_length: max length is %{length}.

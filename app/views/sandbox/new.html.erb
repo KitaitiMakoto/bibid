@@ -1,4 +1,8 @@
-<h2>Sandbox</h2>
+<h2><%= t('sandbox.title') %></h2>
+
+<p><%= t('sandbox.description') %></p>
+<p><strong><%= t('sandbox.caution') %></strong></p>
+
 <% form_for :book, url(:sandbox, :create), :enctype => 'multipart/form-data' do |f| %>
   <p><%= f.error_messages %></p>
   <%= f.file_field_block :epub, :required => true %>

@@ -28,9 +28,10 @@ ja:
       sign_out: サインアウト
       users: ユーザー一覧
       books: 登録された本
-  root:
-    recent_books: 最近登録された本
-    more_books: もっと見る
+  sandbox:
+    title: お試しください！
+    description: このサイトの機能を確認するためのサンドボックスです。EPUBファイルをアップロードして、埋め込まれたEPUBや、それをブログに埋め込むためのiframeタグなどを確認することができます。
+    caution: "注意：アップロードされたファイルはそのうち削除されます。"
   users:
     name:
       max_length: 最大 %{length} 文字です。
