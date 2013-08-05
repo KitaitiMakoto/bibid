@@ -63,6 +63,6 @@ Bibid::App.controllers :sandbox do
     if File.exist? file_path
       File.delete file_path
     end
-    redirect url(:sandbox, :new)
+    redirect url(:sandbox, :new), :success => I18n.t('notice.books.destroy')
   end
 end
