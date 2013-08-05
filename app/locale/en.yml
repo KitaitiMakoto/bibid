@@ -32,6 +32,7 @@ en:
     title: Try it!
     description: This is a sandbox to see feature of this site. You can upload an EPUB file and see embedded EPUB book, an iframe tag to embed it to your blog, and so on. URL of uploaded book does not appear in the book list page.
     caution: "CAUTION: Uploaded book will be removed at some time."
+    file_size_limit: "File size should be less than %{limit}."
     over_file_size: 'total file size will be over limitation. Please delete some files. Current: %{epub}, limit: %{limit}'
   users:
     name:

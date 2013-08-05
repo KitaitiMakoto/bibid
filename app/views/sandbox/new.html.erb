@@ -1,6 +1,7 @@
 <h2><%= t('sandbox.title') %></h2>
 
 <p><%= t('sandbox.description') %></p>
+<p><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></p>
 <p><strong><%= t('sandbox.caution') %></strong></p>
 
 <% form_for :book, url(:sandbox, :create), :enctype => 'multipart/form-data' do |f| %>
