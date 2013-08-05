@@ -4,7 +4,7 @@ Bibid::App.helpers do
   end
 
   def absolute_bibi_url
-    uri(bibi_path, true, false)
+    uri(bibi_url, true, false)
   end
 
   def bookshelf_url(book=nil)

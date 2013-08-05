@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
 
-class RootControllerTest < Test::Unit::TestCase
-  context "RootController" do
+class SandboxControllerTest < Test::Unit::TestCase
+  context "SandboxController" do
     setup do
       get '/'
     end

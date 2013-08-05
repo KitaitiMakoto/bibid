@@ -85,6 +85,10 @@ module Bibid
     #   render 'errors/505'
     # end
 
+    get '/' do
+      render 'sandbox/new'
+    end
+
     get '/auth/failure' do
       redirect url(:sessions, :new), :error => I18n.t('notice.sessions.error', :strategy => params['strategy'], :message => params['message'])
     end
