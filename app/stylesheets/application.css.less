@@ -116,6 +116,18 @@ nav.global {
       margin: 0;
     }
   }
+  .upload-form {
+    p {
+      display: inline;
+      label {
+        display: inline;
+        cursor: pointer;
+      }
+    }
+    input[type="file"], input[type="submit"] {
+      display: none;
+    }
+  }
 }
 
 [download]:after {
@@ -125,17 +137,4 @@ nav.global {
       -ms-transform: rotate(90deg);
        -o-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.upload-form {
-  p {
-    display: inline;
-    label {
-      display: inline;
-      cursor: pointer;
-    }
-  }
-  input[type="file"], input[type="submit"] {
-    display: none;
-  }
 }
