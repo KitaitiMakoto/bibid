@@ -1,5 +1,5 @@
-<% form_for @book || Book.new, url(:books, :create), :enctype => 'multipart/form-data' do |f| %>
+<% form_for @book || Book.new, url(:books, :create), :class => 'upload-form', :enctype => 'multipart/form-data' do |f| %>
   <p><%= f.error_messages %></p>
   <%= f.file_field_block :epub, :required => true %>
-  <%= f.submit t('helpers.upload') %>
+  <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
 <% end %>

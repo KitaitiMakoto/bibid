@@ -1,4 +1,4 @@
 <% form_for @book || Book.new, url(:books, :create), :enctype => 'multipart/form-data', :class => 'upload-form', :'data-ligature-symbol' => 'upload' do |f| %>
   <%= f.file_field_block :epub, :required => true, :caption => t('helpers.upload') %>
-  <%= f.submit t('helpers.upload') %>
+  <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
 <% end %>

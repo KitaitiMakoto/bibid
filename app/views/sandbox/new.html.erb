@@ -6,8 +6,8 @@
 <p><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></p>
 <p><strong><%= t('sandbox.caution') %></strong></p>
 
-<% form_for :book, url(:sandbox, :create), :enctype => 'multipart/form-data' do |f| %>
+<% form_for :book, url(:sandbox, :create), :class => 'upload-form', :enctype => 'multipart/form-data' do |f| %>
   <p><%= f.error_messages %></p>
-  <%= f.file_field_block :epub, :required => true %>
-  <%= f.submit t('helpers.upload') %>
+  <%= f.file_field_block :epub, :caption => 'EPUB:', :required => true %>
+  <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
 <% end %>
