@@ -8,7 +8,7 @@
     <p class="embedding-tag col-10"><label for="embedding-tag"><%= t('books.encourage_embedding') %></label><br>
       <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
     </p>
-    <ul id="book-controls" class="col-2">
+    <ul class="col-2">
       <li><%= number_to_human_size @book.epub.size %></li>
       <li><%= link_to t('books.download'), :href => bookshelf_url(@book), :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'in' %></li>
       <li><%= link_to t('books.open'), :href => embedding_url(@book), :'data-ligature-symbol' => 'full' %></li>
