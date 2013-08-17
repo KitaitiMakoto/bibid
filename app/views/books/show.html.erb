@@ -10,7 +10,7 @@
     </p>
     <ul id="book-controls" class="col-2">
       <li><%= number_to_human_size @book.epub.size %></li>
-      <li><%= link_to t('books.download'), :href => "/components/bibi/bib/bookshelf/#{@book.user.name}/#{File.basename(@book.epub.current_path)}", :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'in' %></li>
+      <li><%= link_to t('books.download'), :href => bookshelf_url(@book), :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'in' %></li>
       <li><%= link_to t('books.open'), :href => embedding_url(@book), :'data-ligature-symbol' => 'full' %></li>
       <% if current_user == @book.user %><li><%= partial 'books/delete_form', :locals => {:book => @book} %></li><% end %>
     </ul>
