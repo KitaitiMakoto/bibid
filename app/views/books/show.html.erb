@@ -10,11 +10,20 @@
         <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
       </p>
       <ul class="customizing btn-group">
-        <li class="btn btn-primary" data-bibi-style="width: 344px; height: 292px;">344 x 292</li>
-        <li class="btn btn-primary" data-bibi-style="width: 429px; height: 357px;">429 x 357</li>
-        <li class="btn btn-primary" data-bibi-style="width: 514px; height: 422px;">514 x 422</li>
-        <li class="btn btn-primary" data-bibi-style="width: 599px; height: 487px;">599 x 487</li>
-        <li class="active btn btn-primary" data-bibi-style="width: 100%; height: 100%;">100% x 100%</li>
+        <li class="iframe-size btn btn-primary" data-bibi-style-width="160px" data-bibi-style-height="240px">160 x 240</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="320px" data-bibi-style-height="480px">320 x 480</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="480px" data-bibi-style-height="720px">480 x 720</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="640px" data-bibi-style-height="960px">640 x 960</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="800px" data-bibi-style-height="1200px">800 x 1200</li>
+        <li class="active default iframe-size btn iframe-size btn-primary" data-bibi-style-width="100%" data-bibi-style-height="100%">100% x 100%</li>
+      </ul>
+      <ul class="customizing btn-group">
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="240px" data-bibi-style-height="160px">240 x 160</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="480px" data-bibi-style-height="320px">480 x 320</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="720px" data-bibi-style-height="480px">720 x 480</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="960px" data-bibi-style-height="640px">960 x 640</li>
+        <li class="iframe-size btn iframe-size btn-primary" data-bibi-style-width="1200px" data-bibi-style-height="800px">1200 x 800</li>
+        <li class="iframe-size-input"><input name="width" type="number" min="0">x<input name="height" type="number" min="0"></li>
       </ul>
     </div>
     <ul class="col-2">
