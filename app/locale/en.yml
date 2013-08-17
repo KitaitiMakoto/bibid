@@ -54,7 +54,6 @@ en:
   books:
     unknown_title: Unknown title
     download: Download
-    open: Open book directly
     encourage_embedding: Embed this book into your blog!
     confirm_deletion: Are you sure you want to delete this book?
   sessions:

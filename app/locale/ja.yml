@@ -54,7 +54,6 @@ ja:
   books:
     unknown_title: タイトル不明
     download: ダウンロード
-    open: 本を開く
     encourage_embedding: この本をブログに埋め込んでみましょう！
     confirm_deletion: この本を削除してよろしいですか？
   sessions:
