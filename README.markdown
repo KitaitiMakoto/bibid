@@ -3,6 +3,8 @@ BiB/i'd
 
 [BiB/i][bibi] daemon. Actually, not a daemon.
 
+It hosts EPUB files and generate HTML tags to embed the book to your blogs.
+
 Demo
 ----
 
