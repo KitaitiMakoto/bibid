@@ -29,10 +29,12 @@ BookControlsView = Backbone.View.extend
     @deactivateSizeInput()
     $selected = $(@)
     newBibiWidth = @$('input[name="width"]', $selected).val()
-    return unless newBibiWidth
     newBibiHeight = @$('input[name="height"]', $selected).val()
-    return unless newBibiHeight
-    newBibiStyle = "width: #{newBibiWidth}px; height: #{newBibiHeight}px;"
+    newBibiStyle =
+      if newBibiHeight && newBibiHeight
+        "width: #{newBibiWidth}px; height: #{newBibiHeight}px;"
+      else
+        "width: 100%; height: 100%;"
     currentTag = @$textarea.val()
     newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{newBibiStyle}\"")
     @$textarea.val newTag
