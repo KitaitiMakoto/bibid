@@ -12,8 +12,6 @@ BookControlsView = Backbone.View.extend
   events:
     'click .iframe-size': 'changeIframeSizeByButton'
     'change .iframe-size-input input': 'changeIframeSizeByInput'
-  deactivateSizeButtons: ->
-    @$customizingListItems.removeClass 'active'
   changeIframeSizeByButton: (event) ->
     $selected = $(event.target)
     @$active = $selected
@@ -26,7 +24,7 @@ BookControlsView = Backbone.View.extend
     @height = @$height.val()
     @render()
   render: ->
-    @deactivateSizeButtons()
+    @$customizingListItems.removeClass 'active'
     @$active?.addClass('active')
     style =
       if @width && @height
