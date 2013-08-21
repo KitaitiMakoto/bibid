@@ -1,20 +1,3 @@
-$('#book-controls .iframe-size').on 'click', (event) ->
-  $('.customizing li').removeClass('active')
-  $selected = $(event.target)
-  $selected.addClass('active')
-  $textarea = $('#embedding-tag')
-  $iframe = $('.embedded iframe')
-  newBibiWidth = $selected.data("bibiStyleWidth")
-  newBibiHeight = $selected.data("bibiStyleHeight")
-  newBibiStyle = "width: #{newBibiWidth}; height: #{newBibiHeight};"
-  unless $selected.hasClass 'default'
-    $('#book-controls .iframe-size-input input[name="width"]').val newBibiWidth.replace 'px', ''
-    $('#book-controls .iframe-size-input input[name="height"]').val newBibiHeight.replace 'px', ''
-  currentTag = $textarea.val()
-  newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{newBibiStyle}\"")
-  $textarea.val newTag
-  $iframe.attr 'style', newBibiStyle
-
 BookControlsView = Backbone.View.extend
   el: '#book-controls'
   initialize: ->
@@ -23,7 +6,23 @@ BookControlsView = Backbone.View.extend
     @$textarea = $('#embedding-tag')
     console.log $('.embedded iframe').remove()
   events:
+    'click .iframe-size': 'changeIframeSize'
     'change .iframe-size-input input': 'render'
+  changeIframeSize: (event) ->
+    $('.customizing li').removeClass 'active'
+    $selected = $(event.target)
+    $selected.addClass 'active'
+    $iframe = $('.embedded iframe')
+    newBibiWidth = $selected.data("bibiStyleWidth")
+    newBibiHeight = $selected.data("bibiStyleHeight")
+    newBibiStyle = "width: #{newBibiWidth}; height: #{newBibiHeight};"
+    unless $selected.hasClass 'default'
+      $('#book-controls .iframe-size-input input[name="width"]').val newBibiWidth.replace 'px', ''
+      $('#book-controls .iframe-size-input input[name="height"]').val newBibiHeight.replace 'px', ''
+    currentTag = @$textarea.val()
+    newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{newBibiStyle}\"")
+    @$textarea.val newTag
+    $iframe.attr 'style', newBibiStyle
   render: (event) ->
     $('.customizing li').removeClass 'active'
     $selected = $(@)
