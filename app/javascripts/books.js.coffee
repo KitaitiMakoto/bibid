@@ -4,12 +4,14 @@ BookControlsView = Backbone.View.extend
     @$iframeSizeButton = @$('.iframe-size')
     @$iframeSizeInput = @$('.iframe-size-input')
     @$textarea = $('#embedding-tag')
-    console.log $('.embedded iframe').remove()
+    @$customizingListItems = $('.customizing li')
   events:
     'click .iframe-size': 'changeIframeSize'
     'change .iframe-size-input input': 'render'
+  deactivateSizeInput: ->
+    @$customizingListItems.removeClass 'active'
   changeIframeSize: (event) ->
-    $('.customizing li').removeClass 'active'
+    @deactivateSizeInput()
     $selected = $(event.target)
     $selected.addClass 'active'
     $iframe = $('.embedded iframe')
@@ -24,7 +26,7 @@ BookControlsView = Backbone.View.extend
     @$textarea.val newTag
     $iframe.attr 'style', newBibiStyle
   render: (event) ->
-    $('.customizing li').removeClass 'active'
+    @deactivateSizeInput()
     $selected = $(@)
     newBibiWidth = @$('input[name="width"]', $selected).val()
     return unless newBibiWidth
