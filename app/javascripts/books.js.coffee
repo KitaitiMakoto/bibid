@@ -1,3 +1,7 @@
+_.templateSettings =
+  interpolate: /\{\{\=(.+?)\}\}/g,
+  evaluate: /\{\{(.+?)\}\}/g
+
 BookControlsView = Backbone.View.extend
   el: '#book-controls'
   initialize: ->
@@ -7,6 +11,7 @@ BookControlsView = Backbone.View.extend
     @$width = @$('input[name="width"]')
     @$height = @$('input[name="height"]')
     @$active = null
+    @embeddingTagTemplate = _.template($('#embedding-tag-template').html())
   events:
     'click .iframe-size': 'changeIframeSizeByButton'
     'change .iframe-size-input input': 'changeIframeSizeByInput'
@@ -30,7 +35,7 @@ BookControlsView = Backbone.View.extend
       else
         "width: 100%; height: 100%;"
     currentTag = @$textarea.val()
-    newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{style}\"")
+    newTag = @embeddingTagTemplate(style: style)
     @$textarea.val newTag
     $('.embedded iframe').attr 'style', style
     @$width.val @width

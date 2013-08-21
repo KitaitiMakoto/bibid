@@ -2,8 +2,9 @@
 
 Bibid::App.helpers do
   # @todo Make width and height customizable
-  def embedding_tag(book)
-    link_to(book.title, embedding_url(book), :'data-bibi' => 'embed', :'data-bibi-style' => 'width: 100%; height: 100%;') +
+  def embedding_tag(book, options={})
+    options = {:'data-bibi' => 'embed', :'data-bibi-style' => 'width: 100%; height: 100%;'}.merge(options)
+    link_to(book.title, embedding_url(book), options) +
       content_tag(:script, '', :src => absolute_bibi_url + '/i.js')
   end
 
