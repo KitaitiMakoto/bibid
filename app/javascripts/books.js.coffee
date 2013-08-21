@@ -9,7 +9,7 @@ BookControlsView = Backbone.View.extend
     @$iframeSizeInputHeight = @$('input[name="height"]')
   events:
     'click .iframe-size': 'changeIframeSize'
-    'change .iframe-size-input input': 'render'
+    'change .iframe-size-input input': 'changeIframeSizeByInput'
   deactivateSizeInput: ->
     @$customizingListItems.removeClass 'active'
   changeIframeSize: (event) ->
@@ -21,8 +21,10 @@ BookControlsView = Backbone.View.extend
     @$iframeSizeInputWidth.val newBibiWidth
     @$iframeSizeInputHeight.val newBibiHeight
     @render()
-  render: (event) ->
+  changeIframeSizeByInput: (event) ->
     @deactivateSizeInput()
+    @render()
+  render: ->
     newBibiWidth = @$iframeSizeInputWidth.val()
     newBibiHeight = @$iframeSizeInputHeight.val()
     newBibiStyle =
