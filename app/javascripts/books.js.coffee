@@ -19,14 +19,9 @@ BookControlsView = Backbone.View.extend
     $iframe = $('.embedded iframe')
     newBibiWidth = $selected.data("bibiStyleWidth")
     newBibiHeight = $selected.data("bibiStyleHeight")
-    newBibiStyle = "width: #{newBibiWidth}; height: #{newBibiHeight};"
-    unless $selected.hasClass 'default'
-      $('#book-controls .iframe-size-input input[name="width"]').val newBibiWidth.replace 'px', ''
-      $('#book-controls .iframe-size-input input[name="height"]').val newBibiHeight.replace 'px', ''
-    currentTag = @$textarea.val()
-    newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{newBibiStyle}\"")
-    @$textarea.val newTag
-    $iframe.attr 'style', newBibiStyle
+    @$iframeSizeInputWidth.val newBibiWidth
+    @$iframeSizeInputHeight.val newBibiHeight
+    @render()
   render: (event) ->
     @deactivateSizeInput()
     newBibiWidth = @$iframeSizeInputWidth.val()
