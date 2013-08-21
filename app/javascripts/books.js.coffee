@@ -11,7 +11,8 @@ BookControlsView = Backbone.View.extend
     @$width = @$('input[name="width"]')
     @$height = @$('input[name="height"]')
     @$active = null
-    @embeddingTagTemplate = _.template($('#embedding-tag-template').html())
+    templateString = $('#embedding-tag-template').html()
+    @embeddingTagTemplate = _.template(templateString) if templateString
   events:
     'click .iframe-size': 'changeIframeSizeByButton'
     'change .iframe-size-input input': 'changeIframeSizeByInput'
