@@ -16,7 +16,6 @@ BookControlsView = Backbone.View.extend
     @deactivateSizeInput()
     $selected = $(event.target)
     $selected.addClass 'active'
-    $iframe = $('.embedded iframe')
     newBibiWidth = $selected.data("bibiStyleWidth")
     newBibiHeight = $selected.data("bibiStyleHeight")
     @$iframeSizeInputWidth.val newBibiWidth
