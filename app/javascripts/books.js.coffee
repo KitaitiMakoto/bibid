@@ -1,8 +1,6 @@
 BookControlsView = Backbone.View.extend
   el: '#book-controls'
   initialize: ->
-    @$iframeSizeButton = @$('.iframe-size')
-    @$iframeSizeInput = @$('.iframe-size-input')
     @$textarea = $('#embedding-tag')
     @$customizingListItems = @$('.customizing li')
     @width = @height = null
