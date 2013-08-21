@@ -27,9 +27,8 @@ BookControlsView = Backbone.View.extend
     $iframe.attr 'style', newBibiStyle
   render: (event) ->
     @deactivateSizeInput()
-    $selected = $(@)
-    newBibiWidth = @$('input[name="width"]', $selected).val()
-    newBibiHeight = @$('input[name="height"]', $selected).val()
+    newBibiWidth = @$('input[name="width"]').val()
+    newBibiHeight = @$('input[name="height"]').val()
     newBibiStyle =
       if newBibiHeight && newBibiHeight
         "width: #{newBibiWidth}px; height: #{newBibiHeight}px;"
