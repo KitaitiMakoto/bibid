@@ -5,6 +5,7 @@ BookControlsView = Backbone.View.extend
     @$iframeSizeInput = @$('.iframe-size-input')
     @$textarea = $('#embedding-tag')
     @$customizingListItems = @$('.customizing li')
+    @width = @height = null
     @$width = @$('input[name="width"]')
     @$height = @$('input[name="height"]')
   events:
@@ -18,24 +19,26 @@ BookControlsView = Backbone.View.extend
     $selected.addClass 'active'
     newBibiWidth = $selected.data("bibiStyleWidth")
     newBibiHeight = $selected.data("bibiStyleHeight")
-    @$width.val newBibiWidth
-    @$height.val newBibiHeight
+    @width = newBibiWidth
+    @height = newBibiHeight
     @render()
   changeIframeSizeByInput: (event) ->
     @deactivateSizeInput()
+    @width = @$width.val()
+    @height = @$height.val()
     @render()
   render: ->
-    newBibiWidth = @$width.val()
-    newBibiHeight = @$height.val()
     newBibiStyle =
-      if newBibiHeight && newBibiHeight
-        "width: #{newBibiWidth}px; height: #{newBibiHeight}px;"
+      if @width && @height
+        "width: #{@width}px; height: #{@height}px;"
       else
         "width: 100%; height: 100%;"
     currentTag = @$textarea.val()
     newTag = currentTag.replace(/data\-bibi\-style=\"[^"]+\"/, "data-bibi-style=\"#{newBibiStyle}\"")
     @$textarea.val newTag
     $('.embedded iframe').attr 'style', newBibiStyle
+    @$width.val @width
+    @$height.val @height
     @
 
 new BookControlsView
