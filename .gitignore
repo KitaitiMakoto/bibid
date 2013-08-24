@@ -9,8 +9,7 @@ db/*.db
 deps/*
 app/assets/components/*
 .bundle
-public/components/**/*
-public/uploads/**/*
+public/*
 config/apps.rb
 .env.development
 .env.test
