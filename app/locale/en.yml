@@ -6,6 +6,8 @@ en:
     destroy: Delete
     upload: Upload
     contact: Contact
+    width: Width
+    height: Height
   notice:
     sessions:
       create: Successfully signed in

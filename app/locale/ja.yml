@@ -6,6 +6,8 @@ ja:
     destroy: 削除
     upload: アップロード
     contact: お問い合わせ
+    width: 幅
+    height: 高さ
   notice:
     sessions:
       create: サインインしました
