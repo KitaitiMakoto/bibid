@@ -28,8 +28,6 @@ ja:
     nav:
       sign_in: サインイン
       sign_out: サインアウト
-      users: ユーザー一覧
-      books: 登録された本
   sandbox:
     title: お試しください！
     description: このサイトの機能を確認するためのお試し用フォームです。
@@ -41,6 +39,7 @@ ja:
     file_size_limit: "ファイルサイズは %{limit} 未満でなければなりません。"
     over_file_size: 'ファイルサイズ制限を超えます。アップロードするファイル：%{epub}, 制限：%{limit}'
   users:
+    list: ユーザー一覧
     name:
       max_length: 最大 %{length} 文字です。
       available_charactors: が使用可能です。
@@ -56,6 +55,7 @@ ja:
     destroy: 退会
     confirm_deletion: このアカウントを削除してよろしいですか？
   books:
+    uploaded_books: 登録された本
     unknown_title: タイトル不明
     download: ダウンロード
     encourage_embedding: この本をブログに埋め込んでみましょう！

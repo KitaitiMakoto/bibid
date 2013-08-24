@@ -28,8 +28,6 @@ en:
     nav:
       sign_in: Sign in
       sign_out: Sign out
-      users: User list
-      books: Uploaded books
   sandbox:
     title: Try it!
     description: This is a form to try feature of this site. You can
@@ -41,6 +39,7 @@ en:
     file_size_limit: "File size should be less than %{limit}."
     over_file_size: 'total file size will be over limitation. Please delete some files. Current: %{epub}, limit: %{limit}'
   users:
+    list: User list
     name:
       max_length: max length is %{length}.
       available_charactors: are avaiable.
@@ -56,6 +55,7 @@ en:
     destroy: Resign
     confirm_deletion: Are you sure you want to delete this account?
   books:
+    uploaded_books: Uploaded books
     unknown_title: Unknown title
     download: Download
     encourage_embedding: Embed this book into your blog!
