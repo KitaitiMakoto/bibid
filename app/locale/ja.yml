@@ -5,6 +5,7 @@ ja:
     update: 更新
     destroy: 削除
     upload: アップロード
+    contact: お問い合わせ
   notice:
     sessions:
       create: サインインしました

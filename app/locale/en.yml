@@ -5,6 +5,7 @@ en:
     update: Update
     destroy: Delete
     upload: Upload
+    contact: Contact
   notice:
     sessions:
       create: Successfully signed in
