@@ -38,6 +38,7 @@ BookControlsView = Backbone.View.extend
     newTag = @embeddingTagTemplate(style: style)
     @$textarea.val newTag
     $('.embedded .bibi-holder').attr 'style', style
+    $('.embedded').css 'height', @height
     @$width.val @width
     @$height.val @height
     @
