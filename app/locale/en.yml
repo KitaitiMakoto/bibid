@@ -31,9 +31,9 @@ en:
   sandbox:
     title: Try it!
     description: This is a form to try feature of this site. You can
-    step1: upload an EPUB file,
-    step2: embed generated HTML tags into your blog.
-    step3: And your readers can read your EPUB book in your blog!
+    step1: upload an EPUB file and
+    step2: embed generated HTML tags into your blog so that,
+    step3: in your blog, your readers can read your EPUB book!
     note_uploaded_files: URL of uploaded book does not appear in the "Uploaded books" page.
     caution: "CAUTION: Uploaded book will be removed at some time."
     file_size_limit: "File size should be less than %{limit}."
