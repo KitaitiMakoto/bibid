@@ -31,7 +31,7 @@
       <li><%= link_to t('books.download'), :href => bookshelf_url(@book), :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'in' %></li>
       <% if current_user == @book.user %><li><%= partial 'books/delete_form', :locals => {:book => @book} %></li><% end %>
     </ul>
-    <script type="text/template" id="embedding-tag-template"><%= embedding_tag(@book, :'data-bibi-style' => '{{= style }}') %></script>
+    <script type="text/template" id="embedding-tag-template"><%= embedding_tag(@book, :'data-bibi-style' => '{{ style }}') %></script>
   </div>
 </article>
 

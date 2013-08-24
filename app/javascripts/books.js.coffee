@@ -1,6 +1,5 @@
 _.templateSettings =
-  interpolate: /\{\{\=(.+?)\}\}/g,
-  evaluate: /\{\{(.+?)\}\}/g
+  interpolate: /\{\{(.+?)\}\}/g
 
 BookControlsView = Backbone.View.extend
   el: '#book-controls'
