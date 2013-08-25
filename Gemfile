@@ -53,7 +53,6 @@ gem 'epub-parser', :github => 'KitaitiMakoto/epub-parser', :require => 'epub/par
 gem 'rss-opds', :require => 'rss/opds'
 
 gem 'mina'
-gem 'triglav-client', :require => 'triglav/client'
 
 group :test do
   gem 'test-unit', :require => 'test/unit'
