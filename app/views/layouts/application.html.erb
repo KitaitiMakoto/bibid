@@ -26,7 +26,11 @@
     </li>
     <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
   <% else %>
-    <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :'data-ligature-symbol' => 'login' %></li>
+    <% if settings.omniauth_providers.length == 1 %>
+      <li><%= link_to t('layout.nav.sign_in'), "/auth/#{settings.omniauth_providers.first.first}", :'data-ligature-symbol' => 'login' %></li>
+    <% else %>
+      <li><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :'data-ligature-symbol' => 'login' %></li>
+    <% end %>
   <% end %>
   </ul>
 </nav>
