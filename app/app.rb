@@ -2,7 +2,7 @@ module Bibid
   class App < Padrino::Application
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     use HttpAcceptLanguage::Middleware
-    use Rack::GoogleAnalytics, :tracker => settings.google_analytics_tracker if environment == :production and settings.google_analytics_tracker
+    use Rack::GoogleAnalytics, :tracker => settings.google_analytics_tracker if (environment == :production and settings.google_analytics_tracker)
     register LessInitializer
     register Padrino::Rendering
     register Padrino::Mailer
