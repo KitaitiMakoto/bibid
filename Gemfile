@@ -52,7 +52,6 @@ gem 'rack-zip', :github => 'KitaitiMakoto/rack-zip', :require => 'rack/zip'
 gem 'epub-parser', :github => 'KitaitiMakoto/epub-parser', :require => 'epub/parser'
 gem 'rss-opds', :require => 'rss/opds'
 
-gem 'rack-google-analytics'
 gem 'mina'
 
 group :test do

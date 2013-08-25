@@ -167,7 +167,6 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-google-analytics (0.12.0)
     rack-less (3.0.2)
       less (~> 2.0)
       rack (~> 1.0)
@@ -246,7 +245,6 @@ DEPENDENCIES
   padrino (= 0.11.3)
   pg
   poltergeist
-  rack-google-analytics
   rack-less
   rack-test
   rack-zip!
