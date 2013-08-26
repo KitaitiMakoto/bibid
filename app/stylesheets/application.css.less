@@ -82,9 +82,19 @@ nav {
 }
 
 nav.global {
-  position: absolute;
-  top: 1em;
-  right: 1em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 12;
+  width: 100%;
+  ul {
+    position: absolute;
+    right: 0;
+    padding: 0.2em 0.5em;
+    width: 100%;
+    background-color: #fcfcfc;
+    border-bottom: solid #cccccc 1px;
+  }
   a {
     color: black;
   }
@@ -105,7 +115,6 @@ nav.global {
     }
   }
   form.upload-form {
-    display: block;
     label {
       font-weight: normal;
       &:hover {
@@ -126,6 +135,13 @@ nav.global {
       margin: 0;
     }
   }
+}
+
+.global-book-controls {
+  position: absolute;
+  top: 3em;
+  right: 1em;
+  list-style: none;
 }
 
 footer {
