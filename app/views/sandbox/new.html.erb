@@ -15,8 +15,6 @@
   <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
 <% end %>
 
-
-
 <ul class="note">
   <li><strong><%= t('sandbox.caution') %></strong></li>
   <% unless current_user %><li><%= link_to t('sandbox.lead_to_sign_up'), url(:sessions, :new) %></li><% end %>
