@@ -37,6 +37,7 @@ en:
     step1: upload an EPUB file and
     step2: embed generated HTML tags into your blog so that,
     step3: in your blog, your readers can read your EPUB book!
+    lead_to_sign_up: Sign up to store your books permanently!
     note_uploaded_files: URL of uploaded book does not appear in the "Uploaded books" page.
     caution: "CAUTION: Uploaded book will be removed at some time."
     file_size_limit: "File size should be less than %{limit}."
