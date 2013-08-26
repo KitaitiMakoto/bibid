@@ -7,3 +7,31 @@ form.sandbox-form {
     margin-right: 0.5em;
   }
 }
+
+.sandbox-step {
+  list-style: none;
+  .step:before {
+    font-family: "LigatureSymbols";
+    margin: 0.5em;
+    font-size: 2em;
+    -webkit-text-rendering: optimizeLegibility;
+       -moz-text-rendering: optimizeLegibility;
+        -ms-text-rendering: optimizeLegibility;
+         -o-text-rendering: optimizeLegibility;
+            text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+         -o-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+  }
+  .step1:before {
+    content: "upload";
+  }
+  .step2:before {
+    content: "code";
+  }
+  .step3:before {
+    content: "book";
+  }
+}

@@ -3,10 +3,10 @@
 <h2><%= t('sandbox.title') %></h2>
 
 <p><%= t('sandbox.description') %></p>
-<ol>
-  <li><%= t('sandbox.step1') %></li>
-  <li><%= t('sandbox.step2') %></li>
-  <li><%= t('sandbox.step3') %></li>
+<ol class="sandbox-step">
+  <li class="step step1"><%= t('sandbox.step1') %></li>
+  <li class="step step2"><%= t('sandbox.step2') %></li>
+  <li class="step step3"><%= t('sandbox.step3') %></li>
 </ol>
 <p><%= t('sandbox.note_uploaded_files') %></p>
 <p><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></p>
