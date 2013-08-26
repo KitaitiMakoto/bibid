@@ -3,17 +3,18 @@
 <h2><%= t('sandbox.title') %></h2>
 
 <p><%= t('sandbox.description') %></p>
-<ol class="sandbox-step">
-  <li class="step step1"><%= t('sandbox.step1') %></li>
-  <li class="step step2"><%= t('sandbox.step2') %></li>
-  <li class="step step3"><%= t('sandbox.step3') %></li>
-</ol>
 
 <% form_for :book, url(:sandbox, :create), :class => 'upload-form sandbox-form', :enctype => 'multipart/form-data' do |f| %>
   <p><%= f.error_messages %></p>
   <%= f.file_field_block :epub, :caption => 'EPUB:', :required => true %>
   <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
 <% end %>
+
+<ol class="sandbox-step">
+  <li class="step step1"><%= t('sandbox.step1') %></li>
+  <li class="step step2"><%= t('sandbox.step2') %></li>
+  <li class="step step3"><%= t('sandbox.step3') %></li>
+</ol>
 
 <ul class="note">
   <li><strong><%= t('sandbox.caution') %></strong></li>
