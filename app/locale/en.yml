@@ -33,8 +33,8 @@ en:
       sign_out: Sign out
   sandbox:
     title: Try it!
-    description: This is a form to try feature of this site. You can
-    step1: upload an EPUB file and
+    description: This is a form to try feature of this site.
+    step1: Upload an EPUB file and
     step2: embed generated HTML tags into your blog so that,
     step3: in your blog, your readers can read your EPUB book!
     lead_to_sign_up: Sign up to store your books permanently!
