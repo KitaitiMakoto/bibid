@@ -25,11 +25,7 @@
       <% end %>
     </li>
     <% else %>
-      <% if settings.omniauth_providers.length == 1 %>
-      <li class="account"><%= link_to t('layout.nav.sign_in'), "/auth/#{settings.omniauth_providers.first.first}", :'data-ligature-symbol' => 'login' %></li>
-      <% else %>
-      <li class="account"><%= link_to t('layout.nav.sign_in'), url(:sessions, :new), :'data-ligature-symbol' => 'login' %></li>
-      <% end %>
+      <li class="account"><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %>
     <% end %>
   </ul>
 </nav>

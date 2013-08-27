@@ -18,7 +18,7 @@
 
 <ul class="note">
   <li><strong><%= t('sandbox.caution') %></strong></li>
-  <% unless current_user %><li><%= link_to t('sandbox.lead_to_sign_up'), url(:sessions, :new) %></li><% end %>
+  <% unless current_user %><li><%= link_to t('sandbox.lead_to_sign_up'), sign_in_url %></li><% end %>
   </li>
   <li><%= t('sandbox.note_uploaded_files') %></li>
   <li><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></li>

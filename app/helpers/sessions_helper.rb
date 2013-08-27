@@ -1,7 +1,7 @@
-# Helper methods defined here can be accessed in any controller or view in the application
-
 Bibid::App.helpers do
-  # def simple_helper_method
-  #  ...
-  # end
+  def sign_in_url
+    settings.omniauth_providers.length == 1 ?
+      "/auth/#{settings.omniauth_providers.first.first}" :
+      url(:sessions, :new)
+  end
 end
