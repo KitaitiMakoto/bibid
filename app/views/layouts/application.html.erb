@@ -11,11 +11,12 @@
 <h1><a href="<%= '/' %>">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></h1>
 
 <nav class="global">
-  <ul class="resources text-right">
+  <ul class="resources">
     <li><%= link_to t('users.list'), url(:users, :index), :'data-ligature-symbol' => 'users' %></li>
     <li><%= link_to t('books.uploaded_books'), url(:books, :index), :'data-ligature-symbol' => 'book' %></li>
+  </ul>
+  <ul class="current-user">
     <% if current_user %>
-    <li class="upload-form"><%= partial('books/upload_form') %></li>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name', :'data-ligature-symbol' => 'you' %></li>
     <li>
       <% form_tag url(:sessions, :destroy), :class => 'sign-out-form', :'data-ligature-symbol' => 'logout' do %>
@@ -32,6 +33,12 @@
     <% end %>
   </ul>
 </nav>
+<nav class="features">
+  <ul>
+    <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
+  </ul>
+</nav>
+
 
 <%= yield %>
 
