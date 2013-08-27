@@ -33,12 +33,13 @@
     <% end %>
   </ul>
 </nav>
-<nav class="features">
-  <ul>
-    <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
-  </ul>
-</nav>
-
+<% if current_user %>
+  <nav class="features">
+    <ul>
+      <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
+    </ul>
+  </nav>
+<% end %>
 
 <%= yield %>
 
