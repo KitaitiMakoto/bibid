@@ -35,8 +35,8 @@ en:
     title: Try it!
     description: This is a form to try feature of this site.
     step1: Upload an EPUB file and
-    step2: embed generated HTML tags into your blog so that,
-    step3: in your blog, your readers can read your EPUB book!
+    step2: paste generated HTML tags into your blog so that,
+    step3: your readers can read your EPUB book in your blog!
     lead_to_sign_up: Sign up to store your books permanently!
     note_uploaded_files: URL of uploaded book does not appear in the "Uploaded books" page.
     caution: "CAUTION: Uploaded book will be removed at some time."
