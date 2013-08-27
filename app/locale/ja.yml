@@ -26,7 +26,7 @@ ja:
     rss: "読者に、iTunes等Podcast用アプリケーションでこのフィードを登録してもらってください。BiB/i'dでEPUBを登録した時に通知・ダウンロードが行われます。"
     opds: "読者に、OPDS用アプリケーションでこのフィードを登録してもらってください。BiB/i'dでEPUBを登録した時に通知が行われます。"
   app:
-    description: "BiB/i'dは、EPUBファイルを登録して、あなたのブログなどに埋め込めるようにするサービスです。"
+    description: "BiB/i'dは、EPUBファイルを、あなたのブログで読めるようにするサービスです。"
   layout:
     nav:
       sign_in: サインイン
