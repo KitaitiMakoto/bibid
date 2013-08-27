@@ -66,7 +66,6 @@ module Bibid
     #
 
     before do
-      I18n.locale = request.env.http_accept_language.compatible_language_from(settings.available_languages) || I18n.default_locale
       ActiveRecord::IdentityMap.enabled = true
     end
 
