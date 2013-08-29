@@ -66,10 +66,13 @@ module Bibid
     #
 
     before do
-      if Bibid::App.environment == :development
-        I18n.locale = request.env.http_accept_language.compatible_language_from(settings.available_languages) || I18n.default_locale
-      end
       ActiveRecord::IdentityMap.enabled = true
+
+      I18n.locale = request.env.http_accept_language.compatible_language_from(settings.available_languages) || I18n.default_locale
+      response.header['Content-Language'] = I18n.locale.to_s
+      varies = response.header['Vary'].to_s.split(/\s*,\s*/)
+      varies << 'Accept-Language' unless varies.include?('Accept-Language')
+      response.header['Vary'] = varies.join(',')
     end
 
     ##
