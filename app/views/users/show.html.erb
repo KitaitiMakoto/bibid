@@ -21,17 +21,20 @@
 
 <div class="user-feeds">
   <h3><%= @user.display_name %><%= t('users.book_feeds') %></h3>
-  <h4>RSS 2.0(<%= t('users.podcasting') %>)</h4>
-  <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
-  <p><%= link_to rss_url, rss_url %></p>
-  <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
-  <p><%= t('help.rss') %></p>
-
-  <h4>OPDS</h4>
-  <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
-  <p><%= link_to opds_url, opds_url %></p>
-  <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
-  <p><%= t('help.opds') %></p>
+  <div class="feed">
+    <h4>RSS 2.0(<%= t('users.podcasting') %>)</h4>
+    <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
+    <p><%= link_to rss_url, rss_url %></p>
+    <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
+    <p><%= t('help.rss') %></p>
+  </div>
+  <div class="feed">
+    <h4>OPDS</h4>
+    <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
+    <p><%= link_to opds_url, opds_url %></p>
+    <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
+    <p><%= t('help.opds') %></p>
+  </div>
 </div>
 
 <div class="user-books">
