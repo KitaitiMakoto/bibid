@@ -25,7 +25,7 @@ Bibid::App.helpers do
             make_entry_base entry, book
             entry.links.new_link do |link|
               link.rel = RSS::OPDS::RELATIONS['acquisition']
-              link.href = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
+              link.href = File.join(absolute_url('/'), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
               link.type = EPUB::MediaType::EPUB
             end
           end
