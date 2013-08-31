@@ -52,7 +52,7 @@ en:
       can_modify: can modify later.
     books: "'s books"
     current_file_size: Total file size
-    book_feeds: Feeds
+    book_feeds: "'s feeds"
     podcasting: for podcasting
     submit:
       create: Create account

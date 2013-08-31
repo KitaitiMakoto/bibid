@@ -19,23 +19,23 @@
   </div>
 <% end %>
 
+<div class="user-feeds">
+  <h3><%= @user.display_name %><%= t('users.book_feeds') %></h3>
+  <h4>RSS 2.0(<%= t('users.podcasting') %>)</h4>
+  <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
+  <p><%= link_to rss_url, rss_url %></p>
+  <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
+  <p><%= t('help.rss') %></p>
+
+  <h4>OPDS</h4>
+  <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
+  <p><%= link_to opds_url, opds_url %></p>
+  <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
+  <p><%= t('help.opds') %></p>
+</div>
+
 <div class="user-books">
   <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
-  <div class="feeds contracted">
-    <h4><%= t('users.book_feeds') %></h4>
-    <ul>
-      <li title="<%= t('help.rss') %>" class="help">
-        <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
-        <span class="feed-type" data-ligature-symbol="help">RSS 2.0(<%= t('users.podcasting') %>)</span> <%= link_to rss_url, rss_url %>
-        <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
-      </li>
-      <li title="<%= t('help.opds') %>" class="help">
-        <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
-        <span class="feed-type" data-ligature-symbol="help">OPDS</span> <%= link_to opds_url, opds_url %>
-        <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
-      </li>
-    </ul>
-  </div>
   <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
 
   <%= paginate @user.books.page(params[:page]) %>
