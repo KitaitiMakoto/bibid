@@ -86,7 +86,7 @@ Bibid::App.controllers :users do
     return halt 403 unless current_user.name == params[:name]
     @user = User.find_by_name(params[:name])
     if @user.destroy
-      redirect url(:root, :index), :success => I18n.t('notice.users.destroy')
+      redirect '/', :success => I18n.t('notice.users.destroy')
     else
       render 'users/show'
     end

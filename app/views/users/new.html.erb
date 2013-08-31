@@ -1,3 +1,9 @@
+<% content_for :title do %><%= t('users.new') %><% end %>
+
+<h1><a href="<%= '/' %>">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></h1>
+
+<h2><%= t('users.new') %></h2>
+
 <% form_for @user, url(:users, :create), :class => 'users_create' do |f| %>
   <% if f.error_messages.present? %><p><%= f.error_messages %></p><% end %>
   <%= f.text_field_block :name, :value => @user.name, :required => true, :pattern => '[A-Za-z0-9_\-]+', :maxlength => 24 %>

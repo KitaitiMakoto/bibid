@@ -1,3 +1,7 @@
+<% content_for :title do %><%= @book.title.presence %><% end %>
+
+<h1><a href="<%= '/' %>">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></h1>
+
 <article>
   <div class="book-heading">
     <h2><%= link_to @book.title.presence || t('books.unknown_title'), url(:books, :show, :id => @book.id) %></h2>

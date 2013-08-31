@@ -1,14 +1,18 @@
-<%- @title = "BiB/i'd" -%>
 <!DOCTYPE html>
-<title><%= @title %></title>
+<title>
+  <% @app_title = "BiB/i'd" %>
+  <% if content_for? :title %>
+    <%= yield_content :title %> - <%= @app_title %>
+  <% else %>
+    <%= @app_title %>
+  <% end %>
+</title>
 <link rel="stylesheet" type="text/css" href="/components/bootstrap/dist/css/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 <%= stylesheet_link_tag 'application' %>
 
 <%= flash_tag :success, :class => 'text-success' %>
 <%= flash_tag :error, :class => 'text-error' %>
-
-<h1><a href="<%= '/' %>">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></h1>
 
 <nav class="global">
   <ul class="resources">

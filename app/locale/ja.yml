@@ -44,6 +44,7 @@ ja:
     over_file_size: 'ファイルサイズ制限を超えます。アップロードするファイル：%{epub}, 制限：%{limit}'
   users:
     list: ユーザー一覧
+    new: サインアップ
     name:
       max_length: 最大 %{length} 文字です。
       available_charactors: が使用可能です。
@@ -60,11 +61,13 @@ ja:
     confirm_deletion: このアカウントを削除してよろしいですか？
   books:
     uploaded_books: 登録された本
+    new: 本の登録
     unknown_title: タイトル不明
     download: ダウンロード
     encourage_embedding: この本をブログに埋め込んでみましょう！
     confirm_deletion: この本を削除してよろしいですか？
   sessions:
+    new: サインイン/サインアップ
     sign_in_with: 次のアカウントでサインイン/サインアップできます
   errors:
     messages:
