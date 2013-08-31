@@ -16,6 +16,7 @@
 
 <nav class="global">
   <ul class="resources">
+    <li><a href="<%= '/' %>" class="link-to-home">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></li>
     <li><%= link_to t('users.list'), url(:users, :index), :'data-ligature-symbol' => 'users' %></li>
     <li><%= link_to t('books.uploaded_books'), url(:books, :index), :'data-ligature-symbol' => 'book' %></li>
   </ul>
