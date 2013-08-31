@@ -66,6 +66,7 @@ ja:
     download: ダウンロード
     encourage_embedding: この本をブログに埋め込んでみましょう！
     confirm_deletion: この本を削除してよろしいですか？
+    embedding_sample: 埋め込み例
   sessions:
     new: サインイン/サインアップ
     sign_in_with: 次のアカウントでサインイン/サインアップできます

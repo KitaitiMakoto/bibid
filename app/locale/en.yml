@@ -66,6 +66,7 @@ en:
     download: Download
     encourage_embedding: Embed this book into your blog!
     confirm_deletion: Are you sure you want to delete this book?
+    embedding_sample: Embedding sample
   sessions:
     new: Sign in/sign up
     sign_in_with: Sign in/sign up with
