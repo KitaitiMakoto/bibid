@@ -5,7 +5,13 @@
 
   <% @users.each do |user| %>
   <ul>
-    <li><%= link_to user.display_name, url(:users, :show, :name => user.name) %></li>
+    <li>
+      <%= link_to user.display_name, url(:users, :show, :name => user.name) %>
+        (
+          <%= link_to 'RSS', absolute_url(:users, :show, :name => user.name, :format => :rss) %>
+          <%= link_to 'OPDS', absolute_url(:users, :show, :name => user.name, :format => :opds) %>
+        )
+    </li>
   </ul>
   <% end %>
 
