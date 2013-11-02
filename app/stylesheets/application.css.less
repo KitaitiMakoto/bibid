@@ -112,38 +112,34 @@ nav.global {
   a.user-name {
     margin-right: 0.2em;
   }
-  form.sign-out-form {
-    input[type="submit"] {
-      padding: 0;
-      background: transparent;
-      border: none;
-      &:hover {
-        text-decoration: underline;
+  form {
+    &.sign-out-form {
+      input[type="submit"] {
+        padding: 0;
+        background: transparent;
+        border: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-    &:after {
-      margin: 0;
-    }
-  }
-  form.upload-form {
-    label {
-      font-weight: normal;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    p {
-      display: inline;
+    &.upload-form {
       label {
-        display: inline;
-        cursor: pointer;
+        font-weight: normal;
+        &:hover {
+          text-decoration: underline;
+        }
       }
-    }
-    input[type="file"], input[type="submit"] {
-      display: none;
-    }
-    &:after {
-      margin: 0;
+      p {
+        display: inline;
+        label {
+          display: inline;
+          cursor: pointer;
+        }
+      }
+      input[type="file"], input[type="submit"] {
+        display: none;
+      }
     }
   }
 }
