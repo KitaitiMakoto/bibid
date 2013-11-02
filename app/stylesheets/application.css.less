@@ -104,27 +104,6 @@ nav.global {
     &.current-user {
       position: absolute;
       right: 1em;
-      form.upload-form {
-        label {
-          font-weight: normal;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-        p {
-          display: inline;
-          label {
-            display: inline;
-            cursor: pointer;
-          }
-        }
-        input[type="file"], input[type="submit"] {
-          display: none;
-        }
-        &:after {
-          margin: 0;
-        }
-      }
     }
   }
   a {
@@ -141,6 +120,27 @@ nav.global {
       &:hover {
         text-decoration: underline;
       }
+    }
+    &:after {
+      margin: 0;
+    }
+  }
+  form.upload-form {
+    label {
+      font-weight: normal;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      display: inline;
+      label {
+        display: inline;
+        cursor: pointer;
+      }
+    }
+    input[type="file"], input[type="submit"] {
+      display: none;
     }
     &:after {
       margin: 0;
