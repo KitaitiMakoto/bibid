@@ -10,14 +10,13 @@
 
   <p><strong><%= t('sandbox.caution') %></strong></p>
 
-  <div id="book-controls">
-    <p class="embedding-tag col-10"><label for="embedding-tag"><%= t('books.encourage_embedding') %></label><br>
+  <div id="book-controls" class="row">
+    <p class="embedding-tag col-xs-10"><label for="embedding-tag"><%= t('books.encourage_embedding') %></label><br>
       <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
     </p>
-    <ul id="book-controls" class="col-2">
+    <ul id="book-controls" class="col-xs-2">
       <li><%= number_to_human_size @book.epub.size %></li>
       <li><%= link_to t('books.download'), :href => "/components/bibi/bib/bookshelf/#{@book.user.name}/#{File.basename(@book.epub.current_path)}", :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'in' %></li>
-      <li><%= link_to t('books.open'), :href => embedding_url(@book), :'data-ligature-symbol' => 'full' %></li>
       <li>
         <% form_for @book, url(:sandbox, :destroy, :filename => params[:filename]), :'data-confirm' => t('books.confirm_deletion') do |f| %>
           <%= hidden_form_method_field 'delete' %>
@@ -28,6 +27,6 @@
   </div>
 </article>
 
-<div class="embedded col-12">
+<div class="embedded col-xs-12">
   <%= embedding_tag(@book) %>
 </div>
