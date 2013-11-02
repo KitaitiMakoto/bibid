@@ -22,6 +22,7 @@
   </ul>
   <ul class="current-user">
     <% if current_user %>
+    <li><%= partial('books/upload_form') %></li>
     <li><%= link_to current_user.display_name, url(:users, :show, :name => current_user.name), :class => 'user-name', :'data-ligature-symbol' => 'you' %></li>
     <li>
       <% form_tag url(:sessions, :destroy), :class => 'sign-out-form', :'data-ligature-symbol' => 'logout' do %>
@@ -34,13 +35,6 @@
     <% end %>
   </ul>
 </nav>
-<% if current_user %>
-  <nav class="features">
-    <ul>
-      <li class="upload-form text-right"><%= partial('books/upload_form') %></li>
-    </ul>
-  </nav>
-<% end %>
 
 <%= yield %>
 
