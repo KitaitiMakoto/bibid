@@ -75,6 +75,10 @@ module Bibid
       response.header['Vary'] = varies.join(',')
     end
 
+    not_found do
+      render 'errors/404'
+    end
+
     ##
     # You can manage errors like:
     #
