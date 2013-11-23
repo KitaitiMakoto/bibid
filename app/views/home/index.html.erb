@@ -10,9 +10,21 @@
   <h2><%= t('home.copy') %></h2>
   <div>
     <p><%= t('home.feature_embedding') %></p>
+    <ol>
+      <li class="step col-sm-3"><p><%= t('home.feature_embedding_step_upload') %></p></li>
+      <li class="step col-sm-3"><%= t('home.feature_embedding_step_generating') %></li>
+      <li class="step col-sm-3"><%= t('home.feature_embedding_step_embedding') %></li>
+      <li class="step col-sm-3"><%= t('home.feature_embedding_step_view') %></li>
+    </ol>
   </div>
   <div>
     <p><%= t('home.feature_feed') %></p>
+    <ol>
+      <li class="step col-sm-3"><%= t('home.feature_feed_step_pasting') %></li>
+      <li class="step col-sm-3"><%= t('home.feature_feed_step_registering') %></li>
+      <li class="step col-sm-3"><%= t('home.feature_feed_step_upload') %></li>
+      <li class="step col-sm-3"><%= t('home.feature_feed_step_notification') %></li>
+    </ol>
   </div>
   <div>
     <p><%= t('home.feature_sign_up') %><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %></p>

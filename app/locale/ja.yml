@@ -37,6 +37,14 @@ ja:
     feature_embedding: 電子書籍（EPUB）をあなたのブログに埋め込めるようにします。
     feature_feed: あなたのRSSフィードを提供します。読者が新刊をチェックし、自動でダウンロードできるようになります。
     feature_sign_up: Twitterアカウントを使ってサインアップできます。
+    feature_embedding_step_upload: EPUBファイルをアップロードします。
+    feature_embedding_step_generating: HTMLタグが生成されます。
+    feature_embedding_step_embedding: そのタグをあなたのブログに埋め込みます。
+    feature_embedding_step_view: EPUBがあなたのブログで読めるようになります。
+    feature_feed_step_pasting: "BiB/i'dが生成するあなたのフィードURIをブログに貼り付けます。"
+    feature_feed_step_registering: フィードを読者のポッドキャストアプリケーションに登録してもらいます。
+    feature_feed_step_upload: "BiB/i'dに本をアップロードします。"
+    feature_feed_step_notification: 読者は自動的にその通知を受け取り、本をダウンロードします。
     acknowledgement: "BiB/i'dは次のツールで作られています"
     acknowledgement_bibi: ブラウザーで動作するEPUBリーダーです。
     acknowledgement_padrino: Ruby製のウェブアプリケーションフレームワークです。

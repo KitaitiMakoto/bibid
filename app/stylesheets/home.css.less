@@ -1,5 +1,42 @@
+@import "application.css";
+
 .features {
-  line-height: 3em;
+  line-height: 2em;
+  div {
+    clear: both;
+  }
+  .step {
+    display: block;
+    margin-left: 3em;
+    margin-bottom: 1em;
+    border: dashed 1px;
+    height: 10em;
+    border-radius: 0.3em;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 4em;
+      left: -2em;
+      content: "arrowright";
+      font-family: "LigatureSymbols";
+      -webkit-text-rendering: optimizeLegibility;
+         -moz-text-rendering: optimizeLegibility;
+          -ms-text-rendering: optimizeLegibility;
+           -o-text-rendering: optimizeLegibility;
+              text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+         -moz-font-smoothing: antialiased;
+          -ms-font-smoothing: antialiased;
+           -o-font-smoothing: antialiased;
+              font-smoothing: antialiased;
+    }
+    &:first-child {
+      margin-left: 0;
+      &:before {
+	content: "";
+      }
+    }
+  }
 }
 
 #acknowledgement {
