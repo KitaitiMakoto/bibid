@@ -95,7 +95,7 @@ module Bibid
     # end
 
     get '/' do
-      render 'sandbox/new'
+      render 'home/index'
     end
 
     get '/auth/failure' do
