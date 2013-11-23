@@ -59,6 +59,8 @@ ja:
     books: の本
     current_file_size: ファイルサイズ総計
     book_feeds: のフィード
+    feed_uri: フィードのURI
+    feed_tag: 貼り付け用タグ
     podcasting: Podcast用
     submit:
       create: アカウント作成

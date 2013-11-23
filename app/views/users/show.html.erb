@@ -36,7 +36,9 @@
     <div class="feed">
       <h4>RSS 2.0(<%= t('users.podcasting') %>)</h4>
       <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
+      <h5><%= t('users.feed_uri') %></h5>
       <p><%= link_to rss_url, rss_url %></p>
+      <h5><%= t('users.feed_tag') %></h5>
       <textarea readonly onclick="this.select();"><%= link_to rss_url, rss_url %></textarea>
       <ul class="note">
         <li><%= t('help.rss') %></li>
@@ -45,7 +47,9 @@
     <div class="feed">
       <h4>OPDS</h4>
       <% opds_url = absolute_url(:users, :show, :name => @user.name, :format => :opds) %>
+      <h5><%= t('users.feed_uri') %></h5>
       <p><%= link_to opds_url, opds_url %></p>
+      <h5><%= t('users.feed_tag') %></h5>
       <textarea readonly onclick="this.select();"><%= tag :link, :rel => 'related', :href => absolute_url(:users, :show, :name => @user.name, :format => :opds), :type => RSS::OPDS::TYPES['acquisition'] %></textarea>
       <ul class="note">
         <li><%= t('help.opds') %></li>
