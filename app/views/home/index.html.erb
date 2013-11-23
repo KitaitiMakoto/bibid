@@ -27,7 +27,7 @@
     </ol>
   </div>
   <div>
-    <p><%= t('home.feature_sign_up') %><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %></p>
+    <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
   </div>
 </section>
 
