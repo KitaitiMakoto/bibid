@@ -23,7 +23,7 @@
   <% end %>
 
   <div class="user-books">
-    <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
+    <h3 class="ligature-symbol" data-ligature-symbol="book"><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
     <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
 
     <%= paginate @user.books.page(params[:page]) %>
@@ -32,7 +32,7 @@
   </div>
 
   <div class="user-feeds">
-    <h3><%= @user.display_name %><%= t('users.book_feeds') %></h3>
+    <h3 class="ligature-symbol" data-ligature-symbol="feed"><%= @user.display_name %><%= t('users.book_feeds') %></h3>
     <div class="feed">
       <h4>RSS 2.0(<%= t('users.podcasting') %>)</h4>
       <% rss_url = absolute_url(:users, :show, :name => @user.name, :format => :rss) %>
