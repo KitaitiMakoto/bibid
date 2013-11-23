@@ -1,0 +1,38 @@
+<h1 class="app-title"><a href="<%= '/' %>">BiB<span style="font-family: 'Cantata One'; font-size: 0.69em; top: 0.05em; margin-left: -0.05em; margin-right: -0.081em; font-weight: 300px;">/</span>i<span style="font-size: 0.9em; margin-left: -0.02em; margin-right: -0.04em;">'</span>d</a></h1>
+
+<p class="app-description"><%= t('app.description') %></p>
+
+<section>
+  <h2><%= t('home.copy') %></h2>
+  <ul class="features">
+    <li class="feature-embedding"><%= t('home.feature_embedding') %></li>
+    <li class="feature-feed"><%= t('home.feature_feed') %></li>
+    <li class="feature-sign-up"><%= t('home.lead_to_sign_up') %><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %></li>
+  </ul>
+</section>
+
+<section>
+  <h2><%= t('sandbox.title') %></h2>
+
+  <p><%= t('sandbox.description') %></p>
+
+  <% form_for :book, url(:sandbox, :create), :class => 'upload-form sandbox-form', :enctype => 'multipart/form-data' do |f| %>
+    <p><%= f.error_messages %></p>
+    <%= f.file_field_block :epub, :caption => 'EPUB:', :required => true %>
+    <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
+  <% end %>
+
+  <ol class="sandbox-step">
+    <li class="step step1"><%= t('sandbox.step1') %></li>
+    <li class="step step2"><%= t('sandbox.step2') %></li>
+    <li class="step step3"><%= t('sandbox.step3') %></li>
+  </ol>
+
+  <ul class="note">
+    <li><strong><%= t('sandbox.caution') %></strong></li>
+    <% unless current_user %><li><%= link_to t('sandbox.lead_to_sign_up'), sign_in_url %></li><% end %>
+    </li>
+    <li><%= t('sandbox.note_uploaded_files') %></li>
+    <li><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></li>
+  </ul>
+</section>
