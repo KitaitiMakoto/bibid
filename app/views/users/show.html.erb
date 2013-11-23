@@ -22,6 +22,15 @@
   </div>
   <% end %>
 
+  <div class="user-books">
+    <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
+    <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
+
+    <%= paginate @user.books.page(params[:page]) %>
+
+    <p><%= t('users.current_file_size') %>: <%= number_to_human_size(@user.current_file_size) %>/<%= number_to_human_size(settings.total_file_size_limit) %></p>
+  </div>
+
   <div class="user-feeds">
     <h3><%= @user.display_name %><%= t('users.book_feeds') %></h3>
     <div class="feed">
@@ -42,14 +51,5 @@
         <li><%= t('help.opds') %></li>
       </ul>
     </div>
-  </div>
-
-  <div class="user-books">
-    <h3><span class="user-name"><%= @user.display_name %></span><%= t('users.books') %></h3>
-    <%= partial 'books/book_list', :locals => {:books => @user.books.page(params[:page])} %>
-
-    <%= paginate @user.books.page(params[:page]) %>
-
-    <p><%= t('users.current_file_size') %>: <%= number_to_human_size(@user.current_file_size) %>/<%= number_to_human_size(settings.total_file_size_limit) %></p>
   </div>
 </article>
