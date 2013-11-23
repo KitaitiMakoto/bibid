@@ -2,12 +2,16 @@
 
 <p class="app-description"><%= t('app.description') %></p>
 
+<% unless current_user %>
+  <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
+<% end %>
+
 <section>
   <h2><%= t('home.copy') %></h2>
   <ul class="features">
     <li class="feature-embedding"><%= t('home.feature_embedding') %></li>
     <li class="feature-feed"><%= t('home.feature_feed') %></li>
-    <li class="feature-sign-up"><%= t('home.lead_to_sign_up') %><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %></li>
+    <li class="feature-sign-up"><%= t('home.feature_sign_up') %><%= link_to t('layout.nav.sign_in'), sign_in_url, :'data-ligature-symbol' => 'login' %></li>
   </ul>
 </section>
 
@@ -36,3 +40,8 @@
     <li><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></li>
   </ul>
 </section>
+
+<% unless current_user %>
+  <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
+<% end %>
+

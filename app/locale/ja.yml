@@ -33,9 +33,10 @@ ja:
       sign_out: サインアウト
   home:
     copy: "BiB/i'dは電子書籍の作者を応援します。"
+    lead_to_sign_up: サインアップはこちら
     feature_embedding: 電子書籍（EPUB）をあなたのブログに埋め込めるようにします。
     feature_feed: あなたのRSSフィードを提供します。読者が新刊をチェックし、自動でダウンロードできるようになります。
-    lead_to_sign_up: Twitterアカウントを使ってサインアップできます。
+    feature_sign_up: Twitterアカウントを使ってサインアップできます。
   sandbox:
     title: お試しください！
     description: このサイトの機能を確認するためのお試し用フォームです。
