@@ -62,6 +62,7 @@ ja:
     feed_uri: フィードのURI
     feed_tag: 貼り付け用タグ
     podcasting: Podcast用
+    upload_form: 本のアップロード
     submit:
       create: アカウント作成
     destroy: 退会

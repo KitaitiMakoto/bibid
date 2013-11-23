@@ -46,7 +46,7 @@ div.delete-area {
   }
 }
 
-.user-books, .user-feeds {
+.user-books, .user-feeds, .user-upload {
   h3 {
     color: #555;
     padding: 0 0 0.3em 0.3em;
@@ -64,5 +64,17 @@ div.delete-area {
     p, textarea, ul {
       margin-left: 1em;
     }
+  }
+}
+
+.user-upload {
+  form {
+    margin-top: 2em;
+    &:before {
+      display: none;
+    }
+  }
+  label {
+    display: none;
   }
 }

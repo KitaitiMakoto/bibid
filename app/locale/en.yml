@@ -59,7 +59,10 @@ en:
     books: "'s books"
     current_file_size: Total file size
     book_feeds: "'s feeds"
+    feed_uri: Feed URI
+    feed_tag: Tag to embed
     podcasting: for podcasting
+    upload_form: Upload book
     submit:
       create: Create account
     destroy: Resign
