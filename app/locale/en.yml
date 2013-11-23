@@ -34,7 +34,7 @@ en:
   home:
     copy: "BiB/i'd backups ebook authors"
     lead_to_sign_up: Sign up with
-    feature_embedding: It makes ebooks(EPUB) able to embed to your blog.
+    feature_embedding: It enables ebooks(EPUB) to embed to your blog.
     feature_feed: It provides your RSS feeds from which readers can know your new book and download it.
     feature_sign_up: You can sign up with Twitter account.
     acknowledgement: "BiB/i'd is made by tools below"
