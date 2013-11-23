@@ -32,7 +32,7 @@ ja:
       sign_in: サインイン
       sign_out: サインアウト
   home:
-    copy: "BiB/i'dは電子書籍の作者を応援します。"
+    copy: "BiB/i'dは電子書籍の作者を応援します"
     lead_to_sign_up: サインアップはこちら
     feature_embedding: 電子書籍（EPUB）をあなたのブログに埋め込めるようにします。
     feature_feed: あなたのRSSフィードを提供します。読者が新刊をチェックし、自動でダウンロードできるようになります。

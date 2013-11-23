@@ -32,7 +32,7 @@ en:
       sign_in: Sign in
       sign_out: Sign out
   home:
-    copy: "BiB/i'd backups ebook authors."
+    copy: "BiB/i'd backups ebook authors"
     lead_to_sign_up: Sign up with
     feature_embedding: It makes ebooks(EPUB) able to embed to your blog.
     feature_feed: It provides your RSS feeds from which readers can know your new book and download it.
