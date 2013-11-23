@@ -37,6 +37,11 @@ en:
     feature_embedding: It makes ebooks(EPUB) able to embed to your blog.
     feature_feed: It provides your RSS feeds from which readers can know your new book and download it.
     feature_sign_up: You can sign up with Twitter account.
+    acknowledgement: "BiB/i'd is made by tools below"
+    acknowledgement_bibi: EPUB reader which works in browser.
+    acknowledgement_padrino: Web application framework in Ruby.
+    acknowledgement_ligature_symbols: Icons made by ligature.
+    acknowledgement_twitter_bootstrap: Useful CSS framework.
   sandbox:
     title: Try it!
     description: This is a form to try feature of this site.

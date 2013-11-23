@@ -37,6 +37,11 @@ ja:
     feature_embedding: 電子書籍（EPUB）をあなたのブログに埋め込めるようにします。
     feature_feed: あなたのRSSフィードを提供します。読者が新刊をチェックし、自動でダウンロードできるようになります。
     feature_sign_up: Twitterアカウントを使ってサインアップできます。
+    acknowledgement: "BiB/i'dは次のツールで作られています"
+    acknowledgement_bibi: ブラウザーで動作するEPUBリーダーです。
+    acknowledgement_padrino: Ruby製のウェブアプリケーションフレームワークです。
+    acknowledgement_ligature_symbols: リガチャによるアイコン集です。
+    acknowledgement_twitter_bootstrap: 使いやすいCSSフレームワークです。
   sandbox:
     title: お試しください！
     description: このサイトの機能を確認するためのお試し用フォームです。
