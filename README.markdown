@@ -1,5 +1,6 @@
 BiB/i'd
 ======
+[![Dependency Status](https://gemnasium.com/KitaitiMakoto/bibid.png)](https://gemnasium.com/KitaitiMakoto/bibid)
 
 [BiB/i][bibi] daemon. Actually, not a daemon.
 
