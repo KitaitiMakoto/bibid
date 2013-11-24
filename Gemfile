@@ -40,7 +40,7 @@ gem 'foreigner'
 gem 'kaminari', '0.14.1', :require => 'kaminari/sinatra'
 
 gem 'sprockets', '~> 2.2.1'
-gem 'http_accept_language', '2.0.0.pre'
+gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
 gem 'omniauth'

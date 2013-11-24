@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/KitaitiMakoto/rack-zip.git
-  revision: 0e7eff1ddf3879e45c0bb3ce22e4e699b585c911
+  revision: 69d99451221e67837c5d7989682122bfc1fba35d
   specs:
     rack-zip (0.0.1)
       rack
@@ -73,7 +73,7 @@ GEM
       activerecord (>= 3.0.0)
     hashie (2.0.5)
     hike (1.2.3)
-    http_accept_language (2.0.0.pre)
+    http_accept_language (2.0.0)
     http_parser.rb (0.5.3)
     http_router (0.11.0)
       rack (>= 1.0.0)
@@ -236,7 +236,7 @@ DEPENDENCIES
   epub-parser!
   erubis (~> 2.7.0)
   foreigner
-  http_accept_language (= 2.0.0.pre)
+  http_accept_language
   kaminari (= 0.14.1)
   less
   mina
