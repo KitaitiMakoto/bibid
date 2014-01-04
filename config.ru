@@ -16,5 +16,5 @@ end
 
 run Rack::Cascade.new([
   Padrino.application,
-  Rack::Zip.new('public', extensions: %w[.epub])
+  Rack::Archive::Zip::Extract.new('public', extensions: %w[.epub])
 ])
