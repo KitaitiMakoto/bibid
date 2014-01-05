@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/epub-parser.git
-  revision: b3fdc6279dbcea72de5254652f12c9e01864216e
+  revision: 32332c19c04e49597faf51b2f48e9f2d401e6d27
   specs:
     epub-parser (0.1.5)
       addressable (>= 2.3.5)
@@ -153,7 +153,7 @@ GEM
       websocket-driver (>= 0.2.0)
     polyglot (0.3.3)
     rack (1.4.5)
-    rack-archive-zip-extract (0.0.1)
+    rack-archive-zip-extract (0.0.2)
       rack (~> 1)
       zipruby (~> 0.3)
     rack-cache (1.2)
