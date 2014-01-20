@@ -2,7 +2,7 @@ Bibid::App.helpers do
   def embedding_tag(book, options={})
     options = {:'data-bibi' => 'embed', :'data-bibi-style' => 'width: 100%; height: 100%;'}.merge(options)
     link_to(book.title, embedding_url(book), options) +
-      content_tag(:script, '', :src => absolute_bibi_url + '/i.js')
+      content_tag(:script, '', :src => absolute_bibi_url + '/i.js', :type => 'text/javascript')
   end
 
   def embedding_url(book)
