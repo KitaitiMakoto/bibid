@@ -33,7 +33,7 @@
       <li><%= number_to_human_size @book.epub.size %></li>
       <% if current_user == @book.user %><li><%= partial 'books/delete_form', :locals => {:book => @book} %></li><% end %>
     </ul>
-    <script type="text/template" id="embedding-tag-template"><%= embedding_tag(@book, :'data-bibi-style' => '{{ style }}') %></script>
+    <template id="embedding-tag-template"><%= embedding_tag(@book, :'data-bibi-style' => '{{ style }}') %></template>
   </div>
 </article>
 
