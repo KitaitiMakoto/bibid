@@ -2,7 +2,7 @@
 
 <article>
   <div class="book-heading">
-    <h1><%= link_to @book.title.presence || t('books.unknown_title'), url(:books, :show, :id => @book.id) %></h1>
+    <h1><%= link_to @book.title.presence || t('books.unknown_title'), url(:users_books, :show, :user_id => @book.user.name, :id => @book.id) %></h1>
     <h2 class="user-name text-right"><%= link_to @book.user.display_name, url(:users, :show, name: @book.user.name) %></h2>
   </div>
 
