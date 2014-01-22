@@ -24,4 +24,10 @@ Bibid::App.controllers :books do
 
     render 'books/index'
   end
+
+  get :show, :map => '/books/:id' do
+    book = Book.find(params[:id])
+    return halt 404 unless book
+    redirect url(:users_books, :show, :user_id => book.user.name, :id => book.id)
+  end
 end
