@@ -1,6 +1,5 @@
 Bibid::App.controllers :users_books, :parent => :users do
   get :show, :map => 'books/:id' do
-    logger.info params.inspect
     user = User.find_by_name(params[:user_id])
     return halt 404 unless user
     @book = user.books.find_by_id(params[:id])
