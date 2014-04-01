@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/KitaitiMakoto/epub-parser.git
-  revision: 9e93a2200968f68a493d0b5e881de5cfc0be609b
+  revision: 527af89ca025fbb7ea4ccf50ed241dee762c1cef
   specs:
     epub-parser (0.1.5)
       addressable (>= 2.3.5)
@@ -32,7 +32,7 @@ GEM
     activesupport (3.2.17)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    addressable (2.3.5)
+    addressable (2.3.6)
     arel (3.0.3)
     builder (3.0.4)
     capybara (2.2.1)
@@ -84,12 +84,10 @@ GEM
     mina (0.3.0)
       open4
       rake
-    mini_portile (0.5.2)
-    monetize (0.1.4)
-    money (6.0.1)
+    mini_portile (0.5.3)
+    money (6.1.1)
       i18n (~> 0.6.4)
-      monetize (~> 0.1.3)
-    multi_json (1.9.0)
+    multi_json (1.9.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nokogiri (1.6.1)
@@ -170,7 +168,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.1.1)
+    rake (10.2.2)
     ref (1.0.5)
     rr (1.1.2)
     rss-atom-feed_history (0.0.4)
@@ -182,7 +180,7 @@ GEM
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
-    shoulda-context (1.1.6)
+    shoulda-context (1.2.0)
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
     sinatra (1.4.4)
