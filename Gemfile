@@ -49,7 +49,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'rack-archive-zip-extract', :require => 'rack/archive/zip/extract'
-gem 'epub-parser', :github => 'KitaitiMakoto/epub-parser', :require => 'epub/parser'
+gem 'epub-parser', :require => 'epub/parser'
 gem 'rss-opds', :require => 'rss/opds'
 
 gem 'mina'
