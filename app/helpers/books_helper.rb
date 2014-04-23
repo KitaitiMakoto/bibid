@@ -11,4 +11,10 @@ Bibid::App.helpers do
     request_uri.query = "book=#{escape book.user.name}%2F#{escape File.basename(book.epub.current_path, '.epub')}"
     request_uri.to_s
   end
+
+  def cover_image_url(book)
+    epub = EPUB::Parser.parse(book.epub.current_path)
+    return unless epub.cover_image
+    epub.cover_image.entry_name
+  end
 end

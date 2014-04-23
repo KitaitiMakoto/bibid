@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/KitaitiMakoto/epub-parser.git
-  revision: 527af89ca025fbb7ea4ccf50ed241dee762c1cef
+  revision: 6434761ada1efdff0d0265af66e01e4b2a5bb301
   specs:
-    epub-parser (0.1.5)
+    epub-parser (0.1.6)
       addressable (>= 2.3.5)
       enumerabler
       nokogiri (~> 1.6)
@@ -52,7 +52,9 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     commonjs (0.2.7)
-    dotenv (0.10.0)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     enumerabler (1.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -60,7 +62,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     foreigner (1.6.1)
       activerecord (>= 3.0.0)
-    hashie (2.0.5)
+    hashie (2.1.1)
     hike (1.2.3)
     http_accept_language (2.0.1)
     http_router (0.11.1)
@@ -104,9 +106,9 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (1.6.0)
       omniauth-oauth2 (~> 1.1)
-    omniauth-google-oauth2 (0.2.2)
+    omniauth-google-oauth2 (0.2.3)
       omniauth (~> 1.0)
-      omniauth-oauth2
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -164,11 +166,11 @@ GEM
     rack-less (3.0.2)
       less (~> 2.0)
       rack (~> 1.0)
-    rack-protection (1.5.2)
+    rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.2.2)
+    rake (10.3.1)
     ref (1.0.5)
     rr (1.1.2)
     rss-atom-feed_history (0.0.4)
@@ -180,10 +182,10 @@ GEM
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
-    shoulda-context (1.2.0)
-    shoulda-matchers (2.5.0)
+    shoulda-context (1.2.1)
+    shoulda-matchers (2.6.0)
       activesupport (>= 3.0.0)
-    sinatra (1.4.4)
+    sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
