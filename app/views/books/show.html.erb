@@ -41,11 +41,3 @@
   <h3><%= t('books.embedding_sample') %></h3>
   <%= embedding_tag(@book) %>
 </div>
-
-<div id="cover-image" style="margin-top: 3em;">
-  <% epub = EPUB::Parser.parse(@book.epub.current_path) %>
-  <% if epub.cover_image  %>
-    <% cover_image_uri = File.join(absolute_bibi_url, 'bookshelf', @book.user.name, File.basename(@book.epub.current_path, '.*'), epub.cover_image.entry_name) %>
-    <%= link_to image_tag(cover_image_uri, :style => 'width: 20%;', :alt => @book.title), cover_image_uri %>
-  <% end %>
-</div>
