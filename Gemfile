@@ -54,6 +54,10 @@ gem 'rss-opds', :require => 'rss/opds'
 
 gem 'mina'
 
+group :production do
+  gem 'newrelic_rpm'
+end
+
 group :test do
   gem 'test-unit', :require => 'test/unit'
   gem 'test-unit-rr', :require => 'test/unit/rr'

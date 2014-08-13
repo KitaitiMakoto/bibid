@@ -13,3 +13,4 @@ public/*
 config/apps.rb
 .env.development
 .env.test
+newrelic.yml
