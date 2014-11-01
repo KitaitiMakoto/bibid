@@ -25,7 +25,7 @@ namespace :lib do
   end
 
   namespace :bower do
-    task :default => :update
+    task :default => [:update, :prune]
 
     desc 'Install bower packages'
     task :install do
@@ -35,6 +35,11 @@ namespace :lib do
     desc 'Update bower packages'
     task :update do
       sh 'bower update'
+    end
+
+    desc 'Prune bower packages'
+    task :prune do
+      sh 'bower prune'
     end
   end
 end
