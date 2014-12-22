@@ -66,7 +66,7 @@ GEM
     journey (1.0.4)
     json (1.8.1)
     jwt (1.0.0)
-    kaminari (0.14.1)
+    kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     less (2.6.0)
@@ -229,7 +229,7 @@ DEPENDENCIES
   erubis (~> 2.7.0)
   foreigner
   http_accept_language
-  kaminari (= 0.14.1)
+  kaminari (~> 0.16.0)
   less
   mina
   newrelic_rpm

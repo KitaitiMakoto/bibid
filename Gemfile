@@ -37,7 +37,7 @@ gem 'dotenv'
 gem 'activerecord', '~> 3', :require => 'active_record'
 gem 'pg'
 gem 'foreigner'
-gem 'kaminari', '0.14.1', :require => 'kaminari/sinatra'
+gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
 
 gem 'sprockets', '~> 2.2.1'
 gem 'http_accept_language'
