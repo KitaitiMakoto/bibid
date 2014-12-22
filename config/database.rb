@@ -69,3 +69,5 @@ ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Padrin
 
 # Timestamps are in the utc by default.
 ActiveRecord::Base.default_timezone = :utc
+
+ActiveRecord::Base.raise_in_transactional_callbacks = true
