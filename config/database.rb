@@ -51,13 +51,6 @@ ActiveRecord::Base.configurations[:test] = {
 # Setup our logger
 ActiveRecord::Base.logger = logger
 
-# Raise exception on mass assignment protection for Active Record models.
-ActiveRecord::Base.mass_assignment_sanitizer = :strict
-
-# Log the query plan for queries taking more than this (works
-# with SQLite, MySQL, and PostgreSQL).
-ActiveRecord::Base.auto_explain_threshold_in_seconds = 0.5
-
 # Include Active Record class name as root for JSON serialized output.
 ActiveRecord::Base.include_root_in_json = false
 
@@ -73,3 +66,6 @@ ActiveSupport.escape_html_entities_in_json = false
 
 # Now we can establish connection with our db.
 ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Padrino.env])
+
+# Timestamps are in the utc by default.
+ActiveRecord::Base.default_timezone = :utc

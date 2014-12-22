@@ -66,8 +66,6 @@ module Bibid
     #
 
     before do
-      ActiveRecord::IdentityMap.enabled = true
-
       I18n.locale = request.env.http_accept_language.compatible_language_from(settings.available_languages) || I18n.default_locale
       response.header['Content-Language'] = I18n.locale.to_s
       varies = response.header['Vary'].to_s.split(/\s*,\s*/)

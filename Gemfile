@@ -34,7 +34,7 @@ gem 'padrino', '0.12.4'
 
 gem 'dotenv'
 
-gem 'activerecord', '~> 3', :require => 'active_record'
+gem 'activerecord', '>= 3.0.0', :require => 'active_record'
 gem 'pg'
 gem 'foreigner'
 gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
