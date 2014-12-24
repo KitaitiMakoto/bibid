@@ -46,7 +46,6 @@ end
 # Add your after (RE)load hooks here
 #
 Padrino.after_load do
-  Foreigner.load
   ActiveRecord::Base.send :include, Padrino::Helpers::NumberHelpers
 end
 
