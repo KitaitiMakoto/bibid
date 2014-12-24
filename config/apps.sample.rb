@@ -34,11 +34,11 @@ Padrino.configure_apps do
   set :protection, true
   set :protect_from_csrf, true
   set :available_languages, ['en', 'ja']
-  set :total_file_size_limit, 20.megabytes
+  set :total_file_size_limit, 20 * 1024 * 1024
   set :epub_uploader_salt, raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
   set :sandbox_retention_count, 12
-  set :sandbox_retention_time, 1.hour
-  set :sandbox_file_size_limit, 6.megabytes
+  set :sandbox_retention_time, 1 * 60 * 60
+  set :sandbox_file_size_limit, 6 * 1024 * 1024
   set :omniauth_providers, raise [
     # You may comment out proviers which you don't support
     [:google_oauth2, 'Google OAuth client id here', 'Google OAuth client secret here'],
