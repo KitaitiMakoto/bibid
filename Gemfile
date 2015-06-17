@@ -38,7 +38,7 @@ gem 'activerecord', '>= 3.0.0', :require => 'active_record'
 gem 'pg'
 gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
 
-gem 'sprockets'
+gem 'sprockets', '~> 2'
 gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
