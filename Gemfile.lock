@@ -1,27 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (4.2.1)
-      actionview (= 4.2.1)
-      activesupport (= 4.2.1)
+    actionpack (4.2.2)
+      actionview (= 4.2.2)
+      activesupport (= 4.2.2)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    actionview (4.2.1)
-      activesupport (= 4.2.1)
+    actionview (4.2.2)
+      activesupport (= 4.2.2)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    activemodel (4.2.1)
-      activesupport (= 4.2.1)
+    activemodel (4.2.2)
+      activesupport (= 4.2.2)
       builder (~> 3.1)
-    activerecord (4.2.1)
-      activemodel (= 4.2.1)
-      activesupport (= 4.2.1)
+    activerecord (4.2.2)
+      activemodel (= 4.2.2)
+      activesupport (= 4.2.2)
       arel (~> 6.0)
-    activesupport (4.2.1)
+    activesupport (4.2.2)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -59,6 +59,7 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     hashie (3.4.2)
+    hike (1.2.3)
     http_accept_language (2.0.5)
     http_router (0.11.1)
       rack (>= 1.0.0)
@@ -161,9 +162,9 @@ GEM
       websocket-driver (>= 0.2.0)
     polyglot (0.3.5)
     power_assert (0.2.3)
-    rack (1.6.1)
-    rack-archive-zip-extract (0.0.8)
-      rack (>= 1.6)
+    rack (1.6.2)
+    rack-archive-zip-extract (0.0.9)
+      rack (>= 1.6.1)
       zipruby (~> 0.3)
     rack-less (3.0.2)
       less (~> 2.0)
@@ -200,8 +201,11 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    sprockets (3.2.0)
+    sprockets (2.12.3)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
       rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
     test-unit (3.1.2)
       power_assert
     test-unit-capybara (1.0.4)
@@ -261,9 +265,12 @@ DEPENDENCIES
   rake
   rss-opds
   shoulda
-  sprockets
+  sprockets (~> 2)
   test-unit
   test-unit-capybara
   test-unit-notify
   test-unit-rr
   therubyracer
+
+BUNDLED WITH
+   1.10.3
