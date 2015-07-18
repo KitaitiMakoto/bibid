@@ -3,6 +3,8 @@ require 'rake/sprocketstask'
 desc 'Compile assets'
 task :assets => 'assets:default'
 
+HTML_ASSET_DIR = './app/elements'
+
 namespace :assets do
   task :default => %w[stylesheets strip_digest_stylesheets javascripts strip_digest_javascripts]
 
@@ -22,6 +24,16 @@ namespace :assets do
     desc 'Strip digest from asset file name'
     task "strip_digest_#{type}" do
       mv Dir["#{output}/application-*#{ext}"].first, "#{output}/application#{ext}"
+    end
+  end
+
+  desc 'Copy HTML to public directory'
+  task :html do
+    Dir["#{HTML_ASSET_DIR}/**/*.html"].each do |path|
+      dest = path.sub(/\/app\//, '/public/')
+      dirname = File.dirname(dest)
+      mkpath dirname unless File.exist? dirname
+      cp path, dest
     end
   end
 end
