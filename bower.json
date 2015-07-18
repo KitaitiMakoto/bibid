@@ -12,6 +12,7 @@
     "jquery-ujs": "*",
     "polymer": "Polymer/polymer#^1.0.0",
     "paper-elements": "PolymerElements/paper-elements#~1.0.1",
-    "webcomponentsjs": "~0.7.7"
+    "webcomponentsjs": "~0.7.7",
+    "iron-elements": "PolymerElements/iron-elements#~1.0.2"
   }
 }
