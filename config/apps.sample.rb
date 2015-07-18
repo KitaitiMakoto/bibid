@@ -39,6 +39,7 @@ Padrino.configure_apps do
   set :sandbox_retention_count, 12
   set :sandbox_retention_time, 1 * 60 * 60
   set :sandbox_file_size_limit, 6 * 1024 * 1024
+  set :html_asset_folder, 'elements'
   set :omniauth_providers, raise [
     # You may comment out proviers which you don't support
     [:google_oauth2, 'Google OAuth client id here', 'Google OAuth client secret here'],

@@ -6,7 +6,7 @@
 
 require File.expand_path("../config/boot.rb", __FILE__)
 
-%w[stylesheets javascripts].each do |type|
+%w[stylesheets javascripts elements].each do |type|
   environment = Sprockets::Environment.new
   environment.append_path Padrino.root('app', type)
   map "/#{type}" do
