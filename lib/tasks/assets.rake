@@ -36,4 +36,9 @@ namespace :assets do
       cp path, dest
     end
   end
+
+  desc 'Vulcanize HTML to import'
+  task :vulcanize do
+    sh 'vulcanize ./public/elements/elements.html --abspath=./public/ --output=./public/elements/elements.html'
+  end
 end
