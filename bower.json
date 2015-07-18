@@ -9,6 +9,7 @@
     "underscore": "*",
     "backbone": "*",
     "jquery": "*",
-    "jquery-ujs": "*"
+    "jquery-ujs": "*",
+    "polymer": "Polymer/polymer#^1.0.0"
   }
 }
