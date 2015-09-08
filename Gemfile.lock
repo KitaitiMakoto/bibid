@@ -154,7 +154,7 @@ GEM
       padrino-core (= 0.13.0.beta2)
     padrino-support (0.13.0.beta2)
       activesupport (>= 3.1)
-    pg (0.18.2)
+    pg (0.18.3)
     poltergeist (1.6.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
