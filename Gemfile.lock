@@ -162,6 +162,7 @@ GEM
       websocket-driver (>= 0.2.0)
     polyglot (0.3.5)
     power_assert (0.2.4)
+    puma (2.14.0)
     rack (1.6.4)
     rack-archive-zip-extract (0.0.9)
       rack (>= 1.6.1)
@@ -257,6 +258,7 @@ DEPENDENCIES
   padrino (= 0.13.0.beta3)
   pg
   poltergeist
+  puma
   rack-archive-zip-extract
   rack-less
   rack-test
