@@ -51,6 +51,8 @@ gem 'rack-archive-zip-extract', :require => 'rack/archive/zip/extract'
 gem 'epub-parser', :require => 'epub/parser'
 gem 'rss-opds', :require => 'rss/opds'
 
+gem 'puma'
+
 gem 'mina'
 
 group :production do
