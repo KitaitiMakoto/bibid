@@ -90,7 +90,7 @@ GEM
     multipart-post (2.0.0)
     mustermann19 (0.4.0)
       enumerable-lazy
-    newrelic_rpm (3.14.0.305)
+    newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     nokogumbo (1.4.6)
