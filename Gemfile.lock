@@ -91,7 +91,7 @@ GEM
     mustermann19 (0.4.0)
       enumerable-lazy
     newrelic_rpm (3.14.1.311)
-    nokogiri (1.6.7)
+    nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     nokogumbo (1.4.6)
       nokogiri
@@ -276,4 +276,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
