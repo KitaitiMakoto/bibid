@@ -190,7 +190,7 @@ GEM
     rake (11.1.2)
     rchardet (1.6.1)
     ref (2.0.0)
-    rr (1.1.2)
+    rr (1.2.0)
     rss-atom-feed_history (0.0.4)
     rss-dcterms (0.0.5)
     rss-opds (0.0.2)
