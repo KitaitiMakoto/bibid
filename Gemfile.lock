@@ -53,7 +53,7 @@ GEM
     commonjs (0.2.7)
     dotenv (2.1.1)
     enumerable-lazy (0.0.1)
-    epub-parser (0.2.5)
+    epub-parser (0.2.6)
       addressable (>= 2.3.5)
       archive-zip
       nokogiri (~> 1.6)
