@@ -51,6 +51,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     commonjs (0.2.7)
+    concurrent-ruby (1.0.2)
     dotenv (2.1.1)
     enumerable-lazy (0.0.2)
     epub-parser (0.2.7)
@@ -95,7 +96,7 @@ GEM
     multipart-post (2.0.0)
     mustermann19 (0.4.4)
       enumerable-lazy
-    newrelic_rpm (3.16.3.323)
+    newrelic_rpm (3.17.0.325)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     oauth (0.5.1)
