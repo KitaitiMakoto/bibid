@@ -51,6 +51,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     commonjs (0.2.7)
+    concurrent-ruby (1.0.2)
     dotenv (2.1.1)
     enumerable-lazy (0.0.2)
     epub-parser (0.2.7)
@@ -64,7 +65,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     hashie (3.4.6)
     hike (1.2.3)
-    http_accept_language (2.0.5)
+    http_accept_language (2.1.0)
     i18n (0.7.0)
     io-like (0.3.0)
     json (1.8.3)
