@@ -52,7 +52,6 @@ GEM
       execjs
     coffee-script-source (1.11.1)
     commonjs (0.2.7)
-    concurrent-ruby (1.0.2)
     dotenv (2.1.1)
     enumerable-lazy (0.0.2)
     epub-parser (0.2.7)
