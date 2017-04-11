@@ -84,7 +84,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     moneta (0.8.1)
-    money (6.8.2)
+    money (6.8.3)
       i18n (>= 0.6.4, < 0.9)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
     multi_json (1.12.1)
