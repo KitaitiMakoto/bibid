@@ -67,7 +67,7 @@ GEM
     io-like (0.3.0)
     json (2.1.0)
     jwt (1.5.6)
-    kaminari (0.16.0)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     less (2.6.0)
