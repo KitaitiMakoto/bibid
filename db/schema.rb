@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -48,6 +47,6 @@ ActiveRecord::Schema.define(version: 3) do
   add_index "users", ["lower_name"], name: "index_users_on_lower_name", using: :btree
   add_index "users", ["name"], name: "index_users_on_name", using: :btree
 
-  add_foreign_key "authentications", "users", name: "authentications_user_id_fk", on_delete: :cascade
-  add_foreign_key "books", "users", name: "books_user_id_fk", on_delete: :cascade
+  add_foreign_key "authentications", "users"
+  add_foreign_key "books", "users"
 end
