@@ -45,7 +45,7 @@ Padrino.configure_apps do
     [:twitter, 'Twitter consumer key here', 'Twitter consumer secret here'],
     [:facebook, 'Facebook App ID here', 'Facebook App secret here']
   ]
-  # set :google_analytics_tag, 'Google Analytics tag here'
+  set :google_analytics_tag, nil # 'Google Analytics tag here'
   set :contact, raise 'Contact URI here'
 
   mime_type :opds, RSS::OPDS::TYPES['navigation']
