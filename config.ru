@@ -18,11 +18,9 @@ map "/components/bibi/bib/bookshelf" do
   run Rack::Archive::Zip::Extract.new('public/components/bibi/bib/bookshelf', extensions: %w[.epub])
 end
 
-if RACK_ENV == "development"
-  map "/components" do
-    use Rack::Static, :urls => {"/" => "index.html"}, :root => "public/components", :index => "index.html"
-    run Rack::Directory.new("public/components")
-  end
+map "/components" do
+  use Rack::Static, :urls => {"/" => "index.html"}, :root => "public/components", :index => "index.html"
+  run Rack::Directory.new("public/components")
 end
 
 run Padrino.application
