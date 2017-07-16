@@ -14,7 +14,8 @@ require File.expand_path("../config/boot.rb", __FILE__)
   end
 end
 
-run Rack::Cascade.new([
-  Padrino.application,
-  Rack::Archive::Zip::Extract.new('public', extensions: %w[.epub])
-])
+map "/components/bibi/bib/bookshelf" do
+  run Rack::Archive::Zip::Extract.new('public/components/bibi/bib/bookshelf', extensions: %w[.epub])
+end
+
+run Padrino.application
