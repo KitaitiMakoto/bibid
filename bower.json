@@ -1,7 +1,7 @@
 {
   "name": "bibid",
   "dependencies": {
-    "bibi": "0.998.3",
+    "bibi": "0.999.9",
     "bootstrap": "3.3.5",
     "twitter-icon": "https://abs.twimg.com/a/1374745069/images/resources/twitter-bird-light-bgs.png",
     "facebook-icon": "https://www.iconfinder.com/icons/317727/download/png/128",
