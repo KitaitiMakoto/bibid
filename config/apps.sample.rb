@@ -39,12 +39,20 @@ Padrino.configure_apps do
   set :sandbox_retention_count, 12
   set :sandbox_retention_time, 1 * 60 * 60
   set :sandbox_file_size_limit, 6 * 1024 * 1024
-  set :omniauth_providers, raise [
-    # You may comment out proviers which you don't support
-    [:google_oauth2, 'Google OAuth client id here', 'Google OAuth client secret here'],
-    [:twitter, 'Twitter consumer key here', 'Twitter consumer secret here'],
-    [:facebook, 'Facebook App ID here', 'Facebook App secret here']
-  ]
+
+  omniauth_providers = []
+  %i[google_oauth2 twitter facebook].each do |provider|
+    key_name = "#{provider.upcase}_KEY"
+    secret_name = "#{provider.upcase}_SECRET"
+    if ENV[key_name]
+      if ENV[secret_name]
+        omniauth_providers << [provider, ENV[key_name], ENV[secret_name]]
+      else
+        raise "Environment variable #{key_name} is set but #{secret_name} is not set"
+      end
+    end
+  end
+  set :omniauth_providers, omniauth_providers
   set :google_analytics_tag, nil # 'Google Analytics tag here'
   set :contact, raise 'Contact URI here'
 
