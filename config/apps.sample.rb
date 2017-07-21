@@ -35,7 +35,6 @@ Padrino.configure_apps do
   set :protect_from_csrf, true
   set :available_languages, ['en', 'ja']
   set :total_file_size_limit, 20 * 1024 * 1024
-  set :epub_uploader_salt, raise "Configure EpubUploader.salt such like 'urfnc09d817ioda900e9023d9557f232u91e'"
   set :sandbox_retention_count, 12
   set :sandbox_retention_time, 1 * 60 * 60
   set :sandbox_file_size_limit, 6 * 1024 * 1024
