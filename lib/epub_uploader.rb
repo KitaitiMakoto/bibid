@@ -2,7 +2,7 @@ class EpubUploader < CarrierWave::Uploader::Base
   storage :file
 
   def filename
-    Digest::SHA1.hexdigest(salt + Time.now.to_s) + '.epub'
+    Digest::SHA1.hexdigest(Time.now.to_s) + '.epub'
   end
 
   def store_dir
@@ -15,9 +15,5 @@ class EpubUploader < CarrierWave::Uploader::Base
 
   def extension_white_list
     ['epub']
-  end
-
-  def salt
-    Bibid::App.settings.epub_uploader_salt
   end
 end
