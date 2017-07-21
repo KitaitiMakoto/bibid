@@ -54,7 +54,7 @@ Padrino.configure_apps do
   end
   set :omniauth_providers, omniauth_providers
   set :google_analytics_tag, nil # 'Google Analytics tag here'
-  set :contact, raise 'Contact URI here'
+  set :contact, ENV["CONTACT_URI"]
 
   mime_type :opds, RSS::OPDS::TYPES['navigation']
 end
