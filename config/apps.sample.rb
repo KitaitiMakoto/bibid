@@ -30,7 +30,7 @@ Encoding.default_internal = Encoding::UTF_8
 #
 Padrino.configure_apps do
   enable :sessions
-  set :session_secret, raise "Configure session_secret such like '01b730daf02343fb470231c6a1f4db8e8c0b755e48c5b2fb2659c65065f69011'"
+  set :session_secret, ENV["SESSION_SECRET"] || raise("Environment variable SESSION_SECRET not set")
   set :protection, true
   set :protect_from_csrf, true
   set :available_languages, ['en', 'ja']
