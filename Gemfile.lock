@@ -75,6 +75,7 @@ GEM
     less (2.6.0)
       commonjs (~> 0.2.7)
     libv8 (3.16.14.19)
+    libv8 (3.16.14.19-x86_64-darwin-16)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -175,6 +176,7 @@ GEM
       rack (~> 1.0)
     rack-protection (1.5.3)
       rack
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -238,6 +240,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-16
 
 DEPENDENCIES
   activerecord (>= 3.0.0)
@@ -260,6 +263,7 @@ DEPENDENCIES
   puma
   rack-archive-zip-extract
   rack-less
+  rack-ssl-enforcer
   rack-test
   rake
   rss-opds
@@ -272,4 +276,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.15.2
+   1.15.4
