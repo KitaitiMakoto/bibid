@@ -32,6 +32,8 @@ gem 'padrino', '~> 0.13'
 #   gem 'padrino-' + g, '0.11.2'
 # end
 
+gem 'rack-ssl-enforcer'
+
 gem 'activerecord', '>= 3.0.0', :require => 'active_record'
 gem 'pg'
 gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
