@@ -53,8 +53,6 @@ gem 'rss-opds', :require => 'rss/opds'
 
 gem 'puma'
 
-gem 'mina'
-
 group :production do
   gem 'newrelic_rpm'
 end
