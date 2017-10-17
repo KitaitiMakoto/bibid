@@ -93,7 +93,6 @@ GEM
     multipart-post (2.0.0)
     mustermann19 (0.4.4)
       enumerable-lazy
-    newrelic_rpm (4.5.0.337)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     oauth (0.5.3)
@@ -247,7 +246,6 @@ DEPENDENCIES
   http_accept_language
   kaminari (~> 0.16.0)
   less
-  newrelic_rpm
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
