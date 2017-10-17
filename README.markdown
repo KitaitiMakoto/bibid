@@ -32,4 +32,4 @@ Development
 
 License
 -------
-BiB/i'd is released under the GPLv3. See th file "gpl-3.0.txt" for the term.
+BiB/i'd is released under the GPLv3. See th file "agpl.txt" for the term.
