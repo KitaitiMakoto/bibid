@@ -42,6 +42,8 @@ gem 'sprockets', '~> 2'
 gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
+gem 'fog-google'
+gem 'google-api-client'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
