@@ -51,4 +51,6 @@ end
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
 
+EPUB::OCF::PhysicalContainer.adapter = :Zipruby
+
 Padrino.load!
