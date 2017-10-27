@@ -50,6 +50,9 @@ Padrino.after_load do
 end
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
+CarrierWave.configure do |config|
+  config.storage = (ENV["CARRIERWAVE_FOG_PROVIDER"] ? :fog : :file)
+end
 
 EPUB::OCF::PhysicalContainer.adapter = :Zipruby
 
