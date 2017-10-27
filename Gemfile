@@ -50,6 +50,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'epub-parser', :require => 'epub/parser'
+gem 'zipruby' # For fast read of EPUB files
 gem 'rss-opds', :require => 'rss/opds'
 
 gem 'puma'
