@@ -8,7 +8,7 @@ Bibid::App.helpers do
   def embedding_url(book)
     request_uri = URI(request.url)
     request_uri.path = "/components/bibi/bib/i/"
-    request_uri.query = "book=#{escape book.user.name}%2F#{escape File.basename(book.epub.current_path)}"
+    request_uri.query = "book=#{escape book.epub.url}"
     request_uri.to_s
   end
 
