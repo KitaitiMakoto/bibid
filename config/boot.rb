@@ -41,6 +41,7 @@ require 'action_dispatch/http/mime_type'
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  Padrino::Application.prerequisites << Padrino.root("app/uploaders/**/*.rb")
 end
 
 ##
