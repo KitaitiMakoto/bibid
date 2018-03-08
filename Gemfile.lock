@@ -53,7 +53,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
-    concurrent-ruby (1.0.5)
     crass (1.0.2)
     enumerable-lazy (0.0.2)
     epub-cfi (0.1.1)
@@ -323,4 +322,4 @@ DEPENDENCIES
   zipruby
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
