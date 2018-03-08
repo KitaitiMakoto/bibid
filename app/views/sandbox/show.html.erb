@@ -15,7 +15,7 @@
       <textarea readonly id="embedding-tag" onclick="this.select();"><%= embedding_tag(@book) %></textarea>
     </p>
     <ul id="book-controls" class="col-xs-2">
-      <li><%= number_to_human_size @book.epub.size %></li>
+      <li><%= number_to_human_size @book.file_size %></li>
       <li><%= link_to t('books.download'), :href => "/components/bibi/bib/bookshelf/#{@book.user.name}/#{File.basename(@book.epub.current_path)}", :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'save' %></li>
       <li>
         <% form_for @book, url(:sandbox, :destroy, :filename => params[:filename]), :'data-confirm' => t('books.confirm_deletion') do |f| %>

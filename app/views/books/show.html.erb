@@ -30,7 +30,7 @@
     </div>
     <ul class="col-xs-2" style="margin-top: 2em;">
       <li><%= link_to t('books.download'), :href => bookshelf_url(@book), :download => "#{@book.title}.epub", :type => EPUB::MediaType::EPUB, :rel => 'nofollow', :'data-ligature-symbol' => 'save' %></li>
-      <li><%= number_to_human_size @book.epub.size %></li>
+      <li><%= number_to_human_size @book.file_size %></li>
       <% if current_user == @book.user %><li><%= partial 'books/delete_form', :locals => {:book => @book} %></li><% end %>
     </ul>
     <template id="embedding-tag-template"><%= embedding_tag(@book, :'data-bibi-style' => '{{ style }}') %></template>
