@@ -6,6 +6,7 @@ ja:
         id: Id
         user_id: User
         title: Title
+        file_size: File Size
         epub: Epub
         created_at: Created at
         updated_at: Updated at
