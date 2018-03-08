@@ -6,6 +6,8 @@ class Book < ActiveRecord::Base
   validates :epub, :presence => true
   validate :epub, :validate_file_size, :on => :create
 
+  before_validation :set_file_size, :on => :create
+
   def validate_file_size
     current_file_size = user.current_file_size
     if current_file_size + epub.size > Bibid::App.total_file_size_limit
@@ -17,5 +19,11 @@ class Book < ActiveRecord::Base
       logger.info error_message
       errors.add :epub, error_message
     end
+  end
+
+  private
+
+  def set_file_size
+    self.file_size = epub.file.size
   end
 end
