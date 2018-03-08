@@ -2,7 +2,7 @@ class Book < ActiveRecord::Base
   belongs_to :user
   mount_uploader :epub, EpubUploader
 
-  validates :file_size, :presence => true, :numericality => true, :only_integer => true, :greator_than_or_equal_to => 0
+  validates :file_size, :presence => true, :numericality => {:only_integer => true, :greator_than_or_equal_to => 0}
   validates :epub, :presence => true
   validate :epub, :validate_file_size, :on => :create
 
