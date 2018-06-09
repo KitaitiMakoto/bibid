@@ -49,7 +49,6 @@ Padrino.configure_apps do
     end
   end
   set :omniauth_providers, omniauth_providers
-  set :google_analytics_tag, nil # 'Google Analytics tag here'
   set :contact, ENV["CONTACT_URI"]
 
   if ENV["COMPONENTS_HOST_PROVIDER"]
