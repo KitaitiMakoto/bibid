@@ -35,7 +35,7 @@ gem 'padrino', '~> 0.13'
 gem 'rack-ssl-enforcer'
 
 gem 'activerecord', '>= 3.0.0', :require => 'active_record'
-gem 'pg'
+gem 'pg', '< 1'
 gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
 
 gem 'sprockets', '~> 2'
