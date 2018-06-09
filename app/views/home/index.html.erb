@@ -31,32 +31,6 @@
   </div>
 </section>
 
-<section>
-  <h2><%= t('sandbox.title') %></h2>
-
-  <p><%= t('sandbox.description') %></p>
-
-  <% form_for :book, url(:sandbox, :create), :class => 'upload-form sandbox-form', :enctype => 'multipart/form-data' do |f| %>
-    <p><%= f.error_messages %></p>
-    <%= f.file_field_block :epub, :caption => 'EPUB:', :required => true %>
-    <%= f.submit t('helpers.upload'), :class => 'btn btn-primary' %>
-  <% end %>
-
-  <ol class="sandbox-step">
-    <li class="step step1"><%= t('sandbox.step1') %></li>
-    <li class="step step2"><%= t('sandbox.step2') %></li>
-    <li class="step step3"><%= t('sandbox.step3') %></li>
-  </ol>
-
-  <ul class="note">
-    <li><strong><%= t('sandbox.caution') %></strong></li>
-    <% unless current_user %><li><%= link_to t('sandbox.lead_to_sign_up'), sign_in_url %></li><% end %>
-    </li>
-    <li><%= t('sandbox.note_uploaded_files') %></li>
-    <li><%= t('sandbox.file_size_limit', limit: number_to_human_size(settings.sandbox_file_size_limit)) %></li>
-  </ul>
-</section>
-
 <% unless current_user %>
   <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
 <% end %>

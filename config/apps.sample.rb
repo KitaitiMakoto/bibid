@@ -35,9 +35,6 @@ Padrino.configure_apps do
   set :protect_from_csrf, true
   set :available_languages, ['en', 'ja']
   set :total_file_size_limit, 20 * 1024 * 1024
-  set :sandbox_retention_count, 12
-  set :sandbox_retention_time, 1 * 60 * 60
-  set :sandbox_file_size_limit, 6 * 1024 * 1024
 
   omniauth_providers = []
   %i[google_oauth2 twitter facebook].each do |provider|
