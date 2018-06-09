@@ -15,8 +15,6 @@ gem 'rake'
 
 # Component requirements
 gem 'therubyracer'
-gem 'rack-less'
-gem 'less'
 gem 'sass'
 gem 'erubis', '~> 2.7.0'
 
