@@ -52,6 +52,23 @@ Padrino.configure_apps do
   set :google_analytics_tag, nil # 'Google Analytics tag here'
   set :contact, ENV["CONTACT_URI"]
 
+  if ENV["COMPONENTS_HOST_PROVIDER"]
+    case ENV["COMPONENTS_HOST_PROVIDER"]
+    when "google"
+      set :components_host_params, {
+        provider: "Google",
+        google_project: (ENV["COMPONENTS_HOST_PROJECT"] || raise("COMPONENTS_HOST_PROJECT not set")),
+        google_json_key_location: (ENV["COMPONENTS_HOST_KEY_LOCATION"] || raise("COMPONENTS_HOST_KEY_LOCATION not set"))
+      }
+      set :components_host_directory, (ENV["COMPONENTS_HOST_DIRECTORY"] || raise("COMPONENTS_HOST_DIRECTORY not set"))
+      set :bibi_uri, "https://storage.googleapis.com/#{settings.components_host_directory}/components/bib/i/"
+    else
+      raise "COMPONENTS_HOST_PROVIDER #{ENV['COMPONENTS_HOST_PROVIDER']} not supported"
+    end
+  else
+    set :bibi_uri, "/components/bibi/bib/i/"
+  end
+
   mime_type :opds, RSS::OPDS::TYPES['navigation']
 end
 
