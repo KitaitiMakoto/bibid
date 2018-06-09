@@ -38,7 +38,7 @@ gem 'rack-ssl-enforcer'
 gem 'activerecord', '>= 5.0.0', :require => 'active_record'
 gem 'pg', '< 1'
 
-gem 'sprockets', '~> 2'
+gem 'sprockets'
 gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
