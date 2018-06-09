@@ -14,7 +14,6 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
-gem 'therubyracer'
 gem 'sass'
 gem 'erubis', '~> 2.7.0'
 
