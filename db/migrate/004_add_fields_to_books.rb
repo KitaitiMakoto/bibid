@@ -1,7 +1,7 @@
 require_relative "../../models/user"
 require_relative "../../models/book"
 
-class AddFieldsToBooks < ActiveRecord::Migration
+class AddFieldsToBooks < ActiveRecord::Migration[4.2]
   def self.up
     change_table :books do |t|
       t.integer :file_size
