@@ -34,7 +34,7 @@ gem 'padrino', '~> 0.13'
 
 gem 'rack-ssl-enforcer'
 
-gem 'activerecord', '>= 3.0.0', :require => 'active_record'
+gem 'activerecord', '>= 5.0.0', :require => 'active_record'
 gem 'pg', '< 1'
 
 gem 'sprockets', '~> 2'
@@ -42,7 +42,8 @@ gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
 gem 'fog-google'
-gem 'google-api-client', '~> 0.8.7', :require => "google/api_client"
+gem 'google-api-client', '~> 0.23.0', :require => "google/apis/storage_v1"
+
 # Load Kaminari after CarrierWave
 gem 'kaminari-activerecord'
 gem 'kaminari-sinatra', :require => 'kaminari/sinatra'
