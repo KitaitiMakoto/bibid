@@ -21,10 +21,10 @@ class AddUniqueIdentifierAndDescriptionAndLanguageToBooks < ActiveRecord::Migrat
                }
              end
       uid = epub.unique_identifier
-      if uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
+      if uid && uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
         book.unique_identifier = "urn:isbn:#{uid.content}"
       else
-        book.unique_identifier = uid.content
+        book.unique_identifier = uid&.content
       end
       book.description = epub.description
       book.language = epub.metadata.language.to_s
