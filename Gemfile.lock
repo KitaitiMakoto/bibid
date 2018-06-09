@@ -112,7 +112,7 @@ GEM
     io-like (0.3.0)
     json (2.1.0)
     jwt (1.5.6)
-    kaminari (0.16.3)
+    kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     launchy (2.4.3)
@@ -299,7 +299,7 @@ DEPENDENCIES
   fog-google
   google-api-client (~> 0.8.7)
   http_accept_language
-  kaminari (~> 0.16.0)
+  kaminari (~> 0.17.0)
   less
   omniauth
   omniauth-facebook
