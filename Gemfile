@@ -43,7 +43,7 @@ gem 'http_accept_language'
 gem 'coffee-script'
 gem 'carrierwave', :require => %w[carrierwave carrierwave/orm/activerecord]
 gem 'fog-google'
-gem 'google-api-client', '~> 0.8.7'
+gem 'google-api-client', '~> 0.8.7', :require => "google/api_client"
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'

@@ -7,7 +7,6 @@ PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
-require "google/api_client" # To prevent loading "google/api_client/railtie"
 
 ##
 # ## Enable devel logging
