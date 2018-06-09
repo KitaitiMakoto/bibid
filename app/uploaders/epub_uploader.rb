@@ -1,6 +1,6 @@
 class EpubUploader < CarrierWave::Uploader::Base
   def filename
-    Digest::SHA1.hexdigest(Time.now.to_s) + '.epub'
+    model[:epub] || Digest::SHA1.hexdigest(Time.now.to_s) + '.epub'
   end
 
   def store_dir
