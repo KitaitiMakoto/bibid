@@ -47,30 +47,6 @@ Padrino.after_load do
   ActiveRecord::Base.send :include, Padrino::Helpers::NumberHelpers
 end
 
-CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
-CarrierWave.configure do |config|
-  if ENV["CARRIERWAVE_FOG_PROVIDER"]
-    require "carrierwave/storage/fog"
-
-    config.storage = :fog
-
-    case ENV["CARRIERWAVE_FOG_PROVIDER"]
-    when "google"
-      config.fog_provider = 'fog/google'
-      config.fog_directory = (ENV["CARRIERWAVE_FOG_DIRECTORY"] || raise("CARRIERWAVE_FOG_DIRECTORY not set"))
-      config.fog_credentials = {
-        provider: "Google",
-        google_project: (ENV["CARRIERWAVE_FOG_PROJECT"] || raise("CARRIERWAVE_FOG_PROJECT not set")),
-        google_json_key_location: (ENV["CARRIERWAVE_FOG_KEY_LOCATION"] || raise("CARRIERWAVE_FOG_KEY_LOCATION not set"))
-      }
-    else
-      raise "Unsupported CarrierWave provider #{ENV['CARRIERWAVE_FOG_PROVIDER']}"
-    end
-  else
-    config.storage = :file
-  end
-end
-
 EPUB::OCF::PhysicalContainer.adapter = :Zipruby
 
 Padrino.load!
