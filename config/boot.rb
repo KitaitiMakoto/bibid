@@ -35,7 +35,6 @@ I18n.default_locale = :ja
 require 'digest/sha1'
 require 'action_view/helpers'
 require 'action_view/helpers/number_helper'
-require 'action_dispatch/http/mime_type'
 
 ##
 # Add your before (RE)load hooks here
