@@ -17,6 +17,7 @@ gem 'rake'
 gem 'therubyracer'
 gem 'rack-less'
 gem 'less'
+gem 'sass'
 gem 'erubis', '~> 2.7.0'
 
 # Test requirements
