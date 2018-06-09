@@ -57,7 +57,7 @@ Bibi.Preset = {
 
 // -------------------------------------------------------------------------------------------------
 
-"bookshelf"                  : "#{'https://storage.googleapis.com/' + ENV['CARRIERWAVE_FOG_DIRECTORY'] if ENV['CARRIERWAVE_FOG_PROVIDER'] == 'google'}/", // relative path from bib/i/index.html (if the origin is included in "trustworthy-origins", URI begins with "http://" or "https://" for COR-allowed server is OK).
+"bookshelf"                  : "#{('https://storage.googleapis.com/' + ENV['CARRIERWAVE_FOG_DIRECTORY']) if ENV['CARRIERWAVE_FOG_PROVIDER'] == 'google'}/", // relative path from bib/i/index.html (if the origin is included in "trustworthy-origins", URI begins with "http://" or "https://" for COR-allowed server is OK).
 
 "reader-view-mode"           : "paged", // "paged" or "vertical" or "horizontal" ("paged" is for flipping, "vertical" and "horizontal" are for scrolling)
 "fix-reader-view-mode"       : "no", // "yes" or "no" or "desktop" or "mobile"
