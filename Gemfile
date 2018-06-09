@@ -36,7 +36,7 @@ gem 'rack-ssl-enforcer'
 
 gem 'activerecord', '>= 3.0.0', :require => 'active_record'
 gem 'pg', '< 1'
-gem 'kaminari', '~> 0.16.0', :require => 'kaminari/sinatra'
+gem 'kaminari', '~> 0.17.0', :require => 'kaminari/sinatra'
 
 gem 'sprockets', '~> 2'
 gem 'http_accept_language'
