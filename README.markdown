@@ -1,7 +1,5 @@
 BiB/i'd
 ======
-[![Dependency Status](https://gemnasium.com/KitaitiMakoto/bibid.png)](https://gemnasium.com/KitaitiMakoto/bibid)
-
 [BiB/i][bibi] daemon. Actually, not a daemon.
 
 It hosts EPUB files and generates HTML tags to embed the books into your blog.
