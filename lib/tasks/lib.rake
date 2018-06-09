@@ -122,5 +122,21 @@ Bibi.Preset = {
 };
 PRESET
     end
+
+    desc "Upload BiB/i files"
+    task :upload_bibi => :environment do
+      settings = Bibid::App.settings
+      connection = Fog::Storage.new(settings.components_host_params)
+      directory = connection.directories.get(settings.components_host_directory)
+      public_dir = Pathname.new(Padrino.root("public"))
+      Pathname.glob(Padrino.root("public/components/bibi/**/*")).each do |path|
+        next unless path.file?
+        relative_path = path.relative_path_from(public_dir)
+        directory.files.create(
+          key: relative_path.to_path,
+          body: path.open
+        )
+      end
+    end
   end
 end
