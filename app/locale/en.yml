@@ -50,17 +50,6 @@ en:
     acknowledgement_padrino: Web application framework in Ruby.
     acknowledgement_ligature_symbols: Icons made by ligature.
     acknowledgement_twitter_bootstrap: Useful CSS framework.
-  sandbox:
-    title: Try it!
-    description: This is a form to try feature of this site.
-    step1: Upload an EPUB file and
-    step2: paste generated HTML tags into your blog so that,
-    step3: your readers can read your EPUB book in your blog!
-    lead_to_sign_up: Sign up to store your books permanently!
-    note_uploaded_files: URL of uploaded book does not appear in the "Uploaded books" page.
-    caution: "CAUTION: Uploaded book will be removed at some time."
-    file_size_limit: "File size should be less than %{limit}."
-    over_file_size: 'total file size will be over limitation. Please delete some files. Current: %{epub}, limit: %{limit}'
   users:
     list: User list
     new: Sign up

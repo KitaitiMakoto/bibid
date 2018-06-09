@@ -50,17 +50,6 @@ ja:
     acknowledgement_padrino: Ruby製のウェブアプリケーションフレームワークです。
     acknowledgement_ligature_symbols: リガチャによるアイコン集です。
     acknowledgement_twitter_bootstrap: 使いやすいCSSフレームワークです。
-  sandbox:
-    title: お試しください！
-    description: このサイトの機能を確認するためのお試し用フォームです。
-    step1: EPUBファイルをアップロードし、
-    step2: 埋め込み用タグを貼り付けることで
-    step3: ブログの中で本が読めるようになります！
-    lead_to_sign_up: 本を保存しておくにはサインアップしてください！
-    note_uploaded_files: アップロードされたファイルは「登録された本」のページには表示されません。
-    caution: "注意：アップロードされたファイルはそのうち削除されます。"
-    file_size_limit: "ファイルサイズは %{limit} 未満でなければなりません。"
-    over_file_size: 'ファイルサイズ制限を超えます。アップロードするファイル：%{epub}, 制限：%{limit}'
   users:
     list: ユーザー一覧
     new: サインアップ

@@ -31,6 +31,10 @@ GEM
     archive-zip (0.10.0)
       io-like (~> 0.3.0)
     arel (6.0.4)
+    autoparse (0.3.3)
+      addressable (>= 2.3.1)
+      extlib (>= 0.9.15)
+      multi_json (>= 1.0.0)
     builder (3.2.3)
     capybara (2.15.4)
       addressable
@@ -50,8 +54,6 @@ GEM
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
     crass (1.0.4)
-    declarative (0.0.10)
-    declarative-option (0.1.0)
     enumerable-lazy (0.0.2)
     epub-cfi (0.1.1)
     epub-parser (0.3.2)
@@ -63,6 +65,7 @@ GEM
     erubis (2.7.0)
     excon (0.59.0)
     execjs (2.7.0)
+    extlib (0.9.16)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     fog-core (1.45.0)
@@ -80,15 +83,17 @@ GEM
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
-    google-api-client (0.10.3)
+    google-api-client (0.8.7)
+      activesupport (>= 3.2, < 5.0)
       addressable (~> 2.3)
-      googleauth (~> 0.5)
-      httpclient (~> 2.7)
-      hurley (~> 0.1)
-      memoist (~> 0.11)
-      mime-types (>= 1.6)
-      representable (~> 3.0)
-      retriable (>= 2.0, < 4.0)
+      autoparse (~> 0.3)
+      extlib (~> 0.9)
+      faraday (~> 0.9)
+      googleauth (~> 0.3)
+      launchy (~> 2.4)
+      multi_json (~> 1.10)
+      retriable (~> 1.4)
+      signet (~> 0.6)
     googleauth (0.6.1)
       faraday (~> 0.12)
       jwt (>= 1.4, < 3.0)
@@ -100,15 +105,15 @@ GEM
     hashie (3.5.6)
     hike (1.2.3)
     http_accept_language (2.1.1)
-    httpclient (2.8.3)
-    hurley (0.2)
     i18n (0.8.6)
     io-like (0.3.0)
     json (2.1.0)
     jwt (1.5.6)
-    kaminari (0.16.0)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
     libv8 (3.16.14.19)
@@ -202,13 +207,10 @@ GEM
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    power_assert (1.1.0)
+    power_assert (1.1.1)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (1.6.10)
-    rack-archive-zip-extract (0.0.9)
-      rack (>= 1.6.1)
-      zipruby (~> 0.3)
     rack-less (3.0.2)
       less (~> 2.0)
       rack (~> 1.0)
@@ -228,11 +230,7 @@ GEM
     rake (12.1.0)
     rchardet (1.6.1)
     ref (2.0.0)
-    representable (3.0.4)
-      declarative (< 0.1.0)
-      declarative-option (< 0.2.0)
-      uber (< 0.2.0)
-    retriable (3.1.1)
+    retriable (1.4.1)
     rr (1.2.1)
     rss-atom-feed_history (0.0.4)
     rss-dcterms (0.0.5)
@@ -277,9 +275,8 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (1.4.1)
-    tzinfo (1.2.3)
+    tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    uber (0.1.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -298,7 +295,7 @@ DEPENDENCIES
   epub-parser
   erubis (~> 2.7.0)
   fog-google
-  google-api-client
+  google-api-client (~> 0.8.7)
   http_accept_language
   kaminari (~> 0.16.0)
   less
@@ -310,7 +307,6 @@ DEPENDENCIES
   pg
   poltergeist
   puma
-  rack-archive-zip-extract
   rack-less
   rack-ssl-enforcer
   rack-test
@@ -323,6 +319,7 @@ DEPENDENCIES
   test-unit-notify
   test-unit-rr
   therubyracer
+  zipruby
 
 BUNDLED WITH
    1.16.1

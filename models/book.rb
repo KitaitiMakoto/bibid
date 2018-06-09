@@ -2,8 +2,11 @@ class Book < ActiveRecord::Base
   belongs_to :user
   mount_uploader :epub, EpubUploader
 
+  validates :file_size, :presence => true, :numericality => {:only_integer => true, :greator_than_or_equal_to => 0}
   validates :epub, :presence => true
   validate :epub, :validate_file_size, :on => :create
+
+  before_validation :set_file_size, :on => :create
 
   def validate_file_size
     current_file_size = user.current_file_size
@@ -16,5 +19,11 @@ class Book < ActiveRecord::Base
       logger.info error_message
       errors.add :epub, error_message
     end
+  end
+
+  private
+
+  def set_file_size
+    self.file_size = epub.file.size
   end
 end
