@@ -1,7 +1,6 @@
 module Bibid
   class App < Padrino::Application
     use HttpAcceptLanguage::Middleware
-    register LessInitializer
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
