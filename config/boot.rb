@@ -33,8 +33,6 @@ I18n.default_locale = :ja
 #   include Padrino::Helpers::TranslationHelpers
 # end
 require 'digest/sha1'
-require 'action_view/helpers'
-require 'action_view/helpers/number_helper'
 
 ##
 # Add your before (RE)load hooks here
