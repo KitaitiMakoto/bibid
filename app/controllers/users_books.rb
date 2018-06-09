@@ -9,7 +9,18 @@ Bibid::App.controllers :users_books, :parent => :users do
 
   post :create, :map => 'books', :require_sign_in => true do
     @book = current_user.books.build(params[:book])
-    @book.title = EPUB::Parser.parse(@book.epub.current_path).title rescue File.basename(@book.epub.filename, '.*')
+    epub = EPUB::Parser.parse(@book.epub.current_path)
+    @book.title = epub&.title || File.basename(@book.epub.filename, '.*')
+    if epub
+      uid = epub.unique_identifier
+      if uid.isbn? and !uid.content.downcase.start_with? 'urn:isbn:'
+        @book.unique_identifier = "urn:isbn:#{uid.content}"
+      else
+        @book.unique_identifier = uid.content
+      end
+      @book.description = epub.description
+      @book.language = epub.metadata.language.to_s
+    end
     if current_user.books << @book
       redirect url(:users_books, :show, :user_id => @book.user.name, :id => @book.id), :success => I18n.t('notice.books.create')
     else
