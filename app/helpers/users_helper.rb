@@ -47,7 +47,11 @@ Bibid::App.helpers do
         begin
           maker.items.new_item do |item|
             make_entry_base item, book
-            item.enclosure.url = File.join(absolute_url(:root, :index), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
+            item.enclosure.url = if book.epub.file.kind_of?(CarrierWave::SanitizedFile)
+                                   File.join(absolute_url("/"), 'components/bibi/bib/bookshelf', user.name, File.basename(book.epub.current_path))
+                                 else
+                                   book.epub.file.url
+                                 end
             item.enclosure.length = book.epub.size
             item.enclosure.type = 'document/x-epub'
           end
