@@ -1,6 +1,5 @@
 module Bibid
   class App < Padrino::Application
-    use ActiveRecord::ConnectionAdapters::ConnectionManagement
     use HttpAcceptLanguage::Middleware
     register LessInitializer
     register Padrino::Rendering
