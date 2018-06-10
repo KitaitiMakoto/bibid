@@ -25,6 +25,7 @@ build_docker_image:
     - docker:dind
   script:
     - docker info
+    - echo ${DOCKER_USERNAME}
     - docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
     - docker build --tag KitaitiMakoto/bibid:${CI_COMMIT_TAG} .
     - docker push KitaitiMakoto/bibid:${CI_COMMIT_TAG}
