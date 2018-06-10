@@ -1,3 +1,4 @@
+# coding: utf-8
 ##
 # This file mounts each app in the Padrino project to a specified sub-uri.
 # You can mount additional applications using any of these commands below:
@@ -50,23 +51,6 @@ Padrino.configure_apps do
   end
   set :omniauth_providers, omniauth_providers
   set :contact, ENV["CONTACT_URI"]
-
-  if ENV["COMPONENTS_HOST_PROVIDER"]
-    case ENV["COMPONENTS_HOST_PROVIDER"]
-    when "google"
-      set :components_host_params, {
-        provider: "Google",
-        google_project: (ENV["COMPONENTS_HOST_PROJECT"] || raise("COMPONENTS_HOST_PROJECT not set")),
-        google_json_key_location: (ENV["COMPONENTS_HOST_KEY_LOCATION"] || raise("COMPONENTS_HOST_KEY_LOCATION not set"))
-      }
-      set :components_host_directory, (ENV["COMPONENTS_HOST_DIRECTORY"] || raise("COMPONENTS_HOST_DIRECTORY not set"))
-      set :bibi_uri, "https://storage.googleapis.com/#{settings.components_host_directory}/components/bib/i/"
-    else
-      raise "COMPONENTS_HOST_PROVIDER #{ENV['COMPONENTS_HOST_PROVIDER']} not supported"
-    end
-  else
-    set :bibi_uri, "/components/bibi/bib/i/"
-  end
 
   CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+？]/
   CarrierWave.configure do |config|
