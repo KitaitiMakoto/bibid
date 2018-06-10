@@ -5,7 +5,6 @@ stages:
 dependency_scanning:
   stage: test
   image: ruby:latest
-  image: docker:stable
   variables:
     DOCKER_DRIVER: overlay2
   allow_failure: true
@@ -23,6 +22,8 @@ dependency_scanning:
 build_docker_image:
   stage: release
   image: docker:stable
+  services:
+    - docker:dind
   script:
     - docker info
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
