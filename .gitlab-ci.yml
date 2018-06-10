@@ -21,6 +21,8 @@ dependency_scanning:
 build_docker_image:
   stage: release
   image: docker:stable
+  services:
+    - docker:dind
   script:
     - docker info
     - docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
