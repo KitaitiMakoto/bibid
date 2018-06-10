@@ -4,6 +4,7 @@ stages:
 
 dependency_scanning:
   stage: test
+  image: ruby:latest
   image: docker:stable
   variables:
     DOCKER_DRIVER: overlay2
@@ -21,6 +22,7 @@ dependency_scanning:
     paths: [gl-dependency-scanning-report.json]
 build_docker_image:
   stage: release
+  image: docker:stable
   script:
     - docker info
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
