@@ -1,6 +1,6 @@
 stages:
   - test
-  - build_image
+  - release
 
 dependency_scanning:
   stage: test
@@ -20,7 +20,7 @@ dependency_scanning:
   artifacts:
     paths: [gl-dependency-scanning-report.json]
 build_docker_image:
-  stage: build_image
+  stage: release
   script:
     - docker info
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
