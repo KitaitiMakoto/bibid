@@ -31,10 +31,6 @@
   </div>
 </section>
 
-<% unless current_user %>
-  <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
-<% end %>
-
 <section id="acknowledgement">
   <h2><%= t('home.acknowledgement') %></h2>
   <dl>
