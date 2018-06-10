@@ -27,7 +27,9 @@
     </ol>
   </div>
   <div>
-    <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
+    <% unless current_user %>
+      <p class="text-right"><%= t('home.lead_to_sign_up', :strategy => 'Twitter') %> <%= link_to image_tag('/components/twitter-icon/index.png', :width => '60px', :alt => 'Twitter'), sign_in_url %></p>
+    <% end %>
   </div>
 </section>
 
