@@ -1,4 +1,9 @@
+stages:
+  - test
+  - build_image
+
 dependency_scanning:
+  stage: test
   image: docker:stable
   variables:
     DOCKER_DRIVER: overlay2
@@ -15,6 +20,7 @@ dependency_scanning:
   artifacts:
     paths: [gl-dependency-scanning-report.json]
 build_docker_image:
+  stage: build_image
   script:
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - docker build -t KitaitiMakoto/bibid:${CI_COMMIT_TAG} .
