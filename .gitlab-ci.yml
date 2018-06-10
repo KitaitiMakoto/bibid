@@ -3,7 +3,6 @@ stages:
   - release
 
 dependency_scanning:
-  stage: test
   variables:
     DOCKER_DRIVER: overlay2
   allow_failure: true
@@ -18,10 +17,11 @@ dependency_scanning:
         "registry.gitlab.com/gitlab-org/security-products/dependency-scanning:$SP_VERSION" /code
   artifacts:
     paths: [gl-dependency-scanning-report.json]
-services:
-  - docker:dind
 build_docker_image:
   stage: release
+  image: docker:stable
+  services:
+    - docker:dind
   script:
     - docker info
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
