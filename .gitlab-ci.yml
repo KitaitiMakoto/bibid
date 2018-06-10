@@ -22,6 +22,7 @@ dependency_scanning:
 build_docker_image:
   stage: build_image
   script:
+    - docker info
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - docker build -t KitaitiMakoto/bibid:${CI_COMMIT_TAG} .
     - docker push KitaitiMakoto/bibid:${CI_COMMIT_TAG}
