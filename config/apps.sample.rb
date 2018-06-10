@@ -66,7 +66,7 @@ Padrino.configure_apps do
         config.fog_credentials = {
           provider: "Google",
           google_project: (ENV["CARRIERWAVE_FOG_PROJECT"] || raise("CARRIERWAVE_FOG_PROJECT not set")),
-          google_json_key_location: (ENV["CARRIERWAVE_FOG_KEY_LOCATION"] || raise("CARRIERWAVE_FOG_KEY_LOCATION not set"))
+          google_json_key_location: (ENV["CARRIERWAVE_FOG_KEY_LOCATION"] || "/bibid/gcp-service-account.json")
         }
       else
         raise "Unsupported CarrierWave provider #{ENV['CARRIERWAVE_FOG_PROVIDER']}"
