@@ -26,8 +26,8 @@ build_docker_image:
   script:
     - docker info
     - docker login --username="${DOCKER_USERNAME}" --password="${DOCKER_PASSWORD}"
-    - docker build --tag KitaitiMakoto/bibid:${CI_COMMIT_TAG} .
-    - docker push KitaitiMakoto/bibid:${CI_COMMIT_TAG}
+    - docker build --tag kitaitimakoto/bibid:${CI_COMMIT_TAG} .
+    - docker push kitaitimakoto/bibid:${CI_COMMIT_TAG}
   only:
     - tags
   when: on_success
