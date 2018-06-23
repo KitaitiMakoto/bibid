@@ -53,7 +53,7 @@ You may set environment variables blow in a file specified for `--env-file` or `
 * `CARRIERWAVE_FOG_PROVIDER`: Object storage provider. Currently, only Google Cloud Storage is available. Set to `google`
 * `CARRIERWAVE_FOG_PROJECT`: Project which include Google Cloud Storage bucket for Bib/i'd instance
 * `CARRIERWAVE_FOG_DIRECTORY`: Google Cloud Storage bucket name
-* CARRIERWAVE_FOG_KEY_LOCATION`: Full path in Docker container for Google Cloud Platform IAM service account file
+* `CARRIERWAVE_FOG_KEY_LOCATION`: Full path in Docker container for Google Cloud Platform IAM service account file
 
 [official document]: https://cloud.google.com/iam/docs/creating-managing-service-accounts
 [Sinatra document]: http://sinatrarb.com/intro.html
