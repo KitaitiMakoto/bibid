@@ -9,6 +9,13 @@ Demo
 
 BiB/i'd is running at [bibid.kitaitimakoto.net](http://bibid.kitaitimakoto.net).
 
+Docker Image
+------------
+
+[kitaitimakoto/bibid][]
+
+[kitaitimakoto/bibid]: https://hub.docker.com/r/kitaitimakoto/bibid/
+
 Running BiB/i'd
 ---------------
 
