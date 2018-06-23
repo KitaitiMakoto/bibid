@@ -9,6 +9,30 @@ Demo
 
 BiB/i'd is running at [bibid.kitaitimakoto.net](http://bibid.kitaitimakoto.net).
 
+Running BiB/i'd
+---------------
+
+### systemd ###
+
+Example unit file is here:
+(`/etc/systemd/system/bibid.service`)
+
+    [Unit]
+    Description=BiB/i'd EPUB Hosting Service
+    After=postgresql.service
+    
+    [Service]
+    User=www-data
+    WorkingDirectory=/var/www/bibid/current
+    EnvironmentFile=/var/www/bibid/current/.env.production
+    ExecStart=/usr/local/bin/bundle exec puma -b unix:///var/www/bibid/puma.sock
+    ExecStop=/bin/kill -TERM $MAINPID
+    ExecReload=/bin/kill -HUP $MAINPID
+    Restart=on-failure
+    
+    [Install]
+    WantedBy=multi-user.target
+
 Development
 -----------
 1. Install assets  
