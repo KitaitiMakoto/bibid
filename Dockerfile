@@ -11,7 +11,6 @@ RUN wget https://deb.nodesource.com/setup_10.x && \
     apt install -y nodejs && \
     npm install -g bower && \
     bower --allow-root install && \
-		bundle install --path=deps && \
-    bundle exec rake assets lib:bower:bibi_preset
-ENTRYPOINT ["bundle", "exec"]
-CMD ["padrino", "start", "--host", "0.0.0.0"]
+    bundle install --path=deps
+ENTRYPOINT ["bundle", "exec"] # need not?
+CMD "rake lib:bower:bibi_preset && padrino start --host 0.0.0.0" # need bundle exec?
