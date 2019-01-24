@@ -20,10 +20,10 @@ gem 'erubis', '~> 2.7.0'
 # Test requirements
 
 # Padrino Stable Gem
-# gem 'padrino', '~> 0.13'
+gem 'padrino', '~> 0.14'
 
 # Or Padrino Edge
-gem 'padrino', :github => 'padrino/padrino-framework'
+# gem 'padrino', :github => 'padrino/padrino-framework'
 
 # Or Individual Gems
 # %w(core gen helpers cache mailer admin).each do |g|
