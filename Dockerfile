@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.6
 LABEL maintainer="https://gitlab.com/KitaitiMakoto"
 ENV RACK_ENV production
 EXPOSE 3000
