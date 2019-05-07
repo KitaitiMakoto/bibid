@@ -33,7 +33,7 @@ gem 'padrino', '~> 0.14'
 gem 'rack-ssl-enforcer'
 
 gem 'activerecord', '>= 5.0.0', :require => 'active_record'
-gem 'pg', '< 1'
+gem 'pg'
 
 gem 'sprockets'
 gem 'http_accept_language'
