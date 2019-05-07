@@ -183,7 +183,7 @@ GEM
       mime-types (< 4)
       padrino-core (= 0.14.4)
     padrino-support (0.14.4)
-    pg (0.21.0)
+    pg (1.1.4)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
@@ -288,7 +288,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-twitter
   padrino (~> 0.14)
-  pg (< 1)
+  pg
   poltergeist
   puma
   rack-ssl-enforcer
