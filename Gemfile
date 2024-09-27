@@ -20,7 +20,7 @@ gem 'erubis', '~> 2.7.0'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '~> 0.14'
+gem 'padrino', '~> 0.15'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
